@@ -73,9 +73,9 @@ export default function SlideNav() {
           whileTap={{ scale: 0.95 }}
           animate={{
             boxShadow: [
-              "0 0 24px rgb(247 112 36 / 0.3), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
-              "0 0 40px rgb(247 112 36 / 0.5), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
-              "0 0 24px rgb(247 112 36 / 0.3), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 24px rgb(247 112 36 / 0.4), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 40px rgb(247 112 36 / 0.6), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 24px rgb(247 112 36 / 0.4), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
             ],
           }}
           transition={{
@@ -99,9 +99,9 @@ export default function SlideNav() {
           animate={{
             y: [0, -10, 0],
             boxShadow: [
-              "0 0 24px rgb(6 192 215 / 0.3), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
-              "0 0 40px rgb(6 192 215 / 0.5), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
-              "0 0 24px rgb(6 192 215 / 0.3), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 24px rgb(6 192 215 / 0.4), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 40px rgb(6 192 215 / 0.6), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 24px rgb(6 192 215 / 0.4), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
             ],
           }}
           transition={{
