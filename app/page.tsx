@@ -66,8 +66,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex gap-4 justify-center flex-wrap"
           >
-            <Button variant="gradient" size="lg" className="w-64">Explore the Opportunity</Button>
-            <Button variant="outline" size="lg" className="w-64">View Financials</Button>
+            <Button variant="gradient" size="lg" className="w-64 shadow-md">Explore the Opportunity</Button>
+            <Button variant="outline" size="lg" className="w-64 shadow-md">View Financials</Button>
           </motion.div>
 
           {/* Subtext */}
