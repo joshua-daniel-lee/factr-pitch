@@ -20,18 +20,13 @@ export default function Home() {
       <Slide id="hero" background="white">
         <Container className="text-center h-full flex flex-col items-center justify-center">
           {/* Animated Logo with Rings */}
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-8 relative"
-          >
+          <div className="mb-8 relative flex items-center justify-center">
             {/* Background Rings */}
             <motion.div
-              className="absolute inset-0 -m-16"
+              className="absolute w-64 h-64"
               animate={{
                 scale: [1, 1.2, 1],
-                opacity: [0.3, 0.1, 0.3],
+                opacity: [0.4, 0.1, 0.4],
               }}
               transition={{
                 duration: 3,
@@ -39,13 +34,13 @@ export default function Home() {
                 ease: "easeInOut",
               }}
             >
-              <div className="absolute inset-0 rounded-full border-2 border-primary/20"></div>
+              <div className="w-full h-full rounded-full border-2 border-primary"></div>
             </motion.div>
             <motion.div
-              className="absolute inset-0 -m-24"
+              className="absolute w-80 h-80"
               animate={{
                 scale: [1, 1.3, 1],
-                opacity: [0.2, 0.05, 0.2],
+                opacity: [0.3, 0.05, 0.3],
               }}
               transition={{
                 duration: 4,
@@ -54,13 +49,13 @@ export default function Home() {
                 delay: 0.5,
               }}
             >
-              <div className="absolute inset-0 rounded-full border-2 border-accent/15"></div>
+              <div className="w-full h-full rounded-full border-2 border-accent"></div>
             </motion.div>
             <motion.div
-              className="absolute inset-0 -m-32"
+              className="absolute w-96 h-96"
               animate={{
                 scale: [1, 1.4, 1],
-                opacity: [0.15, 0.03, 0.15],
+                opacity: [0.2, 0.03, 0.2],
               }}
               transition={{
                 duration: 5,
@@ -69,11 +64,16 @@ export default function Home() {
                 delay: 1,
               }}
             >
-              <div className="absolute inset-0 rounded-full border-2 border-primary/10"></div>
+              <div className="w-full h-full rounded-full border-2 border-primary"></div>
             </motion.div>
 
             {/* Logo */}
-            <div className="relative z-10">
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="relative z-10"
+            >
               <Image 
                 src="/logo.png" 
                 alt="FactrAI Logo" 
@@ -81,8 +81,8 @@ export default function Home() {
                 height={120}
                 className="object-contain"
               />
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
 
           {/* Main Heading with stagger animation */}
           <motion.div
