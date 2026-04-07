@@ -150,7 +150,7 @@ export default function Home() {
                 <motion.div
                   className="flex gap-12 items-center"
                   animate={{
-                    x: [0, -1920], // Move left (8 logos * 240px per logo)
+                    x: [0, -1408], // 8 logos × (128px + 48px gap) = 1408px
                   }}
                   transition={{
                     x: {
@@ -183,7 +183,7 @@ export default function Home() {
                       />
                     </div>
                   ))}
-                  {/* Duplicate set for seamless loop */}
+                  {/* Second set for seamless loop */}
                   {[
                     'nyt-logo.png',
                     'wsj-logo.png',
@@ -206,6 +206,29 @@ export default function Home() {
                       />
                     </div>
                   ))}
+                  {/* Third set for extra coverage */}
+                  {[
+                    'nyt-logo.png',
+                    'wsj-logo.png',
+                    'ft-logo.png',
+                    'economist-logo.png',
+                    'bloomberg-logo.png',
+                    'atlantic-logo.png',
+                    'wapo-logo.png',
+                    'reuters-logo.png',
+                  ].map((logo, index) => (
+                    <div
+                      key={`logo-3-${index}`}
+                      className="flex-shrink-0 w-32 h-16 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    >
+                      <Image
+                        src={`/publishers/${logo}`}
+                        alt={logo.replace('-logo.png', '')}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  ))}
                 </motion.div>
               </div>
             </div>
@@ -213,14 +236,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column: Content */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Heading level="h2" className="text-left mb-4 gradient-text">
+                <Heading level="h2" className="text-left mb-6 gradient-text">
                   The Subscription Trap
                 </Heading>
                 <Text variant="lead" className="text-gray-700 text-left">
@@ -233,31 +256,22 @@ export default function Home() {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="space-y-4"
               >
                 <Text variant="body" className="text-gray-600 leading-relaxed text-left">
-                  While generative AI platforms simultaneously cannibalize direct traffic through automated summaries, this "Subscription Trap" prevents universal access for information workers and creates a systemic crisis.<sup className="text-xs">4</sup>
-                </Text>
-                <Text variant="body" className="text-gray-600 leading-relaxed text-left">
-                  U.S. search traffic to news publishers plummeted by 38%<sup className="text-xs">1</sup> since late 2024 due to AI-integrated search overviews. Zero-click searches surged to 69%<sup className="text-xs">2</sup> in 2025, resulting in an estimated $2 billion<sup className="text-xs">3</sup> annual advertising revenue loss for the sector.
+                  U.S. search traffic to news publishers plummeted by 38%<sup className="text-xs">1</sup> since late 2024 due to AI-integrated search overviews, while zero-click searches surged to 69%<sup className="text-xs">2</sup> in 2025—resulting in an estimated $2 billion<sup className="text-xs">3</sup> annual advertising revenue loss for the sector.<sup className="text-xs">4</sup>
                 </Text>
               </motion.div>
 
-              {/* Quote Callout */}
+              {/* Inline Quote */}
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <div className="relative pl-6 py-4 border-l-4 border-cyan-500 bg-gray-50/50">
-                  <Text variant="body" className="text-gray-700 italic text-left text-sm">
-                    "This prevents universal access for information workers and creates a systemic crisis as referral traffic vanishes in a zero-click ecosystem."
-                  </Text>
-                  <Text variant="small" className="text-gray-500 mt-2 text-left">
-                    — Digital Content Next, 2025<sup className="text-xs">4</sup>
-                  </Text>
-                </div>
+                <Text variant="small" className="text-gray-500 italic text-left">
+                  "This prevents universal access for information workers and creates a systemic crisis as referral traffic vanishes in a zero-click ecosystem." — Digital Content Next, 2025
+                </Text>
               </motion.div>
             </div>
 
