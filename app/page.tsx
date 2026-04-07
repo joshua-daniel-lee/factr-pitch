@@ -137,9 +137,6 @@ export default function Home() {
         <Container size="xl">
           {/* Publisher Logos Carousel */}
           <div className="mb-12 overflow-hidden">
-            <Text variant="small" className="text-center text-gray-500 mb-4">
-              Publishers in our network
-            </Text>
             <div className="relative">
               {/* Gradient overlays for fade effect */}
               <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
