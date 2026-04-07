@@ -67,6 +67,18 @@ export default function Home() {
             <Button variant="primary" size="lg">Explore the Opportunity</Button>
             <Button variant="outline" size="lg">View Financials</Button>
           </motion.div>
+
+          {/* Subtext */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="mt-8"
+          >
+            <Text variant="body" className="text-gray-500 max-w-2xl mx-auto text-sm">
+              Restoring the economic bridge between world-class journalism and the everyday consumer
+            </Text>
+          </motion.div>
         </Container>
         <SlideNav nextSection="summary" />
       </Slide>
