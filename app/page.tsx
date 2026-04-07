@@ -19,77 +19,11 @@ export default function Home() {
       {/* Slide 1: Hero */}
       <Slide id="hero" background="white">
         <Container className="text-center h-full flex flex-col items-center justify-center">
-          {/* Animated Unlock Placeholder with Rings - positioned to overlap behind heading */}
-          <div className="relative flex items-center justify-center -mb-16 z-0">
-            {/* Background Rings */}
-            <motion.div
-              className="absolute w-64 h-64"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.4, 0.1, 0.4],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <div className="w-full h-full rounded-full border-2 border-primary"></div>
-            </motion.div>
-            <motion.div
-              className="absolute w-80 h-80"
-              animate={{
-                scale: [1, 1.3, 1],
-                opacity: [0.3, 0.05, 0.3],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5,
-              }}
-            >
-              <div className="w-full h-full rounded-full border-2 border-accent"></div>
-            </motion.div>
-            <motion.div
-              className="absolute w-96 h-96"
-              animate={{
-                scale: [1, 1.4, 1],
-                opacity: [0.2, 0.03, 0.2],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1,
-              }}
-            >
-              <div className="w-full h-full rounded-full border-2 border-primary"></div>
-            </motion.div>
-
-            {/* Unlock Concept Image */}
-            <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative z-0"
-            >
-              <Image 
-                src="/unlock-hero.svg.png" 
-                alt="Unlock Concept" 
-                width={128} 
-                height={128}
-                className="object-contain"
-              />
-            </motion.div>
-          </div>
-
-          {/* Main Heading with stagger animation - in front with higher z-index */}
+          {/* Main Heading with stagger animation */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="relative z-10"
           >
             <Heading level="h1" className="mb-6">
               The Universal Key to Premium Journalism
