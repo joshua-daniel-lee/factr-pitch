@@ -19,8 +19,8 @@ export default function Home() {
       {/* Slide 1: Hero */}
       <Slide id="hero" background="white">
         <Container className="text-center h-full flex flex-col items-center justify-center">
-          {/* Animated Logo with Rings */}
-          <div className="mb-8 relative flex items-center justify-center">
+          {/* Animated Unlock Placeholder with Rings - positioned to overlap behind heading */}
+          <div className="relative flex items-center justify-center -mb-16 z-0">
             {/* Background Rings */}
             <motion.div
               className="absolute w-64 h-64"
@@ -67,28 +67,28 @@ export default function Home() {
               <div className="w-full h-full rounded-full border-2 border-primary"></div>
             </motion.div>
 
-            {/* Logo */}
+            {/* Unlock Concept Placeholder */}
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative z-10"
+              className="relative z-0"
             >
-              <Image 
-                src="/logo.png" 
-                alt="FactrAI Logo" 
-                width={120} 
-                height={120}
-                className="object-contain"
-              />
+              <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-300">
+                <div className="text-center">
+                  <div className="text-5xl mb-2">🔓</div>
+                  <div className="text-xs text-gray-500 font-mono font-bold">UNLOCK CONCEPT</div>
+                </div>
+              </div>
             </motion.div>
           </div>
 
-          {/* Main Heading with stagger animation */}
+          {/* Main Heading with stagger animation - in front with higher z-index */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
+            className="relative z-10"
           >
             <Heading level="h1" className="mb-6">
               The Universal Key to Premium Journalism
