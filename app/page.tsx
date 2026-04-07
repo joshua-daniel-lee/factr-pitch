@@ -19,11 +19,28 @@ export default function Home() {
       {/* Slide 1: Hero */}
       <Slide id="hero" background="white">
         <Container className="text-center h-full flex flex-col items-center justify-center">
+          {/* Hero Image - Unlock Concept */}
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-8"
+          >
+            <Image 
+              src="/hero-image.svg" 
+              alt="Universal Key to Premium Journalism" 
+              width={350} 
+              height={191}
+              className="object-contain"
+              priority
+            />
+          </motion.div>
+
           {/* Main Heading with stagger animation */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Heading level="h1" className="mb-6">
               The Universal Key to Premium Journalism
@@ -34,7 +51,7 @@ export default function Home() {
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className="mb-12"
           >
             <Text variant="lead" className="max-w-3xl mx-auto text-gray-600">
@@ -46,7 +63,7 @@ export default function Home() {
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             className="flex gap-4 justify-center flex-wrap"
           >
             <Button variant="primary" size="lg">Explore the Opportunity</Button>
@@ -57,7 +74,7 @@ export default function Home() {
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
             className="mt-8"
           >
             <Text variant="body" className="text-gray-500 max-w-2xl mx-auto text-sm">
