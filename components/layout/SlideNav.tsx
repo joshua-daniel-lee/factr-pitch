@@ -64,89 +64,62 @@ export default function SlideNav() {
 
   return (
     <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center space-y-2">
-      {/* Up Arrow with pulse rings */}
+      {/* Up Arrow */}
       {hasPrev && (
-        <div className="relative">
-          {/* Orange pulse rings - filled and subtle */}
-          <motion.div
-            className="absolute inset-0 rounded-full bg-accent/20"
-            animate={{
-              scale: [1, 1.8],
-              opacity: [0.4, 0],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeOut",
-            }}
-          />
-          <motion.div
-            className="absolute inset-0 rounded-full bg-accent/15"
-            animate={{
-              scale: [1, 2.2],
-              opacity: [0.3, 0],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeOut",
-              delay: 1,
-            }}
-          />
-          
-          <motion.button
-            onClick={() => scrollToSection(activeIndex - 1)}
-            className="relative p-3 rounded-full bg-accent/40 backdrop-blur-sm hover:bg-accent/60 transition-all"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Previous section"
-          >
-            <ChevronUp className="w-6 h-6 text-white" />
-          </motion.button>
-        </div>
+        <motion.button
+          onClick={() => scrollToSection(activeIndex - 1)}
+          className="p-3 rounded-full bg-accent/40 backdrop-blur-sm hover:bg-accent/60 transition-all shadow-glow-accent"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          animate={{
+            boxShadow: [
+              "0 0 24px rgb(247 112 36 / 0.15), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 40px rgb(247 112 36 / 0.3), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 24px rgb(247 112 36 / 0.15), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+            ],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          aria-label="Previous section"
+        >
+          <ChevronUp className="w-6 h-6 text-white" />
+        </motion.button>
       )}
 
-      {/* Down Arrow with bounce and pulse rings */}
+      {/* Down Arrow with bounce animation */}
       {hasNext && (
-        <div className="relative">
-          {/* Cyan pulse rings - filled and subtle */}
-          <motion.div
-            className="absolute inset-0 rounded-full bg-primary/20"
-            animate={{
-              scale: [1, 1.8],
-              opacity: [0.4, 0],
-            }}
-            transition={{
+        <motion.button
+          onClick={() => scrollToSection(activeIndex + 1)}
+          className="p-3 rounded-full bg-primary/80 backdrop-blur-sm hover:bg-primary transition-all shadow-glow-primary"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          animate={{
+            y: [0, -10, 0],
+            boxShadow: [
+              "0 0 24px rgb(6 192 215 / 0.15), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 40px rgb(6 192 215 / 0.3), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 24px rgb(6 192 215 / 0.15), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+            ],
+          }}
+          transition={{
+            y: {
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            },
+            boxShadow: {
               duration: 3,
               repeat: Infinity,
-              ease: "easeOut",
-            }}
-          />
-          <motion.div
-            className="absolute inset-0 rounded-full bg-primary/15"
-            animate={{
-              scale: [1, 2.2],
-              opacity: [0.3, 0],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeOut",
-              delay: 1,
-            }}
-          />
-          
-          <motion.button
-            onClick={() => scrollToSection(activeIndex + 1)}
-            className="relative p-3 rounded-full bg-primary/80 backdrop-blur-sm hover:bg-primary transition-all shadow-glow-primary"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            animate={bounceAnimation}
-            aria-label="Next section"
-          >
-            <ChevronDown className="w-6 h-6 text-white" />
-          </motion.button>
-        </div>
+              ease: "easeInOut",
+            },
+          }}
+          aria-label="Next section"
+        >
+          <ChevronDown className="w-6 h-6 text-white" />
+        </motion.button>
       )}
     </div>
   );
