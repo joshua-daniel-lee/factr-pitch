@@ -99,9 +99,9 @@ export default function SlideNav() {
           animate={{
             y: [0, -10, 0],
             boxShadow: [
-              "0 0 24px rgb(6 192 215 / 0.4), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
-              "0 0 40px rgb(6 192 215 / 0.6), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
-              "0 0 24px rgb(6 192 215 / 0.4), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 24px rgb(6 192 215 / 0.6), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 40px rgb(6 192 215 / 0.8), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
+              "0 0 24px rgb(6 192 215 / 0.6), 0 4px 12px -2px rgb(0 0 0 / 0.05)",
             ],
           }}
           transition={{
