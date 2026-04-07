@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { TrendingDown, MousePointerClick, DollarSign, UserX } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -11,33 +10,19 @@ import Container from '@/components/ui/Container';
 import Heading from '@/components/ui/Heading';
 import Text from '@/components/ui/Text';
 import Button from '@/components/ui/Button';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
 
-// Animated Counter Component
-function AnimatedCounter({ value, suffix = '', prefix = '' }: { value: number; suffix?: string; prefix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const motionValue = useMotionValue(0);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  useEffect(() => {
-    if (isInView) {
-      const controls = animate(motionValue, value, {
-        duration: 2,
-        ease: 'easeOut',
-      });
-      return controls.stop;
-    }
-  }, [isInView, motionValue, value]);
-
-  return (
-    <span ref={ref}>
-      {prefix}
-      <motion.span>
-        {useTransform(motionValue, (latest) => Math.round(latest).toLocaleString())}
-      </motion.span>
-      {suffix}
-    </span>
-  );
-}
+// Publisher logos constant
+const PUBLISHER_LOGOS = [
+  'nyt-logo.png',
+  'wsj-logo.png',
+  'ft-logo.png',
+  'economist-logo.png',
+  'bloomberg-logo.png',
+  'atlantic-logo.png',
+  'wapo-logo.png',
+  'reuters-logo.png',
+];
 
 export default function Home() {
   return (
@@ -79,8 +64,9 @@ export default function Home() {
               alt="Universal Key to Premium Journalism" 
               width={350} 
               height={191}
-              className="object-contain"
+              className="object-contain w-full max-w-[280px] sm:max-w-[350px]"
               priority
+              sizes="(max-width: 640px) 280px, 350px"
             />
           </motion.div>
 
@@ -158,70 +144,46 @@ export default function Home() {
                   }}
                 >
                   {/* First set of logos */}
-                  {[
-                    'nyt-logo.png',
-                    'wsj-logo.png',
-                    'ft-logo.png',
-                    'economist-logo.png',
-                    'bloomberg-logo.png',
-                    'atlantic-logo.png',
-                    'wapo-logo.png',
-                    'reuters-logo.png',
-                  ].map((logo, index) => (
+                  {PUBLISHER_LOGOS.map((logo, index) => (
                     <div
                       key={`logo-1-${index}`}
-                      className="flex-shrink-0 w-32 h-16 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      className="flex-shrink-0 w-24 sm:w-32 h-12 sm:h-16 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                     >
                       <Image
                         src={`/publishers/${logo}`}
                         alt={logo.replace('-logo.png', '')}
                         fill
+                        sizes="(max-width: 640px) 96px, 128px"
                         className="object-contain"
                       />
                     </div>
                   ))}
                   {/* Second set for seamless loop */}
-                  {[
-                    'nyt-logo.png',
-                    'wsj-logo.png',
-                    'ft-logo.png',
-                    'economist-logo.png',
-                    'bloomberg-logo.png',
-                    'atlantic-logo.png',
-                    'wapo-logo.png',
-                    'reuters-logo.png',
-                  ].map((logo, index) => (
+                  {PUBLISHER_LOGOS.map((logo, index) => (
                     <div
                       key={`logo-2-${index}`}
-                      className="flex-shrink-0 w-32 h-16 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      className="flex-shrink-0 w-24 sm:w-32 h-12 sm:h-16 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                     >
                       <Image
                         src={`/publishers/${logo}`}
                         alt={logo.replace('-logo.png', '')}
                         fill
+                        sizes="(max-width: 640px) 96px, 128px"
                         className="object-contain"
                       />
                     </div>
                   ))}
                   {/* Third set for extra coverage */}
-                  {[
-                    'nyt-logo.png',
-                    'wsj-logo.png',
-                    'ft-logo.png',
-                    'economist-logo.png',
-                    'bloomberg-logo.png',
-                    'atlantic-logo.png',
-                    'wapo-logo.png',
-                    'reuters-logo.png',
-                  ].map((logo, index) => (
+                  {PUBLISHER_LOGOS.map((logo, index) => (
                     <div
                       key={`logo-3-${index}`}
-                      className="flex-shrink-0 w-32 h-16 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                      className="flex-shrink-0 w-24 sm:w-32 h-12 sm:h-16 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                     >
                       <Image
                         src={`/publishers/${logo}`}
                         alt={logo.replace('-logo.png', '')}
                         fill
+                        sizes="(max-width: 640px) 96px, 128px"
                         className="object-contain"
                       />
                     </div>
@@ -273,7 +235,7 @@ export default function Home() {
             </div>
 
             {/* Right Column: 2x2 Grid of Stat Cards */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Card 1: Traffic Decline */}
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
