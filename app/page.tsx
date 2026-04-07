@@ -46,7 +46,7 @@ export default function Home() {
             className="mb-8 relative perspective-1000"
             style={{ transformStyle: "preserve-3d" }}
           >
-            {/* Shimmer effect overlay */}
+            {/* Shimmer effect overlay - brand colored */}
             <motion.div
               className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none"
               initial={{ opacity: 0 }}
@@ -56,16 +56,17 @@ export default function Home() {
               <motion.div
                 className="absolute inset-0 w-full h-full"
                 style={{
-                  background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)",
-                  transform: "skewX(-20deg)"
+                  background: "linear-gradient(90deg, transparent 0%, rgba(6,192,215,0.5) 45%, rgba(247,112,36,0.5) 55%, transparent 100%)",
+                  transform: "skewX(-20deg)",
+                  filter: "blur(2px)"
                 }}
                 animate={{ 
                   x: ["-150%", "250%"] 
                 }}
                 transition={{ 
-                  duration: 3, 
+                  duration: 2.5, 
                   repeat: Infinity, 
-                  repeatDelay: 4,
+                  repeatDelay: 3,
                   ease: "easeInOut"
                 }}
               />
