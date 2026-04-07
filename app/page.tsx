@@ -46,31 +46,40 @@ export default function Home() {
             className="mb-8 relative perspective-1000"
             style={{ transformStyle: "preserve-3d" }}
           >
-            {/* Shimmer effect overlay - brand colored */}
+            {/* Glowing rings - cyan */}
             <motion.div
-              className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5 }}
-            >
-              <motion.div
-                className="absolute inset-0 w-full h-full"
-                style={{
-                  background: "linear-gradient(90deg, transparent 0%, rgba(6,192,215,0.5) 45%, rgba(247,112,36,0.5) 55%, transparent 100%)",
-                  transform: "skewX(-20deg)",
-                  filter: "blur(2px)"
-                }}
-                animate={{ 
-                  x: ["-150%", "250%"] 
-                }}
-                transition={{ 
-                  duration: 2.5, 
-                  repeat: Infinity, 
-                  repeatDelay: 3,
-                  ease: "easeInOut"
-                }}
-              />
-            </motion.div>
+              className="absolute inset-0 rounded-lg pointer-events-none"
+              animate={{
+                boxShadow: [
+                  "0 0 20px rgba(6,192,215,0.3)",
+                  "0 0 50px rgba(6,192,215,0.6)",
+                  "0 0 20px rgba(6,192,215,0.3)"
+                ]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            
+            {/* Glowing rings - orange (offset) */}
+            <motion.div
+              className="absolute inset-0 rounded-lg pointer-events-none"
+              animate={{
+                boxShadow: [
+                  "0 0 20px rgba(247,112,36,0.2)",
+                  "0 0 50px rgba(247,112,36,0.5)",
+                  "0 0 20px rgba(247,112,36,0.2)"
+                ]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1.5
+              }}
+            />
             
             <Image 
               src="/hero-image.svg" 
