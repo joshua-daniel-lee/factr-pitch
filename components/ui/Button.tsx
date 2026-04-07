@@ -35,7 +35,7 @@ export default function Button({
     accent: 'bg-accent text-white hover:brightness-110',
     dark: 'bg-bunting text-white hover:bg-opacity-90',
     outline: 'bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white',
-    gradient: 'bg-gradient-primary text-white hover:brightness-110'
+    gradient: 'gradient-primary text-white hover:brightness-110'
   };
 
   const combinedStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
