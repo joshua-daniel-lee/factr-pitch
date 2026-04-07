@@ -46,12 +46,22 @@ export default function Home() {
             className="mb-8 relative perspective-1000"
             style={{ transformStyle: "preserve-3d" }}
           >
-            {/* White shimmer effect */}
+            {/* White shimmer effect - masked to SVG shape */}
             <motion.div
-              className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none"
+              className="absolute inset-0 overflow-hidden pointer-events-none"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5 }}
+              style={{
+                WebkitMaskImage: "url(/hero-image.svg)",
+                maskImage: "url(/hero-image.svg)",
+                WebkitMaskSize: "contain",
+                maskSize: "contain",
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+                WebkitMaskPosition: "center",
+                maskPosition: "center"
+              }}
             >
               <motion.div
                 className="absolute inset-0 w-full h-full"
