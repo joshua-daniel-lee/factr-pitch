@@ -135,6 +135,82 @@ export default function Home() {
       {/* Slide 2: Executive Summary - Side by Side Layout */}
       <Slide id="summary" background="white">
         <Container size="xl">
+          {/* Publisher Logos Carousel */}
+          <div className="mb-12 overflow-hidden">
+            <Text variant="small" className="text-center text-gray-500 mb-4">
+              Publishers in our network
+            </Text>
+            <div className="relative">
+              {/* Gradient overlays for fade effect */}
+              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+              
+              {/* Scrolling container */}
+              <div className="flex gap-12 items-center">
+                <motion.div
+                  className="flex gap-12 items-center"
+                  animate={{
+                    x: [0, -1920], // Move left (8 logos * 240px per logo)
+                  }}
+                  transition={{
+                    x: {
+                      duration: 30,
+                      repeat: Infinity,
+                      ease: "linear",
+                    },
+                  }}
+                >
+                  {/* First set of logos */}
+                  {[
+                    'nyt-logo.png',
+                    'wsj-logo.png',
+                    'ft-logo.png',
+                    'economist-logo.png',
+                    'bloomberg-logo.png',
+                    'atlantic-logo.png',
+                    'wapo-logo.png',
+                    'reuters-logo.png',
+                  ].map((logo, index) => (
+                    <div
+                      key={`logo-1-${index}`}
+                      className="flex-shrink-0 w-32 h-16 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    >
+                      <Image
+                        src={`/publishers/${logo}`}
+                        alt={logo.replace('-logo.png', '')}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  ))}
+                  {/* Duplicate set for seamless loop */}
+                  {[
+                    'nyt-logo.png',
+                    'wsj-logo.png',
+                    'ft-logo.png',
+                    'economist-logo.png',
+                    'bloomberg-logo.png',
+                    'atlantic-logo.png',
+                    'wapo-logo.png',
+                    'reuters-logo.png',
+                  ].map((logo, index) => (
+                    <div
+                      key={`logo-2-${index}`}
+                      className="flex-shrink-0 w-32 h-16 relative grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    >
+                      <Image
+                        src={`/publishers/${logo}`}
+                        alt={logo.replace('-logo.png', '')}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column: Content */}
             <div className="space-y-6">
