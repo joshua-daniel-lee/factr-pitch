@@ -19,7 +19,7 @@ export default function Home() {
       {/* Slide 1: Hero */}
       <Slide id="hero" background="white">
         <Container className="text-center h-full flex flex-col items-center justify-center">
-          {/* Hero Image - Unlock Concept with Animations */}
+          {/* Hero Image - Unlock Concept with Float Animation */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ 
@@ -43,90 +43,14 @@ export default function Home() {
               scale: 1.05,
               transition: { duration: 0.3 }
             }}
-            className="mb-8 relative perspective-1000"
-            style={{ transformStyle: "preserve-3d" }}
+            className="mb-8"
           >
-            {/* Noisy glowing rings - Layer 1: Cyan, fast */}
-            <motion.div
-              className="absolute inset-0 rounded-lg pointer-events-none"
-              style={{ filter: "blur(4px)" }}
-              animate={{
-                boxShadow: [
-                  "0 0 15px rgba(6,192,215,0.2)",
-                  "0 0 40px rgba(6,192,215,0.5)",
-                  "0 0 15px rgba(6,192,215,0.2)"
-                ]
-              }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            
-            {/* Layer 2: Orange, medium */}
-            <motion.div
-              className="absolute inset-0 rounded-lg pointer-events-none"
-              style={{ filter: "blur(6px)" }}
-              animate={{
-                boxShadow: [
-                  "0 0 20px rgba(247,112,36,0.15)",
-                  "0 0 50px rgba(247,112,36,0.45)",
-                  "0 0 20px rgba(247,112,36,0.15)"
-                ]
-              }}
-              transition={{ 
-                duration: 3.5, 
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5
-              }}
-            />
-            
-            {/* Layer 3: Cyan, slow */}
-            <motion.div
-              className="absolute inset-0 rounded-lg pointer-events-none"
-              style={{ filter: "blur(8px)" }}
-              animate={{
-                boxShadow: [
-                  "0 0 25px rgba(6,192,215,0.1)",
-                  "0 0 60px rgba(6,192,215,0.4)",
-                  "0 0 25px rgba(6,192,215,0.1)"
-                ]
-              }}
-              transition={{ 
-                duration: 5, 
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
-            />
-            
-            {/* Layer 4: Orange, very slow */}
-            <motion.div
-              className="absolute inset-0 rounded-lg pointer-events-none"
-              style={{ filter: "blur(10px)" }}
-              animate={{
-                boxShadow: [
-                  "0 0 30px rgba(247,112,36,0.1)",
-                  "0 0 70px rgba(247,112,36,0.35)",
-                  "0 0 30px rgba(247,112,36,0.1)"
-                ]
-              }}
-              transition={{ 
-                duration: 6.5, 
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1.8
-              }}
-            />
-            
             <Image 
               src="/hero-image.svg" 
               alt="Universal Key to Premium Journalism" 
               width={350} 
               height={191}
-              className="object-contain relative z-10"
+              className="object-contain"
               priority
             />
           </motion.div>
