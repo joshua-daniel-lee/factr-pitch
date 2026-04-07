@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { TrendingDown, MousePointerClick, DollarSign, UserX } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -10,6 +11,33 @@ import Container from '@/components/ui/Container';
 import Heading from '@/components/ui/Heading';
 import Text from '@/components/ui/Text';
 import Button from '@/components/ui/Button';
+
+// Animated Counter Component
+function AnimatedCounter({ value, suffix = '', prefix = '' }: { value: number; suffix?: string; prefix?: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const motionValue = useMotionValue(0);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(motionValue, value, {
+        duration: 2,
+        ease: 'easeOut',
+      });
+      return controls.stop;
+    }
+  }, [isInView, motionValue, value]);
+
+  return (
+    <span ref={ref}>
+      {prefix}
+      <motion.span>
+        {useTransform(motionValue, (latest) => Math.round(latest).toLocaleString())}
+      </motion.span>
+      {suffix}
+    </span>
+  );
+}
 
 export default function Home() {
   return (
@@ -116,7 +144,7 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Heading level="h2" className="text-left mb-4">
+                <Heading level="h2" className="text-left mb-4 gradient-text">
                   The Subscription Trap
                 </Heading>
                 <Text variant="lead" className="text-gray-700 text-left">
@@ -165,10 +193,16 @@ export default function Home() {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                style={{
+                  background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(6,192,215,0.3), rgba(6,192,215,0.1)) border-box',
+                  border: '2px solid transparent'
+                }}
               >
                 <TrendingDown className="w-8 h-8 text-cyan-600 mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">38%<sup className="text-xs">1</sup></div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">
+                  <AnimatedCounter value={38} suffix="%" /><sup className="text-xs">1</sup>
+                </div>
                 <div className="text-sm font-medium text-gray-700 mb-1">Traffic Decline</div>
                 <div className="text-xs text-gray-500">Since late 2024</div>
               </motion.div>
@@ -179,10 +213,16 @@ export default function Home() {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                style={{
+                  background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(247,112,36,0.3), rgba(247,112,36,0.1)) border-box',
+                  border: '2px solid transparent'
+                }}
               >
                 <MousePointerClick className="w-8 h-8 text-orange-600 mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">69%<sup className="text-xs">2</sup></div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">
+                  <AnimatedCounter value={69} suffix="%" /><sup className="text-xs">2</sup>
+                </div>
                 <div className="text-sm font-medium text-gray-700 mb-1">Zero-Click</div>
                 <div className="text-xs text-gray-500">In 2025</div>
               </motion.div>
@@ -193,10 +233,16 @@ export default function Home() {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                style={{
+                  background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(6,192,215,0.3), rgba(6,192,215,0.1)) border-box',
+                  border: '2px solid transparent'
+                }}
               >
                 <DollarSign className="w-8 h-8 text-cyan-600 mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">$2B<sup className="text-xs">3</sup></div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">
+                  <AnimatedCounter value={2} prefix="$" suffix="B" /><sup className="text-xs">3</sup>
+                </div>
                 <div className="text-sm font-medium text-gray-700 mb-1">Revenue Loss</div>
                 <div className="text-xs text-gray-500">Annual advertising</div>
               </motion.div>
@@ -207,10 +253,16 @@ export default function Home() {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                style={{
+                  background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(247,112,36,0.3), rgba(247,112,36,0.1)) border-box',
+                  border: '2px solid transparent'
+                }}
               >
                 <UserX className="w-8 h-8 text-orange-600 mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">95%<sup className="text-xs">5</sup></div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">
+                  <AnimatedCounter value={95} suffix="%" /><sup className="text-xs">5</sup>
+                </div>
                 <div className="text-sm font-medium text-gray-700 mb-1">Bounce Rate</div>
                 <div className="text-xs text-gray-500">Non-subscribers leave</div>
               </motion.div>
