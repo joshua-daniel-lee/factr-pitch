@@ -29,12 +29,12 @@ export default function SlideNav({ prevSection, nextSection }: SlideNavProps) {
       {prevSection && (
         <motion.button
           onClick={() => scrollToSection(prevSection)}
-          className="p-3 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/30 hover:bg-primary/20 transition-all"
+          className="p-3 rounded-full bg-accent/80 backdrop-blur-sm hover:bg-accent transition-all shadow-glow-accent"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           aria-label="Previous section"
         >
-          <ChevronUp className="w-6 h-6 text-primary" />
+          <ChevronUp className="w-6 h-6 text-white" />
         </motion.button>
       )}
 
