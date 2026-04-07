@@ -14,6 +14,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <SlideNav />
       
       {/* Slide 1: Hero */}
       <Slide id="hero" background="white">
@@ -80,7 +81,6 @@ export default function Home() {
             </Text>
           </motion.div>
         </Container>
-        <SlideNav nextSection="summary" />
       </Slide>
 
       {/* Slide 2: Executive Summary */}
@@ -98,7 +98,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="hero" nextSection="problem" />
       </Slide>
 
       {/* Slide 3: The Problem */}
@@ -116,7 +115,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="summary" nextSection="customers" />
       </Slide>
 
       {/* Slide 4: Customer Landscape */}
@@ -134,7 +132,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="problem" nextSection="solution" />
       </Slide>
 
       {/* Slide 5: The Solution */}
@@ -152,7 +149,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="customers" nextSection="how-it-works" />
       </Slide>
 
       {/* Slide 6: How It Works */}
@@ -170,7 +166,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="solution" nextSection="technology" />
       </Slide>
 
       {/* Slide 7: Technology */}
@@ -188,7 +183,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="how-it-works" nextSection="business" />
       </Slide>
 
       {/* Slide 8: Business Model */}
@@ -206,7 +200,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="technology" nextSection="market" />
       </Slide>
 
       {/* Slide 9: Market Opportunity */}
@@ -224,7 +217,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="business" nextSection="financials" />
       </Slide>
 
       {/* Slide 10: Financial Model */}
@@ -242,7 +234,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="market" nextSection="investment" />
       </Slide>
 
       {/* Slide 11: The Investment */}
@@ -260,7 +251,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="financials" nextSection="moat" />
       </Slide>
 
       {/* Slide 12: Strategic Moat */}
@@ -278,7 +268,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="investment" nextSection="vision" />
       </Slide>
 
       {/* Slide 13: Vision & Impact */}
@@ -296,7 +285,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="moat" nextSection="capstone" />
       </Slide>
 
       {/* Slide 14: Georgetown Capstone */}
@@ -314,7 +302,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="vision" nextSection="contact" />
       </Slide>
 
       {/* Slide 15: Contact */}
@@ -336,7 +323,6 @@ export default function Home() {
             </Text>
           </div>
         </Container>
-        <SlideNav prevSection="capstone" />
       </Slide>
     </>
   );

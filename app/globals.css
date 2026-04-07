@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #334155;
+}
+
+@theme inline {
+  /* FactrAI Brand Colors - Original Palette */
+  --color-primary: #06c0d7;      /* Cyan/Turquoise */
+  --color-accent: #f77024;       /* Orange */
+  --color-blue-chill: #117297;   /* Deep Blue */
+  --color-bunting: #1b2356;      /* Navy Blue */
+  --color-ironstone: #894a3d;    /* Brown/Rust */
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Fonts */
+  --font-inter: var(--font-inter);
+  --font-newsreader: var(--font-newsreader);
+  --font-roboto: var(--font-roboto);
+  
+  /* Custom Shadows - Softer, More Subtle */
+  --shadow-glow-primary: 0 0 24px rgb(6 192 215 / 0.15), 0 4px 12px -2px rgb(0 0 0 / 0.05);
+  --shadow-glow-accent: 0 0 24px rgb(247 112 36 / 0.15), 0 4px 12px -2px rgb(0 0 0 / 0.05);
+  --shadow-soft: 0 1px 3px rgb(0 0 0 / 0.02), 0 2px 6px rgb(0 0 0 / 0.03), 0 4px 12px rgb(0 0 0 / 0.04);
+  --shadow-elevated: 0 2px 8px rgb(0 0 0 / 0.04), 0 6px 20px rgb(0 0 0 / 0.06), 0 12px 32px rgb(0 0 0 / 0.08);
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-roboto), sans-serif;
+}
+
+/* Custom CSS Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Utility Classes - FactrAI Gradients */
+.gradient-animated {
+  background: linear-gradient(-45deg, #06c0d7, #117297, #1b2356, #f77024);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, #06c0d7 0%, #117297 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #f77024 0%, #894a3d 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #06c0d7, #f77024);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(27, 35, 86, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.button-hover {
+  transition: all 0.3s ease;
+}
+
+.button-hover:hover {
+  transform: scale(1.02);
+  filter: brightness(110%);
+}
+
+.button-hover:active {
+  transform: scale(0.98);
+}
+
+/* Scroll-triggered animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Focus styles */
+.focus-glow:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(6, 192, 215, 0.2);
+  border-color: #06c0d7;
+}

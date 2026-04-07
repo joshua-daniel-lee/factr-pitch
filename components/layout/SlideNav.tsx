@@ -1,16 +1,52 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 
-interface SlideNavProps {
-  prevSection?: string;
-  nextSection?: string;
-}
+const sections = [
+  'hero',
+  'summary',
+  'problem',
+  'customers',
+  'solution',
+  'how-it-works',
+  'technology',
+  'business',
+  'market',
+  'financials',
+  'investment',
+  'moat',
+  'vision',
+  'capstone',
+  'contact'
+];
 
-export default function SlideNav({ prevSection, nextSection }: SlideNavProps) {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
+export default function SlideNav() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionElements = sections.map(id => document.getElementById(id));
+      const currentSection = sectionElements.findIndex(el => {
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        return rect.top >= -100 && rect.top <= 100;
+      });
+
+      if (currentSection !== -1) {
+        setActiveIndex(currentSection);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (index: number) => {
+    const element = document.getElementById(sections[index]);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -23,12 +59,15 @@ export default function SlideNav({ prevSection, nextSection }: SlideNavProps) {
     }
   };
 
+  const hasPrev = activeIndex > 0;
+  const hasNext = activeIndex < sections.length - 1;
+
   return (
     <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center space-y-2">
       {/* Up Arrow */}
-      {prevSection && (
+      {hasPrev && (
         <motion.button
-          onClick={() => scrollToSection(prevSection)}
+          onClick={() => scrollToSection(activeIndex - 1)}
           className="p-3 rounded-full bg-accent/80 backdrop-blur-sm hover:bg-accent transition-all shadow-glow-accent"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
@@ -39,9 +78,9 @@ export default function SlideNav({ prevSection, nextSection }: SlideNavProps) {
       )}
 
       {/* Down Arrow with bounce animation */}
-      {nextSection && (
+      {hasNext && (
         <motion.button
-          onClick={() => scrollToSection(nextSection)}
+          onClick={() => scrollToSection(activeIndex + 1)}
           className="p-3 rounded-full bg-primary/80 backdrop-blur-sm hover:bg-primary transition-all shadow-glow-primary"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
