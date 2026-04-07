@@ -45,27 +45,15 @@ export default function Home() {
             </Heading>
           </motion.div>
 
-          {/* Lead Text */}
+          {/* Tagline */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mb-4"
+            className="mb-12"
           >
-            <Text variant="lead" className="max-w-3xl mx-auto">
-              Restoring the economic bridge between world-class journalism and the everyday consumer
-            </Text>
-          </motion.div>
-
-          {/* Subtext */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="mb-8"
-          >
-            <Text variant="body" className="text-gray-600 max-w-2xl mx-auto">
-              A solution to the $2B Subscription Trap plaguing digital publishers and knowledge workers
+            <Text variant="lead" className="max-w-3xl mx-auto text-gray-600">
+              Premium Insights, Minus the Paywalls
             </Text>
           </motion.div>
 
@@ -73,25 +61,11 @@ export default function Home() {
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
             className="flex gap-4 justify-center flex-wrap"
           >
             <Button variant="primary" size="lg">Explore the Opportunity</Button>
             <Button variant="outline" size="lg">View Financials</Button>
-          </motion.div>
-
-          {/* Optional: Floating badge */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="mt-12"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <Text variant="small" className="text-primary font-medium">
-                95% of paywall traffic currently lost
-              </Text>
-            </div>
           </motion.div>
         </Container>
         <SlideNav nextSection="summary" />
