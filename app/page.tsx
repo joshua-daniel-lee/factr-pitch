@@ -19,19 +19,64 @@ export default function Home() {
       {/* Slide 1: Hero */}
       <Slide id="hero" background="white">
         <Container className="text-center h-full flex flex-col items-center justify-center">
-          {/* Hero Image - Unlock Concept */}
+          {/* Hero Image - Unlock Concept with Animations */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-8"
+            animate={{ 
+              scale: 1, 
+              opacity: 1,
+              y: [0, -12, 0]
+            }}
+            transition={{ 
+              scale: { duration: 0.8, ease: "easeOut" },
+              opacity: { duration: 0.8, ease: "easeOut" },
+              y: { 
+                duration: 4, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 1
+              }
+            }}
+            whileHover={{ 
+              rotateY: 5, 
+              rotateX: -3,
+              scale: 1.05,
+              transition: { duration: 0.3 }
+            }}
+            className="mb-8 relative perspective-1000"
+            style={{ transformStyle: "preserve-3d" }}
           >
+            {/* Shimmer effect overlay */}
+            <motion.div
+              className="absolute inset-0 overflow-hidden rounded-lg pointer-events-none"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+            >
+              <motion.div
+                className="absolute inset-0 w-full h-full"
+                style={{
+                  background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)",
+                  transform: "skewX(-20deg)"
+                }}
+                animate={{ 
+                  x: ["-150%", "250%"] 
+                }}
+                transition={{ 
+                  duration: 3, 
+                  repeat: Infinity, 
+                  repeatDelay: 4,
+                  ease: "easeInOut"
+                }}
+              />
+            </motion.div>
+            
             <Image 
               src="/hero-image.svg" 
               alt="Universal Key to Premium Journalism" 
               width={350} 
               height={191}
-              className="object-contain"
+              className="object-contain relative z-10"
               priority
             />
           </motion.div>
