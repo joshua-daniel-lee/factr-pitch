@@ -67,30 +67,30 @@ export default function SlideNav() {
       {/* Up Arrow with pulse rings */}
       {hasPrev && (
         <div className="relative">
-          {/* Orange pulse rings */}
+          {/* Orange pulse rings - filled and subtle */}
           <motion.div
-            className="absolute inset-0 rounded-full border-2 border-accent"
+            className="absolute inset-0 rounded-full bg-accent/20"
             animate={{
-              scale: [1, 2],
-              opacity: [0.5, 0],
+              scale: [1, 1.8],
+              opacity: [0.4, 0],
             }}
             transition={{
-              duration: 2,
+              duration: 3,
               repeat: Infinity,
               ease: "easeOut",
             }}
           />
           <motion.div
-            className="absolute inset-0 rounded-full border-2 border-accent"
+            className="absolute inset-0 rounded-full bg-accent/15"
             animate={{
-              scale: [1, 2.5],
+              scale: [1, 2.2],
               opacity: [0.3, 0],
             }}
             transition={{
-              duration: 2,
+              duration: 3,
               repeat: Infinity,
               ease: "easeOut",
-              delay: 0.5,
+              delay: 1,
             }}
           />
           
@@ -109,30 +109,30 @@ export default function SlideNav() {
       {/* Down Arrow with bounce and pulse rings */}
       {hasNext && (
         <div className="relative">
-          {/* Cyan pulse rings */}
+          {/* Cyan pulse rings - filled and subtle */}
           <motion.div
-            className="absolute inset-0 rounded-full border-2 border-primary"
+            className="absolute inset-0 rounded-full bg-primary/20"
             animate={{
-              scale: [1, 2],
-              opacity: [0.5, 0],
+              scale: [1, 1.8],
+              opacity: [0.4, 0],
             }}
             transition={{
-              duration: 2,
+              duration: 3,
               repeat: Infinity,
               ease: "easeOut",
             }}
           />
           <motion.div
-            className="absolute inset-0 rounded-full border-2 border-primary"
+            className="absolute inset-0 rounded-full bg-primary/15"
             animate={{
-              scale: [1, 2.5],
+              scale: [1, 2.2],
               opacity: [0.3, 0],
             }}
             transition={{
-              duration: 2,
+              duration: 3,
               repeat: Infinity,
               ease: "easeOut",
-              delay: 0.5,
+              delay: 1,
             }}
           />
           
