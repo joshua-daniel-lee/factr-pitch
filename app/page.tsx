@@ -67,19 +67,20 @@ export default function Home() {
               <div className="w-full h-full rounded-full border-2 border-primary"></div>
             </motion.div>
 
-            {/* Unlock Concept Placeholder */}
+            {/* Unlock Concept Image */}
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="relative z-0"
             >
-              <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-300">
-                <div className="text-center">
-                  <div className="text-5xl mb-2">🔓</div>
-                  <div className="text-xs text-gray-500 font-mono font-bold">UNLOCK CONCEPT</div>
-                </div>
-              </div>
+              <Image 
+                src="/unlock-hero.svg.png" 
+                alt="Unlock Concept" 
+                width={128} 
+                height={128}
+                className="object-contain"
+              />
             </motion.div>
           </div>
 
