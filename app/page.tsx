@@ -66,8 +66,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex gap-4 justify-center flex-wrap"
           >
-            <Button variant="primary" size="lg">Explore the Opportunity</Button>
-            <Button variant="outline" size="lg">View Financials</Button>
+            <Button variant="primary" size="lg" className="w-64">Explore the Opportunity</Button>
+            <Button variant="outline" size="lg" className="w-64">View Financials</Button>
           </motion.div>
 
           {/* Subtext */}
@@ -77,7 +77,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 1.0 }}
             className="mt-8"
           >
-            <Text variant="body" className="text-gray-500 max-w-2xl mx-auto text-sm">
+            <Text variant="body" className="text-gray-500 max-w-4xl mx-auto text-sm">
               Restoring the economic bridge between world-class journalism and the everyday consumer
             </Text>
           </motion.div>
