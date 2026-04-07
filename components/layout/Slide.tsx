@@ -22,7 +22,7 @@ export default function Slide({ id, children, background = 'white', className = 
   return (
     <motion.section
       id={id}
-      className={`min-h-screen flex items-center justify-center snap-start ${backgroundStyles[background]} ${className}`}
+      className={`min-h-screen pt-20 flex items-center justify-center snap-start ${backgroundStyles[background]} ${className}`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: '-100px' }}
