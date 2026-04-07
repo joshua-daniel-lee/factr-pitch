@@ -19,20 +19,69 @@ export default function Home() {
       {/* Slide 1: Hero */}
       <Slide id="hero" background="white">
         <Container className="text-center h-full flex flex-col items-center justify-center">
-          {/* Animated Logo */}
+          {/* Animated Logo with Rings */}
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-8"
+            className="mb-8 relative"
           >
-            <Image 
-              src="/logo.png" 
-              alt="FactrAI Logo" 
-              width={120} 
-              height={120}
-              className="object-contain"
-            />
+            {/* Background Rings */}
+            <motion.div
+              className="absolute inset-0 -m-16"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.1, 0.3],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <div className="absolute inset-0 rounded-full border-2 border-primary/20"></div>
+            </motion.div>
+            <motion.div
+              className="absolute inset-0 -m-24"
+              animate={{
+                scale: [1, 1.3, 1],
+                opacity: [0.2, 0.05, 0.2],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5,
+              }}
+            >
+              <div className="absolute inset-0 rounded-full border-2 border-accent/15"></div>
+            </motion.div>
+            <motion.div
+              className="absolute inset-0 -m-32"
+              animate={{
+                scale: [1, 1.4, 1],
+                opacity: [0.15, 0.03, 0.15],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1,
+              }}
+            >
+              <div className="absolute inset-0 rounded-full border-2 border-primary/10"></div>
+            </motion.div>
+
+            {/* Logo */}
+            <div className="relative z-10">
+              <Image 
+                src="/logo.png" 
+                alt="FactrAI Logo" 
+                width={120} 
+                height={120}
+                className="object-contain"
+              />
+            </div>
           </motion.div>
 
           {/* Main Heading with stagger animation */}

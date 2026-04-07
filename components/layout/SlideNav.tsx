@@ -68,7 +68,7 @@ export default function SlideNav() {
       {hasPrev && (
         <motion.button
           onClick={() => scrollToSection(activeIndex - 1)}
-          className="p-3 rounded-full bg-accent/80 backdrop-blur-sm hover:bg-accent transition-all shadow-glow-accent"
+          className="p-3 rounded-full bg-accent/40 backdrop-blur-sm hover:bg-accent/60 transition-all"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           aria-label="Previous section"
