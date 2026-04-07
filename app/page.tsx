@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { TrendingDown, MousePointerClick, DollarSign, UserX } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Slide from '@/components/layout/Slide';
 import SlideNav from '@/components/layout/SlideNav';
@@ -103,92 +104,118 @@ export default function Home() {
         </Container>
       </Slide>
 
-      {/* Slide 2: Executive Summary */}
+      {/* Slide 2: Executive Summary - Side by Side Layout */}
       <Slide id="summary" background="white">
-        <Container className="text-center">
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <Heading level="h2" className="mb-6">
-              The Subscription Trap
-            </Heading>
-          </motion.div>
+        <Container size="xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column: Content */}
+            <div className="space-y-6">
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <Heading level="h2" className="text-left mb-4">
+                  The Subscription Trap
+                </Heading>
+                <Text variant="lead" className="text-gray-700 text-left">
+                  Digital publishers are trapped in a monetization bottleneck where rigid, high-cost subscriptions alienate 95% of high-intent readers
+                </Text>
+              </motion.div>
 
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <Text variant="lead" className="max-w-3xl mx-auto mb-8">
-              Digital publishers are trapped in a monetization bottleneck where rigid, high-cost subscriptions alienate 95% of high-intent readers
-            </Text>
-          </motion.div>
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-4"
+              >
+                <Text variant="body" className="text-gray-600 leading-relaxed text-left">
+                  While generative AI platforms simultaneously cannibalize direct traffic through automated summaries, this "Subscription Trap" prevents universal access for information workers and creates a systemic crisis.<sup className="text-xs">4</sup>
+                </Text>
+                <Text variant="body" className="text-gray-600 leading-relaxed text-left">
+                  U.S. search traffic to news publishers plummeted by 38%<sup className="text-xs">1</sup> since late 2024 due to AI-integrated search overviews. Zero-click searches surged to 69%<sup className="text-xs">2</sup> in 2025, resulting in an estimated $2 billion<sup className="text-xs">3</sup> annual advertising revenue loss for the sector.
+                </Text>
+              </motion.div>
 
-          {/* Key Metrics StatCards */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8"
-          >
-            <div className="bg-gradient-to-br from-cyan-50 to-white p-6 rounded-xl border border-cyan-100">
-              <div className="text-4xl font-bold text-cyan-600 mb-2">38%<sup className="text-sm">1</sup></div>
-              <div className="text-sm font-medium text-gray-700">Traffic Decline</div>
-              <div className="text-xs text-gray-500 mt-2">Since late 2024</div>
+              {/* Quote Callout */}
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <div className="relative pl-6 py-4 border-l-4 border-cyan-500 bg-gray-50/50">
+                  <Text variant="body" className="text-gray-700 italic text-left text-sm">
+                    "This prevents universal access for information workers and creates a systemic crisis as referral traffic vanishes in a zero-click ecosystem."
+                  </Text>
+                  <Text variant="small" className="text-gray-500 mt-2 text-left">
+                    — Digital Content Next, 2025<sup className="text-xs">4</sup>
+                  </Text>
+                </div>
+              </motion.div>
             </div>
-            
-            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-xl border border-orange-100">
-              <div className="text-4xl font-bold text-orange-600 mb-2">69%<sup className="text-sm">2</sup></div>
-              <div className="text-sm font-medium text-gray-700">Zero-Click Searches</div>
-              <div className="text-xs text-gray-500 mt-2">In 2025</div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-50 to-white p-6 rounded-xl border border-cyan-100">
-              <div className="text-4xl font-bold text-cyan-600 mb-2">$2B<sup className="text-sm">3</sup></div>
-              <div className="text-sm font-medium text-gray-700">Revenue Loss</div>
-              <div className="text-xs text-gray-500 mt-2">Annual advertising</div>
-            </div>
-          </motion.div>
 
-          {/* Body Text */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto mb-8"
-          >
-            <Text variant="body" className="text-gray-700 leading-relaxed">
-              While generative AI platforms simultaneously cannibalize direct traffic through automated summaries, this "Subscription Trap" prevents universal access for information workers and creates a systemic crisis.<sup className="text-xs">4</sup>
-            </Text>
-            <Text variant="body" className="text-gray-700 leading-relaxed mt-4">
-              U.S. search traffic to news publishers plummeted by 38%<sup className="text-xs">1</sup> since late 2024 due to AI-integrated search overviews. Zero-click searches surged to 69%<sup className="text-xs">2</sup> in 2025, resulting in an estimated $2 billion<sup className="text-xs">3</sup> annual advertising revenue loss for the sector.
-            </Text>
-          </motion.div>
+            {/* Right Column: 2x2 Grid of Stat Cards */}
+            <div className="grid grid-cols-2 gap-4">
+              {/* Card 1: Traffic Decline */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <TrendingDown className="w-8 h-8 text-cyan-600 mb-3" />
+                <div className="text-3xl font-bold text-gray-900 mb-1">38%<sup className="text-xs">1</sup></div>
+                <div className="text-sm font-medium text-gray-700 mb-1">Traffic Decline</div>
+                <div className="text-xs text-gray-500">Since late 2024</div>
+              </motion.div>
 
-          {/* Callout Box with Quote */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto"
-          >
-            <div className="relative p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border-l-4 border-cyan-500 shadow-sm">
-              <div className="absolute top-4 left-4 text-6xl text-cyan-200 font-serif">"</div>
-              <Text variant="body" className="text-gray-700 italic relative z-10 pl-8">
-                This prevents universal access for information workers and creates a systemic crisis as referral traffic vanishes in a zero-click ecosystem.
-              </Text>
-              <Text variant="small" className="text-gray-500 mt-4 text-right">
-                — Digital Content Next, 2025<sup className="text-xs">4</sup>
-              </Text>
+              {/* Card 2: Zero-Click */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <MousePointerClick className="w-8 h-8 text-orange-600 mb-3" />
+                <div className="text-3xl font-bold text-gray-900 mb-1">69%<sup className="text-xs">2</sup></div>
+                <div className="text-sm font-medium text-gray-700 mb-1">Zero-Click</div>
+                <div className="text-xs text-gray-500">In 2025</div>
+              </motion.div>
+
+              {/* Card 3: Revenue Loss */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <DollarSign className="w-8 h-8 text-cyan-600 mb-3" />
+                <div className="text-3xl font-bold text-gray-900 mb-1">$2B<sup className="text-xs">3</sup></div>
+                <div className="text-sm font-medium text-gray-700 mb-1">Revenue Loss</div>
+                <div className="text-xs text-gray-500">Annual advertising</div>
+              </motion.div>
+
+              {/* Card 4: Bounce Rate */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <UserX className="w-8 h-8 text-orange-600 mb-3" />
+                <div className="text-3xl font-bold text-gray-900 mb-1">95%<sup className="text-xs">5</sup></div>
+                <div className="text-sm font-medium text-gray-700 mb-1">Bounce Rate</div>
+                <div className="text-xs text-gray-500">Non-subscribers leave</div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
         </Container>
       </Slide>
 
