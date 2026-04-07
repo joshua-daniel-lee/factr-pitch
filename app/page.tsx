@@ -106,17 +106,89 @@ export default function Home() {
       {/* Slide 2: Executive Summary */}
       <Slide id="summary" background="white">
         <Container className="text-center">
-          <Heading level="h2" className="mb-6">
-            The Subscription Trap
-          </Heading>
-          <Text variant="lead" className="max-w-3xl mx-auto">
-            Digital publishers trapped in a monetization bottleneck
-          </Text>
-          <div className="mt-8 p-6 bg-gray-50 rounded-2xl max-w-2xl mx-auto">
-            <Text variant="body" className="text-gray-600">
-              Content coming soon...
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <Heading level="h2" className="mb-6">
+              The Subscription Trap
+            </Heading>
+          </motion.div>
+
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <Text variant="lead" className="max-w-3xl mx-auto mb-8">
+              Digital publishers are trapped in a monetization bottleneck where rigid, high-cost subscriptions alienate 95% of high-intent readers
             </Text>
-          </div>
+          </motion.div>
+
+          {/* Key Metrics StatCards */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8"
+          >
+            <div className="bg-gradient-to-br from-cyan-50 to-white p-6 rounded-xl border border-cyan-100">
+              <div className="text-4xl font-bold text-cyan-600 mb-2">38%<sup className="text-sm">1</sup></div>
+              <div className="text-sm font-medium text-gray-700">Traffic Decline</div>
+              <div className="text-xs text-gray-500 mt-2">Since late 2024</div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-orange-50 to-white p-6 rounded-xl border border-orange-100">
+              <div className="text-4xl font-bold text-orange-600 mb-2">69%<sup className="text-sm">2</sup></div>
+              <div className="text-sm font-medium text-gray-700">Zero-Click Searches</div>
+              <div className="text-xs text-gray-500 mt-2">In 2025</div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-cyan-50 to-white p-6 rounded-xl border border-cyan-100">
+              <div className="text-4xl font-bold text-cyan-600 mb-2">$2B<sup className="text-sm">3</sup></div>
+              <div className="text-sm font-medium text-gray-700">Revenue Loss</div>
+              <div className="text-xs text-gray-500 mt-2">Annual advertising</div>
+            </div>
+          </motion.div>
+
+          {/* Body Text */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto mb-8"
+          >
+            <Text variant="body" className="text-gray-700 leading-relaxed">
+              While generative AI platforms simultaneously cannibalize direct traffic through automated summaries, this "Subscription Trap" prevents universal access for information workers and creates a systemic crisis.<sup className="text-xs">4</sup>
+            </Text>
+            <Text variant="body" className="text-gray-700 leading-relaxed mt-4">
+              U.S. search traffic to news publishers plummeted by 38%<sup className="text-xs">1</sup> since late 2024 due to AI-integrated search overviews. Zero-click searches surged to 69%<sup className="text-xs">2</sup> in 2025, resulting in an estimated $2 billion<sup className="text-xs">3</sup> annual advertising revenue loss for the sector.
+            </Text>
+          </motion.div>
+
+          {/* Callout Box with Quote */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="relative p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border-l-4 border-cyan-500 shadow-sm">
+              <div className="absolute top-4 left-4 text-6xl text-cyan-200 font-serif">"</div>
+              <Text variant="body" className="text-gray-700 italic relative z-10 pl-8">
+                This prevents universal access for information workers and creates a systemic crisis as referral traffic vanishes in a zero-click ecosystem.
+              </Text>
+              <Text variant="small" className="text-gray-500 mt-4 text-right">
+                — Digital Content Next, 2025<sup className="text-xs">4</sup>
+              </Text>
+            </div>
+          </motion.div>
         </Container>
       </Slide>
 
