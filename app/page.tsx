@@ -120,18 +120,18 @@ export default function Home() {
 
       {/* Slide 2: Executive Summary - Side by Side Layout */}
       <Slide id="summary" background="white">
-        <Container size="xl">
+        <Container size="xl" className="overflow-x-hidden">
           {/* Publisher Logos Carousel */}
-          <div className="mb-12 overflow-hidden">
-            <div className="relative">
+          <div className="mb-12 overflow-hidden w-full">
+            <div className="relative w-full overflow-hidden">
               {/* Gradient overlays for fade effect */}
               <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
               <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
               
               {/* Scrolling container */}
-              <div className="flex gap-12 items-center">
+              <div className="flex gap-12 items-center overflow-hidden w-full">
                 <motion.div
-                  className="flex gap-12 items-center"
+                  className="flex gap-12 items-center min-w-max"
                   animate={{
                     x: [0, -1408], // 8 logos × (128px + 48px gap) = 1408px
                   }}
