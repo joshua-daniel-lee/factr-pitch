@@ -79,16 +79,19 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <Image 
-                src="/logo.png" 
-                alt="FactrAI Logo" 
-                width={40} 
-                height={40}
-                className="object-contain"
-              />
-              <div className="text-2xl font-inter font-bold gradient-text">
+            {/* Logo with Unlock Concept Placeholder */}
+            <div className="flex items-center relative">
+              {/* Unlock Concept Placeholder - Behind */}
+              <div className="absolute -left-4 top-1 w-20 h-20 z-0 opacity-30">
+                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center border-2 border-dashed border-gray-300">
+                  <div className="text-center">
+                    <div className="text-2xl mb-1">🔓</div>
+                    <div className="text-[8px] text-gray-500 font-mono">UNLOCK</div>
+                  </div>
+                </div>
+              </div>
+              {/* Text - In Front */}
+              <div className="text-2xl font-inter font-bold gradient-text relative z-10 pl-8">
                 FactrAI
               </div>
             </div>
