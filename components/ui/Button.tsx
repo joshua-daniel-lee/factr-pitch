@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
-type ButtonVariant = 'primary' | 'accent' | 'dark' | 'outline';
+type ButtonVariant = 'primary' | 'accent' | 'dark' | 'outline' | 'gradient';
 
 interface ButtonProps {
   variant?: ButtonVariant;
@@ -34,7 +34,8 @@ export default function Button({
     primary: 'bg-primary text-white hover:brightness-110',
     accent: 'bg-accent text-white hover:brightness-110',
     dark: 'bg-bunting text-white hover:bg-opacity-90',
-    outline: 'bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white'
+    outline: 'bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white',
+    gradient: 'bg-gradient-primary text-white hover:brightness-110'
   };
 
   const combinedStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

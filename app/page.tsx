@@ -66,7 +66,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex gap-4 justify-center flex-wrap"
           >
-            <Button variant="primary" size="lg" className="w-64">Explore the Opportunity</Button>
+            <Button variant="gradient" size="lg" className="w-64">Explore the Opportunity</Button>
             <Button variant="outline" size="lg" className="w-64">View Financials</Button>
           </motion.div>
 
