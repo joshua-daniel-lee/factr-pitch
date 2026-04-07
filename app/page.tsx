@@ -46,40 +46,80 @@ export default function Home() {
             className="mb-8 relative perspective-1000"
             style={{ transformStyle: "preserve-3d" }}
           >
-            {/* White shimmer effect - masked to SVG shape */}
+            {/* Noisy glowing rings - Layer 1: Cyan, fast */}
             <motion.div
-              className="absolute inset-0 overflow-hidden pointer-events-none"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5 }}
-              style={{
-                WebkitMaskImage: "url(/hero-image.svg)",
-                maskImage: "url(/hero-image.svg)",
-                WebkitMaskSize: "contain",
-                maskSize: "contain",
-                WebkitMaskRepeat: "no-repeat",
-                maskRepeat: "no-repeat",
-                WebkitMaskPosition: "center",
-                maskPosition: "center"
+              className="absolute inset-0 rounded-lg pointer-events-none"
+              style={{ filter: "blur(4px)" }}
+              animate={{
+                boxShadow: [
+                  "0 0 15px rgba(6,192,215,0.2)",
+                  "0 0 40px rgba(6,192,215,0.5)",
+                  "0 0 15px rgba(6,192,215,0.2)"
+                ]
               }}
-            >
-              <motion.div
-                className="absolute inset-0 w-full h-full"
-                style={{
-                  background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.6) 50%, transparent 100%)",
-                  transform: "skewX(-20deg)"
-                }}
-                animate={{ 
-                  x: ["-150%", "250%"] 
-                }}
-                transition={{ 
-                  duration: 2.5, 
-                  repeat: Infinity, 
-                  repeatDelay: 3,
-                  ease: "easeInOut"
-                }}
-              />
-            </motion.div>
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            
+            {/* Layer 2: Orange, medium */}
+            <motion.div
+              className="absolute inset-0 rounded-lg pointer-events-none"
+              style={{ filter: "blur(6px)" }}
+              animate={{
+                boxShadow: [
+                  "0 0 20px rgba(247,112,36,0.15)",
+                  "0 0 50px rgba(247,112,36,0.45)",
+                  "0 0 20px rgba(247,112,36,0.15)"
+                ]
+              }}
+              transition={{ 
+                duration: 3.5, 
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+            />
+            
+            {/* Layer 3: Cyan, slow */}
+            <motion.div
+              className="absolute inset-0 rounded-lg pointer-events-none"
+              style={{ filter: "blur(8px)" }}
+              animate={{
+                boxShadow: [
+                  "0 0 25px rgba(6,192,215,0.1)",
+                  "0 0 60px rgba(6,192,215,0.4)",
+                  "0 0 25px rgba(6,192,215,0.1)"
+                ]
+              }}
+              transition={{ 
+                duration: 5, 
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1
+              }}
+            />
+            
+            {/* Layer 4: Orange, very slow */}
+            <motion.div
+              className="absolute inset-0 rounded-lg pointer-events-none"
+              style={{ filter: "blur(10px)" }}
+              animate={{
+                boxShadow: [
+                  "0 0 30px rgba(247,112,36,0.1)",
+                  "0 0 70px rgba(247,112,36,0.35)",
+                  "0 0 30px rgba(247,112,36,0.1)"
+                ]
+              }}
+              transition={{ 
+                duration: 6.5, 
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1.8
+              }}
+            />
             
             <Image 
               src="/hero-image.svg" 
