@@ -461,7 +461,7 @@ export default function Home() {
 
       {/* Slide 6: How It Works */}
       <Slide id="how-it-works" background="white">
-        <Container size="xl">
+        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
             <motion.div
@@ -516,7 +516,7 @@ export default function Home() {
             >
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-cyan-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-orange-500 text-white font-bold text-xl mb-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl mb-4 mx-auto">
                   1
                 </div>
 
@@ -560,7 +560,7 @@ export default function Home() {
             >
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-purple-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-orange-500 text-white font-bold text-xl mb-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl mb-4 mx-auto">
                   2
                 </div>
 
@@ -604,7 +604,7 @@ export default function Home() {
             >
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-orange-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-orange-500 text-white font-bold text-xl mb-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl mb-4 mx-auto">
                   3
                 </div>
 
@@ -641,7 +641,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-        </Container>
+        </div>
       </Slide>
 
       {/* Slide 6: Technology */}
