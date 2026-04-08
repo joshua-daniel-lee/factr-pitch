@@ -484,8 +484,9 @@ export default function Home() {
             
             {/* Angular Data Flow Connector - SVG Path */}
             <svg 
+              viewBox="0 0 1000 400"
               className="hidden md:block absolute inset-0 pointer-events-none z-15 w-full h-full"
-              style={{ overflow: 'visible' }}
+              preserveAspectRatio="none"
             >
               <defs>
                 {/* Gradient for the line */}
@@ -519,7 +520,7 @@ export default function Home() {
               
               {/* Main path with hard angles connecting images */}
               <motion.path
-                d="M 16.66% 25% L 33.33% 25% L 33.33% 75% L 50% 75% L 50% 45% L 66.66% 45% L 83.33% 45%"
+                d="M 166 100 L 333 100 L 333 300 L 500 300 L 500 180 L 666 180 L 833 180"
                 stroke="url(#flowGradient)"
                 strokeWidth="3"
                 fill="none"
@@ -533,7 +534,7 @@ export default function Home() {
               
               {/* Animated flowing overlay */}
               <motion.path
-                d="M 16.66% 25% L 33.33% 25% L 33.33% 75% L 50% 75% L 50% 45% L 66.66% 45% L 83.33% 45%"
+                d="M 166 100 L 333 100 L 333 300 L 500 300 L 500 180 L 666 180 L 833 180"
                 stroke="url(#flowAnimatedGradient)"
                 strokeWidth="4"
                 fill="none"
@@ -551,9 +552,9 @@ export default function Home() {
               
               {/* Connection dots at each card */}
               <motion.circle
-                cx="16.66%"
-                cy="25%"
-                r="5"
+                cx="166"
+                cy="100"
+                r="6"
                 fill="rgb(6,182,212)"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -561,9 +562,9 @@ export default function Home() {
                 viewport={{ once: true }}
               />
               <motion.circle
-                cx="50%"
-                cy="75%"
-                r="5"
+                cx="500"
+                cy="300"
+                r="6"
                 fill="rgb(168,85,247)"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -571,9 +572,9 @@ export default function Home() {
                 viewport={{ once: true }}
               />
               <motion.circle
-                cx="83.33%"
-                cy="45%"
-                r="5"
+                cx="833"
+                cy="180"
+                r="6"
                 fill="rgb(249,115,22)"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
