@@ -602,7 +602,7 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative z-1"
+              className="relative"
             >
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-cyan-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
@@ -647,7 +647,7 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="relative z-1"
+              className="relative"
             >
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-purple-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
@@ -691,7 +691,7 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="relative z-1"
+              className="relative"
             >
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-orange-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
