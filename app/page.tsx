@@ -615,6 +615,24 @@ export default function Home() {
       {/* Slide 14: About the Founders - Split Screen Hero */}
       <Slide id="about" background="white">
         <div className="relative h-full w-full overflow-hidden">
+          {/* Unified Gradient Background (Cyan to Orange) */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to right, rgb(6,192,215), rgb(247,112,36))',
+            }}
+          />
+          
+          {/* Grainy Texture Overlay */}
+          <div 
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+              backgroundRepeat: 'repeat',
+              backgroundSize: '200px 200px',
+            }}
+          />
+
           {/* Header */}
           <div className="absolute top-8 left-0 right-0 z-20 text-center">
             <motion.div
@@ -623,17 +641,17 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Heading level="h2" className="gradient-text mb-2">
+              <Heading level="h2" className="text-white mb-2 drop-shadow-lg">
                 About the Founders
               </Heading>
-              <Text variant="body" className="text-gray-600">
+              <Text variant="body" className="text-white/90 drop-shadow">
                 Building the future of premium journalism access
               </Text>
             </motion.div>
           </div>
 
           {/* Split Screen Container */}
-          <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 h-full relative z-10">
             
             {/* Danyang - Left Side with Cyan Glow */}
             <motion.div
@@ -642,13 +660,10 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="relative h-full flex items-center justify-center overflow-hidden group"
-              style={{
-                background: 'linear-gradient(135deg, rgba(6,192,215,0.05) 0%, rgba(6,192,215,0.15) 100%)',
-              }}
             >
               {/* Cyan Radial Gradient Backdrop */}
-              <div className="absolute inset-0 opacity-40">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400 rounded-full blur-3xl opacity-30" />
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-300 rounded-full blur-3xl" />
               </div>
 
               {/* Content */}
@@ -711,13 +726,10 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="relative h-full flex items-center justify-center overflow-hidden group"
-              style={{
-                background: 'linear-gradient(135deg, rgba(247,112,36,0.05) 0%, rgba(247,112,36,0.15) 100%)',
-              }}
             >
               {/* Orange Radial Gradient Backdrop */}
-              <div className="absolute inset-0 opacity-40">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-400 rounded-full blur-3xl opacity-30" />
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-300 rounded-full blur-3xl" />
               </div>
 
               {/* Content */}
@@ -782,7 +794,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <Text variant="small" className="text-gray-600">
+              <Text variant="small" className="text-white/80 drop-shadow">
                 Georgetown Capstone Project © 2026
               </Text>
             </motion.div>
