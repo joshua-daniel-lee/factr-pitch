@@ -766,63 +766,77 @@ Academic rigor meets real-world innovation—a Georgetown Capstone project groun
 
 ---
 
-### **Slide 14: Contact** (Background: white)
+### **Slide 14: About the Founders** (Background: Cyan-to-Orange Gradient)
 
-**Layout:** Call-to-action + contact info
+**Layout:** Split-screen hero with unified gradient background
 
 **Content:**
 
 **H2:**
 ```
-Let's Talk
+About the Founders
 ```
 
-**Lead Text:**
-```
-Join us in restoring the economic bridge between world-class journalism and the everyday consumer
-```
-
-**Call to Action:**
-```
-We're raising a $3M Seed round to build the platform, launch with initial publishers, and prove the model.
-
-This is the optimal entry point: 15x return potential with 62.4% IRR in a capital-efficient marketplace solving a $2B industry problem.
-```
-
-**Contact Information:**
-```
-Email: team@factrai.com
-Website: www.factrai.com
-Pitch Deck: factrai.com/deck
-```
-
-**Next Steps:**
-1. Schedule a meeting to discuss the opportunity
-2. Review detailed financial model
-3. Meet with early publisher partners
-4. Join our Seed round
-
-**Social Proof (if available):**
-- Publisher partnerships in pipeline
-- Letters of intent
-- Advisory board members
-
-**Footer:**
+**Subtext:**
 ```
 Georgetown Capstone Project © 2026
-FactrAI - The Universal Key to Premium Journalism
 ```
 
+**Founder Profiles (Side-by-Side):**
+
+**DANYANG (DARCY) WANG - Co-Founder & CEO**
+- Georgetown MSITM '26
+- Former Senior Policy Data Analyst at Tsingyan Research
+- Engineered predictive forecasting models using 80,000+ data points
+- Yale Law School researcher (R programming, GIS mapping, data visualization)
+- AWS Certified Cloud Practitioner
+- Role Badge: "Hustler" (cyan theme)
+- Email: dw1026@georgetown.edu
+- LinkedIn: https://www.linkedin.com/in/danyang-wang-79984a253/
+
+**JOSHUA LEE - Co-Founder & CTO**
+- Georgetown MSITM '26
+- Branch Chief at NOAA Fisheries
+- Drives cloud strategy (GCP/OCI) and DevOps transformation
+- Award-winning technologist (NMFS Employee of the Year 2016, Team Member 2014)
+- Specializes in data architecture and secure web solutions
+- Role Badge: "Hacker" (orange theme)
+- Email: jdl166@georgetown.edu
+- LinkedIn: https://www.linkedin.com/in/joshua-lee-339504100/
+
+**Visual Design:**
+- 🎨 **Unified Gradient Background:** Cyan (#06c0d7) → Orange (#f77024) left-to-right
+- 🖼️ **Grain Texture Overlay:** SVG noise filter (30% opacity) for premium feel
+- 📸 **Large Circular Portraits:** 256px diameter with brand-colored glow rings
+  - Danyang: Cyan glow ring (#06c0d7) + subtle radial backdrop
+  - Joshua: Orange glow ring (#f77024) + subtle radial backdrop
+- 💎 **Glassmorphism Cards:** Frosted glass info cards (backdrop-blur-lg, bg-white/80)
+- ✨ **Animations:** 
+  - Entrance: Slide in from sides (x: ±50)
+  - Hover: Scale 1.05 + lift 10px
+  - Portrait glow effects
+
 **Visual Assets:**
-- 📧 **Contact card** with email, website
-- 🤝 **Partnership logos** (if available)
-- 📄 **Document links** (pitch deck, financial model)
+- 🖼️ `/team/danyang.png` - Founder photo (256x256)
+- 🖼️ `/team/joshua.png` - Founder photo (256x256)
+- 🎨 **Gradient background** - CSS linear-gradient
+- 📐 **Noise texture** - Inline SVG fractal noise filter
 
 **Components:**
-- Heading (level h2)
-- Text (variant lead, body)
-- Button (x2, "Schedule Meeting", "View Research")
-- Card (contact info)
+- Heading (level h2, white text with drop-shadow)
+- Text (variant small, white/80 opacity)
+- Custom split-screen layout with:
+  - Large circular Image components (256px)
+  - Glassmorphism containers with backdrop-blur
+  - Gradient badge components (Hustler/Hacker)
+  - Mail and ExternalLink icons from lucide-react
+  - Hover-responsive contact buttons
+
+**Implementation Notes:**
+- Built as full-screen custom layout (not using FounderCard component)
+- Responsive: Stacks vertically on mobile
+- Brand color association: Cyan (Danyang/Hustler), Orange (Joshua/Hacker)
+- Professional focus: Real credentials, no FactrAI marketing language
 
 ---
 
@@ -921,19 +935,38 @@ Each section should flow naturally to the next:
 
 ## ✅ Implementation Checklist
 
-- [ ] Create placeholder images (10 total)
-- [ ] Implement chart data in components
-- [ ] Add StatCard data for all metrics
-- [ ] Build ComparisonTable data structures
-- [ ] Write full copy for each section
-- [ ] Test scroll-snap transitions
-- [ ] Add keyboard navigation
-- [ ] Optimize animations
-- [ ] Test on mobile
+### Completed ✓
+- [x] **Asset Organization:** Created organized structure (branding/, illustrations/, mockups/, publishers/, team/)
+- [x] **Slide 1 (Hero):** Complete with floating key animation, gradient text, CTAs
+- [x] **Slide 2 (Executive Summary):** Side-by-side layout with publisher carousel, stat cards
+- [x] **Slide 3 (Customer Pain Points):** Three-panel pain journey cards with illustrations
+- [x] **Slide 4 (Solution):** Value prop cards + app mockup with animations
+- [x] **Slide 5 (Demo CTA):** Complete with hero key and feature pills
+- [x] **Slide 14 (About Founders):** Split-screen hero with gradient, glassmorphism, real profiles
+- [x] **Reusable Components:** StatCard, PainPointCard, ValuePropCard, FeaturePill, FounderCard
+- [x] **Data Extraction:** constants/slides.ts with all card data
+- [x] **Design System:** animations.ts and design-tokens.ts for consistency
+- [x] **Navigation:** Navbar with progress bar, dropdown, section tracking
+- [x] **Layout Components:** Slide, Container, SlideNav with scroll-snap
+
+### In Progress 🚧
+- [ ] Slides 6-13 (How It Works through Capstone) - Placeholders in place
+- [ ] Chart data implementation (LineChart, BarChart, PieChart components)
+- [ ] ComparisonTable data structures for competitive analysis
+
+### Remaining 📋
+- [ ] Complete all slide content (Slides 6-13)
+- [ ] Add financial visualizations (Recharts integration)
+- [ ] Build comparison tables
+- [ ] Add keyboard navigation (arrow keys for slide navigation)
+- [ ] Comprehensive mobile testing
+- [ ] Performance optimization (image loading, animation performance)
 - [ ] Deploy to Vercel
+- [ ] SEO optimization
 
 ---
 
-**Last Updated:** April 6, 2026  
-**Status:** Ready for implementation  
-**Next Step:** Fill in section-by-section content in app/page.tsx
+**Last Updated:** April 8, 2026  
+**Status:** Phase 1 Complete (Slides 1-5, 14), Phase 2 In Progress  
+**Next Step:** Complete remaining slide content (Slides 6-13) with visualizations
+
