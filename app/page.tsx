@@ -613,10 +613,10 @@ export default function Home() {
                 3
               </div>
 
-              {/* Card with Pulsing Glow Effect */}
+              {/* Card with Vibrant Orange Border + Pulsing Glow */}
               <div className="relative">
                 <div 
-                  className="bg-gradient-to-br from-white to-orange-50/30 border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-orange-400 hover:scale-[1.02] transition-all duration-300 flex flex-col"
+                  className="bg-gradient-to-br from-white to-orange-50/30 border-2 border-orange-400 rounded-2xl p-6 h-full hover:scale-[1.02] transition-all duration-300 flex flex-col"
                   style={{
                     animation: 'pulse-glow 3s ease-in-out infinite'
                   }}
@@ -662,17 +662,228 @@ export default function Home() {
 
       {/* Slide 6: Technology */}
       <Slide id="technology" background="white">
-        <Container className="text-center">
-          <Heading level="h2" className="mb-6 gradient-text">
-            Technical Innovation
-          </Heading>
-          <Text variant="lead" className="max-w-3xl mx-auto">
-            Privacy-preserving identity meets AI-powered pricing
-          </Text>
-          <div className="mt-8 p-6 bg-gray-50 rounded-2xl max-w-2xl mx-auto">
-            <Text variant="body" className="text-gray-600">
-              Content coming soon...
-            </Text>
+        <Container size="xl">
+          {/* Split Screen Layout - Diagram centered, Title on right */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            
+            {/* LEFT SIDE: Hub-and-Spoke Diagram - Static First */}
+            <div className="relative w-full max-w-[500px] h-[500px] mx-auto">
+              
+              {/* Central Hub - FactrAI Logo (Rounded Rectangle) */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                <div className="w-40 h-32 rounded-3xl bg-white shadow-2xl flex items-center justify-center border-2 border-cyan-400 p-4">
+                  <Image
+                    src="/branding/logo.png"
+                    alt="FactrAI"
+                    width={80}
+                    height={80}
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Top Node: OAuth */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2">
+                <div className="w-24 h-20 rounded-2xl bg-white border border-gray-300 shadow-md flex flex-col items-center justify-center p-2">
+                  <div className="relative w-10 h-10 mb-1">
+                    <Image
+                      src="/tech/oauth.svg.svg"
+                      alt="OAuth"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="text-[10px] font-semibold text-gray-600">OAuth</p>
+                </div>
+              </div>
+
+              {/* Connecting Line: Top to Center (Gray) - Animated with Pulse */}
+              <motion.div 
+                className="absolute top-20 left-1/2 -translate-x-1/2 w-0.5 h-[calc(50%-100px)] bg-gray-300"
+                initial={{ scaleY: 0, opacity: 0 }}
+                animate={{ 
+                  scaleY: 1,
+                  opacity: [1, 0.4, 1]
+                }}
+                transition={{ 
+                  scaleY: { duration: 0.6, delay: 0.2, ease: "easeOut" },
+                  opacity: {
+                    duration: 2,
+                    delay: 1.2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+                style={{ transformOrigin: 'top' }}
+              />
+
+              {/* Right Node: SmartReader AI (HERO) */}
+              <div className="absolute right-0 top-1/2 -translate-y-1/2">
+                <div className="relative">
+                  <div className="w-28 h-24 rounded-2xl bg-white border-2 border-orange-500 shadow-lg flex flex-col items-center justify-center p-2">
+                    <div className="relative w-12 h-12 mb-1">
+                      <Image
+                        src="/tech/ai-engine.svg"
+                        alt="SmartReader AI"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-[10px] font-semibold text-orange-600">SmartReader AI</p>
+                  </div>
+                  {/* Star badge */}
+                  <div className="absolute -top-2 -right-2 w-7 h-7 bg-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="text-sm">⭐</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Connecting Line: Center to Right (Orange - thick) - Animated with Pulse */}
+              <motion.div 
+                className="absolute right-28 top-1/2 -translate-y-1/2 w-[calc(50%-130px)] h-1 bg-orange-500"
+                initial={{ scaleX: 0, opacity: 0 }}
+                animate={{ 
+                  scaleX: 1,
+                  opacity: [1, 0.5, 1]
+                }}
+                transition={{ 
+                  scaleX: { duration: 0.6, delay: 0.4, ease: "easeOut" },
+                  opacity: {
+                    duration: 2,
+                    delay: 1.4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+                style={{ transformOrigin: 'right' }}
+              />
+
+              {/* Bottom Node: FedCM (Cyan) */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+                <div className="w-24 h-20 rounded-2xl bg-white border-2 border-cyan-500 shadow-md flex flex-col items-center justify-center p-2">
+                  <div className="relative w-10 h-10 mb-1">
+                    <Image
+                      src="/tech/fedcm-icon.svg"
+                      alt="FedCM"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="text-[10px] font-bold text-cyan-600">FedCM</p>
+                </div>
+              </div>
+
+              {/* Connecting Line: Center to Bottom (Cyan) - Animated with Pulse */}
+              <motion.div 
+                className="absolute bottom-20 left-1/2 -translate-x-1/2 w-0.5 h-[calc(50%-100px)] bg-cyan-500"
+                initial={{ scaleY: 0, opacity: 0 }}
+                animate={{ 
+                  scaleY: 1,
+                  opacity: [1, 0.4, 1]
+                }}
+                transition={{ 
+                  scaleY: { duration: 0.6, delay: 0.6, ease: "easeOut" },
+                  opacity: {
+                    duration: 2,
+                    delay: 1.6,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+                style={{ transformOrigin: 'bottom' }}
+              />
+
+              {/* Left Node: JWT */}
+              <div className="absolute left-0 top-1/2 -translate-y-1/2">
+                <div className="w-24 h-20 rounded-2xl bg-white border border-gray-300 shadow-md flex flex-col items-center justify-center p-2">
+                  <div className="relative w-10 h-10 mb-1">
+                    <Image
+                      src="/tech/oauth-jwt.svg"
+                      alt="JWT"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="text-[10px] font-semibold text-gray-600">JWT</p>
+                </div>
+              </div>
+
+              {/* Connecting Line: Left to Center (Gray) - Animated with Pulse */}
+              <motion.div 
+                className="absolute left-24 top-1/2 -translate-y-1/2 w-[calc(50%-120px)] h-0.5 bg-gray-300"
+                initial={{ scaleX: 0, opacity: 0 }}
+                animate={{ 
+                  scaleX: 1,
+                  opacity: [1, 0.4, 1]
+                }}
+                transition={{ 
+                  scaleX: { duration: 0.6, delay: 0.8, ease: "easeOut" },
+                  opacity: {
+                    duration: 2,
+                    delay: 1.8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+                style={{ transformOrigin: 'left' }}
+              />
+
+            </div>
+
+            {/* RIGHT SIDE: Clean Minimalist Content */}
+            <motion.div
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              {/* Title and Subtitle */}
+              <div>
+                <Heading level="h2" className="text-left mb-4 gradient-text">
+                  Technical Innovation
+                </Heading>
+                <Text variant="lead" className="text-gray-700 text-left">
+                  Privacy-preserving identity meets AI-powered pricing, validated by production-ready standards
+                </Text>
+              </div>
+
+              {/* SmartReader AI - Core Innovation */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-gray-900">SmartReader Yield Algorithm</h3>
+                <Text variant="body" className="text-gray-700 text-left">
+                  Our ML-powered pricing engine creates market-clearing credit prices in real-time, maximizing publisher yield while minimizing user friction.
+                </Text>
+              </div>
+
+              {/* The Stack - De-emphasized with smaller text */}
+              <div className="space-y-3 pt-6 mt-6 border-t border-gray-100">
+                <h4 className="text-base font-medium text-gray-600">The Stack</h4>
+                
+                <div className="space-y-3">
+                  <div>
+                    <h5 className="text-sm font-medium text-gray-700 mb-0.5">FedCM</h5>
+                    <p className="text-xs text-gray-500 leading-relaxed">
+                      Browser-level authentication without 3rd-party cookies, production-ready in Google Chrome.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h5 className="text-sm font-medium text-gray-700 mb-0.5">OAuth/JWT</h5>
+                    <p className="text-xs text-gray-500 leading-relaxed">
+                      Secure publisher access with decentralized control through publisher SDKs.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h5 className="text-sm font-medium text-gray-700 mb-0.5">SmartReader AI</h5>
+                    <p className="text-xs text-gray-500 leading-relaxed">
+                      Dynamic pricing optimization powered by real-time traffic analysis.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </Container>
       </Slide>
