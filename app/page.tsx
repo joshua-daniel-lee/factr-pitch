@@ -644,8 +644,8 @@ export default function Home() {
               <Heading level="h2" className="text-white mb-2 drop-shadow-lg">
                 About the Founders
               </Heading>
-              <Text variant="body" className="text-white/90 drop-shadow">
-                Building the future of premium journalism access
+              <Text variant="small" className="text-white/80 drop-shadow">
+                Georgetown Capstone Project © 2026
               </Text>
             </motion.div>
           </div>
@@ -786,19 +786,6 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Footer */}
-          <div className="absolute bottom-8 left-0 right-0 z-20 text-center">
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <Text variant="small" className="text-white/80 drop-shadow">
-                Georgetown Capstone Project © 2026
-              </Text>
-            </motion.div>
-          </div>
         </div>
       </Slide>
     </>
