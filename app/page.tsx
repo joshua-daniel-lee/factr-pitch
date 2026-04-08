@@ -479,171 +479,147 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* 3-Card Process Flow with Animated Connectors */}
+          {/* 3-Card Process Flow with Top Animated Connector */}
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             
-            {/* Animated Connector Line 1→2 */}
-            <motion.div
-              className="hidden md:block absolute top-1/2 left-1/3 w-1/6 h-0.5 bg-gradient-to-r from-cyan-300 to-purple-300"
-              style={{ transform: 'translateX(50%) translateY(-50%)' }}
-              initial={{ scaleX: 0, opacity: 0 }}
-              whileInView={{ scaleX: 1, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              {/* Animated dash effect */}
+            {/* Animated Connector Line at Badge Level */}
+            <div className="hidden md:block absolute top-6 left-0 right-0 h-1 pointer-events-none z-0">
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
-                animate={{
-                  x: ['-100%', '200%']
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-            </motion.div>
+                className="absolute left-[8.33%] right-[8.33%] h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-orange-400 rounded-full"
+                initial={{ scaleX: 0, opacity: 0 }}
+                whileInView={{ scaleX: 1, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                {/* Animated flowing dash */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-60 rounded-full"
+                  animate={{
+                    x: ['-100%', '200%']
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+              </motion.div>
+            </div>
 
-            {/* Animated Connector Line 2→3 */}
-            <motion.div
-              className="hidden md:block absolute top-1/2 left-2/3 w-1/6 h-0.5 bg-gradient-to-r from-purple-300 to-orange-300"
-              style={{ transform: 'translateX(50%) translateY(-50%)' }}
-              initial={{ scaleX: 0, opacity: 0 }}
-              whileInView={{ scaleX: 1, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              viewport={{ once: true }}
-            >
-              {/* Animated dash effect */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500 to-transparent"
-                animate={{
-                  x: ['-100%', '200%']
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "linear",
-                  delay: 0.5
-                }}
-              />
-            </motion.div>
-
-            {/* Card 1: User Authentication */}
+            {/* Card 1: User Authentication - Image TOP */}
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative z-10"
             >
-              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 h-full hover:border-cyan-300 hover:shadow-lg transition-all duration-300">
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-cyan-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-600 text-white font-bold text-xl mb-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-orange-500 text-white font-bold text-xl mb-4">
                   1
                 </div>
 
-                {/* Visual Icon */}
-                <div className="flex justify-center mb-6">
-                  <div className="relative w-24 h-24 bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-2xl flex items-center justify-center">
-                    <svg className="w-12 h-12 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                {/* Image Placeholder - TOP */}
+                <div className="w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center mb-6">
+                  <div className="text-center">
+                    <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
+                    <p className="text-xs text-gray-500">Image Coming Soon</p>
                   </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">User Authentication</h3>
-
-                {/* Description */}
-                <p className="text-sm text-gray-600 mb-4">
-                  Browser-level identity (FedCM)
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-cyan-500 mr-2">→</span>
-                    <span>One-tap OAuth/JWT token</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyan-500 mr-2">→</span>
-                    <span>No 3rd-party cookies needed</span>
-                  </li>
-                </ul>
+                {/* Content */}
+                <div className="flex-1 flex flex-col">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">User Authentication</h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Browser-level identity (FedCM)
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2">→</span>
+                      <span>One-tap OAuth/JWT token</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2">→</span>
+                      <span>No 3rd-party cookies needed</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </motion.div>
 
-            {/* Card 2: Content Access */}
+            {/* Card 2: Content Access - Image BOTTOM */}
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative z-10"
             >
-              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 h-full hover:border-purple-300 hover:shadow-lg transition-all duration-300">
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-purple-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 text-white font-bold text-xl mb-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-orange-500 text-white font-bold text-xl mb-4">
                   2
                 </div>
 
-                {/* Visual Icon */}
-                <div className="flex justify-center mb-6">
-                  <div className="relative w-24 h-24 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center">
-                    <svg className="w-12 h-12 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
+                {/* Content */}
+                <div className="flex-1 flex flex-col mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Content Access</h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    AI-powered pricing engine
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-purple-500 mr-2">→</span>
+                      <span>Dynamic credit allocation</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-purple-500 mr-2">→</span>
+                      <span>Instant article unlock</span>
+                    </li>
+                  </ul>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Content Access</h3>
-
-                {/* Description */}
-                <p className="text-sm text-gray-600 mb-4">
-                  AI-powered pricing engine
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-purple-500 mr-2">→</span>
-                    <span>Dynamic credit allocation</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-purple-500 mr-2">→</span>
-                    <span>Instant article unlock</span>
-                  </li>
-                </ul>
+                {/* Image Placeholder - BOTTOM */}
+                <div className="w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center">
+                  <div className="text-center">
+                    <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-xs text-gray-500">Image Coming Soon</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
-            {/* Card 3: Publisher Payout */}
+            {/* Card 3: Publisher Payout - Image MIDDLE */}
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative z-10"
             >
-              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 h-full hover:border-orange-300 hover:shadow-lg transition-all duration-300">
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-orange-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-white font-bold text-xl mb-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-orange-500 text-white font-bold text-xl mb-4">
                   3
                 </div>
 
-                {/* Visual Icon */}
-                <div className="flex justify-center mb-6">
-                  <div className="relative w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center">
-                    <svg className="w-12 h-12 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Publisher Payout</h3>
+
+                {/* Image Placeholder - MIDDLE */}
+                <div className="w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center mb-4">
+                  <div className="text-center">
+                    <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
+                    <p className="text-xs text-gray-500">Image Coming Soon</p>
                   </div>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Publisher Payout</h3>
 
                 {/* Description */}
                 <p className="text-sm text-gray-600 mb-4">
