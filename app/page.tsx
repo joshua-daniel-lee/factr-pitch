@@ -10,7 +10,10 @@ import Container from '@/components/ui/Container';
 import Heading from '@/components/ui/Heading';
 import Text from '@/components/ui/Text';
 import Button from '@/components/ui/Button';
-import AnimatedCounter from '@/components/ui/AnimatedCounter';
+import StatCard from '@/components/ui/StatCard';
+import PainPointCard from '@/components/ui/PainPointCard';
+import ValuePropCard from '@/components/ui/ValuePropCard';
+import FeaturePill from '@/components/ui/FeaturePill';
 
 // Publisher logos constant
 const PUBLISHER_LOGOS = [
@@ -236,85 +239,47 @@ export default function Home() {
 
             {/* Right Column: 2x2 Grid of Stat Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Card 1: Traffic Decline */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                style={{
-                  background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(6,192,215,0.3), rgba(6,192,215,0.1)) border-box',
-                  border: '2px solid transparent'
-                }}
-              >
-                <TrendingDown className="w-8 h-8 text-cyan-600 mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">
-                  <AnimatedCounter value={38} suffix="%" /><sup className="text-xs">1</sup>
-                </div>
-                <div className="text-sm font-medium text-gray-700 mb-1">Traffic Decline</div>
-                <div className="text-xs text-gray-500">Since late 2024</div>
-              </motion.div>
-
-              {/* Card 2: Zero-Click */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                style={{
-                  background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(247,112,36,0.3), rgba(247,112,36,0.1)) border-box',
-                  border: '2px solid transparent'
-                }}
-              >
-                <MousePointerClick className="w-8 h-8 text-orange-600 mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">
-                  <AnimatedCounter value={69} suffix="%" /><sup className="text-xs">2</sup>
-                </div>
-                <div className="text-sm font-medium text-gray-700 mb-1">Zero-Click</div>
-                <div className="text-xs text-gray-500">In 2025</div>
-              </motion.div>
-
-              {/* Card 3: Revenue Loss */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                style={{
-                  background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(6,192,215,0.3), rgba(6,192,215,0.1)) border-box',
-                  border: '2px solid transparent'
-                }}
-              >
-                <DollarSign className="w-8 h-8 text-cyan-600 mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">
-                  <AnimatedCounter value={2} prefix="$" suffix="B" /><sup className="text-xs">3</sup>
-                </div>
-                <div className="text-sm font-medium text-gray-700 mb-1">Revenue Loss</div>
-                <div className="text-xs text-gray-500">Annual advertising</div>
-              </motion.div>
-
-              {/* Card 4: Bounce Rate */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                style={{
-                  background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(247,112,36,0.3), rgba(247,112,36,0.1)) border-box',
-                  border: '2px solid transparent'
-                }}
-              >
-                <UserX className="w-8 h-8 text-orange-600 mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">
-                  <AnimatedCounter value={95} suffix="%" /><sup className="text-xs">5</sup>
-                </div>
-                <div className="text-sm font-medium text-gray-700 mb-1">Bounce Rate</div>
-                <div className="text-xs text-gray-500">Non-subscribers leave</div>
-              </motion.div>
+              <StatCard
+                icon={TrendingDown}
+                value={38}
+                suffix="%"
+                label="Traffic Decline"
+                sublabel="Since late 2024"
+                footnote={1}
+                variant="cyan"
+                delay={0.1}
+              />
+              <StatCard
+                icon={MousePointerClick}
+                value={69}
+                suffix="%"
+                label="Zero-Click"
+                sublabel="In 2025"
+                footnote={2}
+                variant="orange"
+                delay={0.2}
+              />
+              <StatCard
+                icon={DollarSign}
+                value={2}
+                prefix="$"
+                suffix="B"
+                label="Revenue Loss"
+                sublabel="Annual advertising"
+                footnote={3}
+                variant="cyan"
+                delay={0.3}
+              />
+              <StatCard
+                icon={UserX}
+                value={95}
+                suffix="%"
+                label="Bounce Rate"
+                sublabel="Non-subscribers leave"
+                footnote={5}
+                variant="orange"
+                delay={0.4}
+              />
             </div>
           </div>
         </Container>
@@ -356,140 +321,39 @@ export default function Home() {
               className="flex flex-wrap items-center justify-center gap-2"
             >
               {['Knowledge Professionals', 'Informed Citizens', 'Academics & Learners', 'Intent-Driven Bouncers', 'Enterprise Teams'].map((persona) => (
-                <div
-                  key={persona}
-                  className="px-4 py-1.5 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-full border border-cyan-200 transition-all hover:border-cyan-300 hover:shadow-sm"
-                >
-                  <Text variant="small" className="font-medium text-gray-700 text-xs whitespace-nowrap">
-                    {persona}
-                  </Text>
-                </div>
+                <FeaturePill key={persona} variant="cyan">
+                  {persona}
+                </FeaturePill>
               ))}
             </motion.div>
           </div>
 
           {/* Three-Panel Pain Journey */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-
-            {/* Panel 1: Digital Hide-and-Seek */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="relative bg-white p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col h-full cursor-pointer group"
-              style={{
-                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(247,112,36,0.4), rgba(247,112,36,0.2)) border-box',
-                border: '3px solid transparent'
-              }}
-            >
-              {/* Header */}
-              <div className="bg-gradient-to-r from-cyan-500 to-cyan-600 text-white px-3 py-1.5 rounded-lg mb-3 text-center font-semibold text-sm flex items-center justify-center gap-2">
-                <span className="text-lg">🔍</span>
-                Digital Hide-and-Seek
-              </div>
-              
-              {/* Illustration */}
-              <div className="bg-white rounded-lg h-36 mb-3 flex items-center justify-center flex-shrink-0 overflow-hidden">
-                <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
-                  <Image
-                    src="/digital-search-frustration.svg"
-                    alt="Frustrated professional drowning in browser tabs"
-                    width={120}
-                    height={120}
-                    className="object-contain"
-                  />
-                </motion.div>
-              </div>
-
-              {/* Description */}
-              <div className="flex-1">
-                <Text variant="small" className="text-gray-600 leading-relaxed text-xs">
-                  Users are trapped in a <strong className="text-cyan-600 font-bold">cycle of digital hide-and-seek</strong>, wasting a significant portion of their professional lives <strong className="text-cyan-600 font-bold">searching for information</strong> they know exists but cannot access.
-                </Text>
-              </div>
-            </motion.div>
-
-            {/* Panel 2: Subscription Fatigue */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="relative bg-white p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col h-full cursor-pointer group"
-              style={{
-                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(247,112,36,0.4), rgba(247,112,36,0.2)) border-box',
-                border: '3px solid transparent'
-              }}
-            >
-              {/* Header */}
-              <div className="bg-gradient-to-r from-cyan-500 to-cyan-600 text-white px-3 py-1.5 rounded-lg mb-3 text-center font-semibold text-sm flex items-center justify-center gap-2">
-                <span className="text-lg">💳</span>
-                Subscription Fatigue
-              </div>
-              
-              {/* Illustration */}
-              <div className="bg-white rounded-lg h-36 mb-3 flex items-center justify-center flex-shrink-0 overflow-hidden">
-                <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
-                  <Image
-                    src="/subscription-fatigue.svg"
-                    alt="Phone showing subscription overload"
-                    width={120}
-                    height={120}
-                    className="object-contain"
-                  />
-                </motion.div>
-              </div>
-
-              {/* Description */}
-              <div className="flex-1">
-                <Text variant="small" className="text-gray-600 leading-relaxed text-xs">
-                  Consumers have reached a point of <strong className="text-cyan-600 font-bold">absolute fatigue</strong>, where <strong className="text-cyan-600 font-bold">managing multiple recurring accounts</strong> has become a mental and financial burden they are no longer willing to carry.
-                </Text>
-              </div>
-            </motion.div>
-
-            {/* Panel 3: The Demand for Choice */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="relative bg-white p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col h-full cursor-pointer group"
-              style={{
-                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(247,112,36,0.4), rgba(247,112,36,0.2)) border-box',
-                border: '3px solid transparent'
-              }}
-            >
-              {/* Header */}
-              <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1.5 rounded-lg mb-3 text-center font-semibold text-sm flex items-center justify-center gap-2">
-                <span className="text-lg">🚫</span>
-                The Demand for Choice
-              </div>
-              
-              {/* Illustration */}
-              <div className="bg-white rounded-lg h-36 mb-3 flex items-center justify-center flex-shrink-0 overflow-hidden">
-                <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
-                  <Image
-                    src="/paywall-blocked.svg"
-                    alt="Computer screen with ACCESS DENIED paywall"
-                    width={120}
-                    height={120}
-                    className="object-contain"
-                  />
-                </motion.div>
-              </div>
-
-              {/* Description */}
-              <div className="flex-1">
-                <Text variant="small" className="text-gray-600 leading-relaxed text-xs">
-                  There is a clear and growing frustration with <strong className="text-cyan-600 font-bold">rigid, binary paywalls</strong>, as users increasingly seek <strong className="text-cyan-600 font-bold">flexible, on-demand access</strong> that aligns with how they actually consume information.
-                </Text>
-              </div>
-            </motion.div>
+            <PainPointCard
+              emoji="🔍"
+              title="Digital Hide-and-Seek"
+              imageSrc="/digital-search-frustration.svg"
+              imageAlt="Frustrated professional drowning in browser tabs"
+              description="Users are trapped in a cycle of digital hide-and-seek, wasting a significant portion of their professional lives searching for information they know exists but cannot access."
+              delay={0.05}
+            />
+            <PainPointCard
+              emoji="💳"
+              title="Subscription Fatigue"
+              imageSrc="/subscription-fatigue.svg"
+              imageAlt="Phone showing subscription overload"
+              description="Consumers have reached a point of absolute fatigue, where managing multiple recurring accounts has become a mental and financial burden they are no longer willing to carry."
+              delay={0.1}
+            />
+            <PainPointCard
+              emoji="🚫"
+              title="The Demand for Choice"
+              imageSrc="/paywall-blocked.svg"
+              imageAlt="Computer screen with ACCESS DENIED paywall"
+              description="There is a clear and growing frustration with rigid, binary paywalls, as users increasingly seek flexible, on-demand access that aligns with how they actually consume information."
+              delay={0.15}
+            />
           </div>
         </Container>
       </Slide>
@@ -527,65 +391,27 @@ export default function Home() {
 
               {/* Three Value Propositions - Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                  style={{
-                    background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(6,192,215,0.3), rgba(6,192,215,0.1)) border-box',
-                    border: '2px solid transparent'
-                  }}
-                >
-                  <Key className="w-8 h-8 text-cyan-600 mb-3" />
-                  <div className="text-lg font-bold text-gray-900 mb-1">
-                    One Key, All Paywalls
-                  </div>
-                  <div className="text-xs text-gray-500">
-                    Single OAuth/JWT identity • Auto-unlock partner content
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                  style={{
-                    background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(247,112,36,0.3), rgba(247,112,36,0.1)) border-box',
-                    border: '2px solid transparent'
-                  }}
-                >
-                  <CreditCard className="w-8 h-8 text-orange-600 mb-3" />
-                  <div className="text-lg font-bold text-gray-900 mb-1">
-                    The Credit Economy
-                  </div>
-                  <div className="text-xs text-gray-500">
-                    Monthly credit pool • No decision fatigue • AI-powered
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                  style={{
-                    background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(6,192,215,0.3), rgba(6,192,215,0.1)) border-box',
-                    border: '2px solid transparent'
-                  }}
-                >
-                  <RefreshCw className="w-8 h-8 text-cyan-600 mb-3" />
-                  <div className="text-lg font-bold text-gray-900 mb-1">
-                    Data Reciprocity
-                  </div>
-                  <div className="text-xs text-gray-500">
-                    Share 1st-party data • Unlike Apple News+ walled gardens
-                  </div>
-                </motion.div>
+                <ValuePropCard
+                  icon={Key}
+                  title="One Key, All Paywalls"
+                  description="Single OAuth/JWT identity • Auto-unlock partner content"
+                  variant="cyan"
+                  delay={0.1}
+                />
+                <ValuePropCard
+                  icon={CreditCard}
+                  title="The Credit Economy"
+                  description="Monthly credit pool • No decision fatigue • AI-powered"
+                  variant="orange"
+                  delay={0.2}
+                />
+                <ValuePropCard
+                  icon={RefreshCw}
+                  title="Data Reciprocity"
+                  description="Share 1st-party data • Unlike Apple News+ walled gardens"
+                  variant="cyan"
+                  delay={0.3}
+                />
               </div>
             </div>
 
@@ -706,21 +532,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="mt-8 flex flex-wrap items-center justify-center gap-2"
           >
-            <div className="px-4 py-1.5 bg-gradient-to-r from-orange-50 to-orange-100 rounded-full border border-orange-200 transition-all hover:border-orange-300 hover:shadow-sm">
-              <Text variant="small" className="font-medium text-gray-700 text-xs whitespace-nowrap">
-                No signup required
-              </Text>
-            </div>
-            <div className="px-4 py-1.5 bg-gradient-to-r from-orange-50 to-orange-100 rounded-full border border-orange-200 transition-all hover:border-orange-300 hover:shadow-sm">
-              <Text variant="small" className="font-medium text-gray-700 text-xs whitespace-nowrap">
-                Full feature access
-              </Text>
-            </div>
-            <div className="px-4 py-1.5 bg-gradient-to-r from-orange-50 to-orange-100 rounded-full border border-orange-200 transition-all hover:border-orange-300 hover:shadow-sm">
-              <Text variant="small" className="font-medium text-gray-700 text-xs whitespace-nowrap">
-                2-minute experience
-              </Text>
-            </div>
+            <FeaturePill variant="orange">No signup required</FeaturePill>
+            <FeaturePill variant="orange">Full feature access</FeaturePill>
+            <FeaturePill variant="orange">2-minute experience</FeaturePill>
           </motion.div>
         </Container>
       </Slide>
