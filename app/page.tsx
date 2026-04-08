@@ -482,29 +482,105 @@ export default function Home() {
           {/* 3-Card Process Flow with Top Animated Connector */}
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 mb-16">
             
-            {/* Animated Connector Line at Badge Level */}
-            <div className="hidden md:block absolute top-6 left-0 right-0 h-1 pointer-events-none z-0">
-              <motion.div
-                className="absolute left-[8.33%] right-[8.33%] h-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-orange-400 rounded-full"
-                initial={{ scaleX: 0, opacity: 0 }}
-                whileInView={{ scaleX: 1, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+            {/* Angular Data Flow Connector - SVG Path */}
+            <svg 
+              className="hidden md:block absolute inset-0 pointer-events-none z-15 w-full h-full"
+              style={{ overflow: 'visible' }}
+            >
+              <defs>
+                {/* Gradient for the line */}
+                <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="rgb(6,182,212)" stopOpacity="0.8" />
+                  <stop offset="50%" stopColor="rgb(168,85,247)" stopOpacity="0.8" />
+                  <stop offset="100%" stopColor="rgb(249,115,22)" stopOpacity="0.8" />
+                </linearGradient>
+                
+                {/* Animated gradient for flowing effect */}
+                <linearGradient id="flowAnimatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="transparent" />
+                  <stop offset="30%" stopColor="rgb(6,182,212)" stopOpacity="1" />
+                  <stop offset="50%" stopColor="white" stopOpacity="1" />
+                  <stop offset="70%" stopColor="rgb(249,115,22)" stopOpacity="1" />
+                  <stop offset="100%" stopColor="transparent" />
+                  <animate 
+                    attributeName="x1" 
+                    values="-100%;200%" 
+                    dur="3s" 
+                    repeatCount="indefinite" 
+                  />
+                  <animate 
+                    attributeName="x2" 
+                    values="0%;300%" 
+                    dur="3s" 
+                    repeatCount="indefinite" 
+                  />
+                </linearGradient>
+              </defs>
+              
+              {/* Main path with hard angles connecting images */}
+              <motion.path
+                d="M 16.66% 25% L 33.33% 25% L 33.33% 75% L 50% 75% L 50% 45% L 66.66% 45% L 83.33% 45%"
+                stroke="url(#flowGradient)"
+                strokeWidth="3"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="miter"
+                initial={{ pathLength: 0, opacity: 0 }}
+                whileInView={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 1.5, delay: 0.3, ease: "easeInOut" }}
                 viewport={{ once: true }}
-              >
-                {/* Animated flowing dash */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-60 rounded-full"
-                  animate={{
-                    x: ['-100%', '200%']
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                />
-              </motion.div>
-            </div>
+              />
+              
+              {/* Animated flowing overlay */}
+              <motion.path
+                d="M 16.66% 25% L 33.33% 25% L 33.33% 75% L 50% 75% L 50% 45% L 66.66% 45% L 83.33% 45%"
+                stroke="url(#flowAnimatedGradient)"
+                strokeWidth="4"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="miter"
+                opacity="0.6"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ 
+                  duration: 0.8,
+                  delay: 1.5,
+                  ease: "easeOut"
+                }}
+              />
+              
+              {/* Connection dots at each card */}
+              <motion.circle
+                cx="16.66%"
+                cy="25%"
+                r="5"
+                fill="rgb(6,182,212)"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.4, delay: 1.8 }}
+                viewport={{ once: true }}
+              />
+              <motion.circle
+                cx="50%"
+                cy="75%"
+                r="5"
+                fill="rgb(168,85,247)"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.4, delay: 2.0 }}
+                viewport={{ once: true }}
+              />
+              <motion.circle
+                cx="83.33%"
+                cy="45%"
+                r="5"
+                fill="rgb(249,115,22)"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.4, delay: 2.2 }}
+                viewport={{ once: true }}
+              />
+            </svg>
 
             {/* Card 1: User Authentication - Image TOP */}
             <motion.div
