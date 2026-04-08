@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Mail, ExternalLink } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Slide from '@/components/layout/Slide';
 import SlideNav from '@/components/layout/SlideNav';
@@ -611,70 +612,182 @@ export default function Home() {
         </Container>
       </Slide>
 
-      {/* Slide 14: About the Founders */}
+      {/* Slide 14: About the Founders - Split Screen Hero */}
       <Slide id="about" background="white">
-        <Container size="xl">
+        <div className="relative h-full w-full overflow-hidden">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="absolute top-8 left-0 right-0 z-20 text-center">
             <motion.div
-              initial={{ y: 20, opacity: 0 }}
+              initial={{ y: -20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Heading level="h2" className="mb-4 gradient-text">
+              <Heading level="h2" className="gradient-text mb-2">
                 About the Founders
               </Heading>
-            </motion.div>
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Text variant="lead" className="max-w-3xl mx-auto text-gray-700">
+              <Text variant="body" className="text-gray-600">
                 Building the future of premium journalism access
               </Text>
             </motion.div>
           </div>
 
-          {/* Founder Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-            <FounderCard
-              name="Danyang"
-              title="Co-Founder & CEO"
-              role="Hustler"
-              bio="Visionary leader driving FactrAI's mission to democratize access to premium journalism. Passionate about solving the subscription crisis facing publishers and readers alike."
-              imageSrc="/team/danyang.png"
-              email="danyang@factrai.com"
-              linkedinUrl="https://linkedin.com/in/placeholder"
-              delay={0.1}
-            />
-            <FounderCard
-              name="Joshua"
-              title="Co-Founder & CTO"
-              role="Hacker"
-              bio="Technical architect building FactrAI's innovative platform. Expert in browser-level identity systems and AI-powered pricing optimization for digital content marketplaces."
-              imageSrc="/team/joshua.png"
-              email="joshua@factrai.com"
-              linkedinUrl="https://linkedin.com/in/placeholder"
-              delay={0.2}
-            />
+          {/* Split Screen Container */}
+          <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+            
+            {/* Danyang - Left Side with Cyan Glow */}
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative h-full flex items-center justify-center overflow-hidden group"
+              style={{
+                background: 'linear-gradient(135deg, rgba(6,192,215,0.05) 0%, rgba(6,192,215,0.15) 100%)',
+              }}
+            >
+              {/* Cyan Radial Gradient Backdrop */}
+              <div className="absolute inset-0 opacity-40">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400 rounded-full blur-3xl opacity-30" />
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10 flex flex-col items-center px-8 py-20">
+                {/* Large Portrait */}
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative mb-8"
+                >
+                  <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                    {/* Cyan glow ring */}
+                    <div className="absolute -inset-4 bg-cyan-400/30 rounded-full blur-xl" />
+                    <Image
+                      src="/team/danyang.png"
+                      alt="Danyang - Co-Founder & CEO"
+                      fill
+                      className="object-cover relative z-10"
+                      sizes="256px"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Info Card with Glassmorphism */}
+                <div className="backdrop-blur-lg bg-white/80 rounded-2xl p-6 shadow-xl border border-white/50 max-w-md">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-1">Danyang</h3>
+                  <p className="text-cyan-600 font-semibold mb-1">Co-Founder & CEO</p>
+                  <div className="inline-block bg-gradient-to-r from-cyan-500 to-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                    Hustler
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    Visionary leader driving FactrAI's mission to democratize access to premium journalism. Passionate about solving the subscription crisis facing publishers and readers alike.
+                  </p>
+                  <div className="flex gap-3 justify-center">
+                    <a
+                      href="mailto:danyang@factrai.com"
+                      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>Email</span>
+                    </a>
+                    <a
+                      href="https://linkedin.com/in/placeholder"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Joshua - Right Side with Orange Glow */}
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative h-full flex items-center justify-center overflow-hidden group"
+              style={{
+                background: 'linear-gradient(135deg, rgba(247,112,36,0.05) 0%, rgba(247,112,36,0.15) 100%)',
+              }}
+            >
+              {/* Orange Radial Gradient Backdrop */}
+              <div className="absolute inset-0 opacity-40">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-400 rounded-full blur-3xl opacity-30" />
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10 flex flex-col items-center px-8 py-20">
+                {/* Large Portrait */}
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative mb-8"
+                >
+                  <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                    {/* Orange glow ring */}
+                    <div className="absolute -inset-4 bg-orange-400/30 rounded-full blur-xl" />
+                    <Image
+                      src="/team/joshua.png"
+                      alt="Joshua - Co-Founder & CTO"
+                      fill
+                      className="object-cover relative z-10"
+                      sizes="256px"
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Info Card with Glassmorphism */}
+                <div className="backdrop-blur-lg bg-white/80 rounded-2xl p-6 shadow-xl border border-white/50 max-w-md">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-1">Joshua</h3>
+                  <p className="text-orange-600 font-semibold mb-1">Co-Founder & CTO</p>
+                  <div className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                    Hacker
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    Technical architect building FactrAI's innovative platform. Expert in browser-level identity systems and AI-powered pricing optimization for digital content marketplaces.
+                  </p>
+                  <div className="flex gap-3 justify-center">
+                    <a
+                      href="mailto:joshua@factrai.com"
+                      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>Email</span>
+                    </a>
+                    <a
+                      href="https://linkedin.com/in/placeholder"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
 
           {/* Footer */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <Text variant="small" className="text-gray-600">
-              Georgetown Capstone Project © 2026
-            </Text>
-          </motion.div>
-        </Container>
+          <div className="absolute bottom-8 left-0 right-0 z-20 text-center">
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <Text variant="small" className="text-gray-600">
+                Georgetown Capstone Project © 2026
+              </Text>
+            </motion.div>
+          </div>
+        </div>
       </Slide>
     </>
   );
