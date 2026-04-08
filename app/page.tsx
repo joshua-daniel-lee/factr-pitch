@@ -695,7 +695,7 @@ export default function Home() {
                     Hustler
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Dual master's strategist (Georgetown MSITM '26, CMU MSPPM '24) with data analytics expertise from Yale Law and government consulting. AWS-certified leader revolutionizing journalism economics.
+                    Georgetown MSITM '26. Former Senior Policy Data Analyst at Tsingyan Research who engineered predictive forecasting models using 80,000+ data points. Yale Law School researcher with expertise in R programming, GIS mapping, and data visualization. AWS Certified Cloud Practitioner.
                   </p>
                   <div className="flex gap-3 justify-center">
                     <a
@@ -761,7 +761,7 @@ export default function Home() {
                     Hacker
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Cloud architect at NOAA Fisheries and Georgetown MSITM candidate. Award-winning DevOps leader building FactrAI's enterprise-grade identity and pricing platform.
+                    Georgetown MSITM '26. Branch Chief at NOAA Fisheries driving cloud strategy (GCP/OCI) and DevOps transformation. Award-winning technologist (NMFS Employee of the Year 2016, Team Member 2014) specializing in data architecture and secure web solutions.
                   </p>
                   <div className="flex gap-3 justify-center">
                     <a
