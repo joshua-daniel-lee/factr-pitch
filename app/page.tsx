@@ -675,14 +675,15 @@ export default function Home() {
                   </ul>
                 </div>
 
-                {/* Image Placeholder - BOTTOM */}
-                <div className="relative z-10 w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center">
-                  <div className="text-center">
-                    <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-xs text-gray-500">Image Coming Soon</p>
-                  </div>
+                {/* Image - BOTTOM */}
+                <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden bg-white">
+                  <Image
+                    src="/how-it-works/step-2-access.svg"
+                    alt="Content Access with AI-powered pricing"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -705,14 +706,15 @@ export default function Home() {
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Publisher Payout</h3>
 
-                {/* Image Placeholder - MIDDLE */}
-                <div className="relative z-10 w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center mb-4">
-                  <div className="text-center">
-                    <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-xs text-gray-500">Image Coming Soon</p>
-                  </div>
+                {/* Image - MIDDLE */}
+                <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden mb-4 bg-white">
+                  <Image
+                    src="/how-it-works/step-3-payout.svg"
+                    alt="Publisher Payout with revenue sharing"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  />
                 </div>
 
                 {/* Description */}
