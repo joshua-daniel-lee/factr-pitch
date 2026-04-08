@@ -20,7 +20,7 @@ const sections = [
   { id: 'moat', label: 'Strategic Moat' },
   { id: 'vision', label: 'Vision & Impact' },
   { id: 'capstone', label: 'Georgetown Capstone' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'about', label: 'About the Founders' },
 ];
 
 export default function Navbar() {

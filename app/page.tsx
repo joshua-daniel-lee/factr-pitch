@@ -13,6 +13,7 @@ import StatCard from '@/components/ui/StatCard';
 import PainPointCard from '@/components/ui/PainPointCard';
 import ValuePropCard from '@/components/ui/ValuePropCard';
 import FeaturePill from '@/components/ui/FeaturePill';
+import FounderCard from '@/components/ui/FounderCard';
 import { 
   PUBLISHER_LOGOS, 
   STAT_CARDS, 
@@ -610,24 +611,69 @@ export default function Home() {
         </Container>
       </Slide>
 
-      {/* Slide 14: Contact */}
-      <Slide id="contact" background="white">
-        <Container className="text-center">
-          <Heading level="h2" className="mb-6 gradient-text">
-            Let's Talk
-          </Heading>
-          <Text variant="lead" className="max-w-3xl mx-auto mb-8">
-            Connect with us about FactrAI
-          </Text>
-          <div className="flex gap-4 justify-center">
-            <Button variant="primary" size="lg">Contact Us</Button>
-            <Button variant="outline" size="lg">View Research</Button>
+      {/* Slide 14: About the Founders */}
+      <Slide id="about" background="white">
+        <Container size="xl">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Heading level="h2" className="mb-4 gradient-text">
+                About the Founders
+              </Heading>
+            </motion.div>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Text variant="lead" className="max-w-3xl mx-auto text-gray-700">
+                Building the future of premium journalism access
+              </Text>
+            </motion.div>
           </div>
-          <div className="mt-12">
+
+          {/* Founder Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            <FounderCard
+              name="Danyang"
+              title="Co-Founder & CEO"
+              role="Hustler"
+              bio="Visionary leader driving FactrAI's mission to democratize access to premium journalism. Passionate about solving the subscription crisis facing publishers and readers alike."
+              imageSrc="/team/danyang.png"
+              email="danyang@factrai.com"
+              linkedinUrl="https://linkedin.com/in/placeholder"
+              delay={0.1}
+            />
+            <FounderCard
+              name="Joshua"
+              title="Co-Founder & CTO"
+              role="Hacker"
+              bio="Technical architect building FactrAI's innovative platform. Expert in browser-level identity systems and AI-powered pricing optimization for digital content marketplaces."
+              imageSrc="/team/joshua.png"
+              email="joshua@factrai.com"
+              linkedinUrl="https://linkedin.com/in/placeholder"
+              delay={0.2}
+            />
+          </div>
+
+          {/* Footer */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
             <Text variant="small" className="text-gray-600">
               Georgetown Capstone Project © 2026
             </Text>
-          </div>
+          </motion.div>
         </Container>
       </Slide>
     </>
