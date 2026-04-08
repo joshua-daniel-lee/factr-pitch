@@ -613,10 +613,10 @@ export default function Home() {
                 {/* Image - TOP */}
                 <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden mb-6">
                   <Image
-                    src="/how-it-works/step-1-auth.png"
+                    src="/how-it-works/step-1-auth.svg"
                     alt="User Authentication with FedCM"
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                   />
                 </div>
