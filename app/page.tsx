@@ -655,7 +655,7 @@ export default function Home() {
                 2
               </div>
 
-              <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-purple-400 hover:shadow-xl transition-all duration-300 flex flex-col">
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-cyan-400 hover:shadow-xl transition-all duration-300 flex flex-col">
 
                 {/* Content */}
                 <div className="flex-1 flex flex-col mb-6">
