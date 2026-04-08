@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Mail, Linkedin as LinkedinIcon } from 'lucide-react';
+import { Mail, ExternalLink } from 'lucide-react';
 import { GRADIENT_BORDER } from '@/constants/design-tokens';
 import { DURATION, VIEWPORT } from '@/constants/animations';
 
@@ -98,7 +98,7 @@ export default function FounderCard({
           className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-cyan-600 hover:bg-gray-50 rounded-lg transition-colors"
           aria-label={`${name}'s LinkedIn`}
         >
-          <LinkedinIcon className="w-4 h-4" />
+          <ExternalLink className="w-4 h-4" />
           <span>LinkedIn</span>
         </a>
       </div>
