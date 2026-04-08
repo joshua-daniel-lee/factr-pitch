@@ -485,7 +485,7 @@ export default function Home() {
             {/* Angular Data Flow Connector - SVG Path */}
             <svg 
               viewBox="0 0 1000 400"
-              className="hidden md:block absolute inset-0 pointer-events-none z-15 w-full h-full"
+              className="hidden md:block absolute inset-0 pointer-events-none z-5 w-full h-full"
               preserveAspectRatio="none"
             >
               <defs>
@@ -602,7 +602,7 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative z-10"
+              className="relative z-1"
             >
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-cyan-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
@@ -611,7 +611,7 @@ export default function Home() {
                 </div>
 
                 {/* Image Placeholder - TOP */}
-                <div className="w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center mb-6">
+                <div className="relative z-10 w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-center">
                     <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -646,7 +646,7 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="relative z-10"
+              className="relative z-1"
             >
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-purple-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
@@ -673,7 +673,7 @@ export default function Home() {
                 </div>
 
                 {/* Image Placeholder - BOTTOM */}
-                <div className="w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center">
+                <div className="relative z-10 w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center">
                   <div className="text-center">
                     <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -690,7 +690,7 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="relative z-10"
+              className="relative z-1"
             >
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-orange-400 hover:shadow-xl transition-all duration-300 flex flex-col">
                 {/* Step Number Badge */}
@@ -702,7 +702,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Publisher Payout</h3>
 
                 {/* Image Placeholder - MIDDLE */}
-                <div className="w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center mb-4">
+                <div className="relative z-10 w-full h-40 bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center mb-4">
                   <div className="text-center">
                     <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
