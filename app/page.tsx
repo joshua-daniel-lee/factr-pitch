@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { TrendingDown, MousePointerClick, DollarSign, UserX, Key, CreditCard, RefreshCw } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Slide from '@/components/layout/Slide';
 import SlideNav from '@/components/layout/SlideNav';
@@ -14,18 +13,14 @@ import StatCard from '@/components/ui/StatCard';
 import PainPointCard from '@/components/ui/PainPointCard';
 import ValuePropCard from '@/components/ui/ValuePropCard';
 import FeaturePill from '@/components/ui/FeaturePill';
-
-// Publisher logos constant
-const PUBLISHER_LOGOS = [
-  'nyt-logo.png',
-  'wsj-logo.png',
-  'ft-logo.png',
-  'economist-logo.png',
-  'bloomberg-logo.png',
-  'atlantic-logo.png',
-  'wapo-logo.png',
-  'reuters-logo.png',
-];
+import { 
+  PUBLISHER_LOGOS, 
+  STAT_CARDS, 
+  PAIN_POINT_CARDS, 
+  VALUE_PROP_CARDS, 
+  USER_PERSONAS, 
+  DEMO_FEATURES 
+} from '@/constants/slides';
 
 export default function Home() {
   return (
@@ -239,47 +234,9 @@ export default function Home() {
 
             {/* Right Column: 2x2 Grid of Stat Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <StatCard
-                icon={TrendingDown}
-                value={38}
-                suffix="%"
-                label="Traffic Decline"
-                sublabel="Since late 2024"
-                footnote={1}
-                variant="cyan"
-                delay={0.1}
-              />
-              <StatCard
-                icon={MousePointerClick}
-                value={69}
-                suffix="%"
-                label="Zero-Click"
-                sublabel="In 2025"
-                footnote={2}
-                variant="orange"
-                delay={0.2}
-              />
-              <StatCard
-                icon={DollarSign}
-                value={2}
-                prefix="$"
-                suffix="B"
-                label="Revenue Loss"
-                sublabel="Annual advertising"
-                footnote={3}
-                variant="cyan"
-                delay={0.3}
-              />
-              <StatCard
-                icon={UserX}
-                value={95}
-                suffix="%"
-                label="Bounce Rate"
-                sublabel="Non-subscribers leave"
-                footnote={5}
-                variant="orange"
-                delay={0.4}
-              />
+              {STAT_CARDS.map((card, index) => (
+                <StatCard key={index} {...card} />
+              ))}
             </div>
           </div>
         </Container>
@@ -320,7 +277,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="flex flex-wrap items-center justify-center gap-2"
             >
-              {['Knowledge Professionals', 'Informed Citizens', 'Academics & Learners', 'Intent-Driven Bouncers', 'Enterprise Teams'].map((persona) => (
+              {USER_PERSONAS.map((persona) => (
                 <FeaturePill key={persona} variant="cyan">
                   {persona}
                 </FeaturePill>
@@ -330,30 +287,9 @@ export default function Home() {
 
           {/* Three-Panel Pain Journey */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-            <PainPointCard
-              emoji="🔍"
-              title="Digital Hide-and-Seek"
-              imageSrc="/digital-search-frustration.svg"
-              imageAlt="Frustrated professional drowning in browser tabs"
-              description="Users are trapped in a cycle of digital hide-and-seek, wasting a significant portion of their professional lives searching for information they know exists but cannot access."
-              delay={0.05}
-            />
-            <PainPointCard
-              emoji="💳"
-              title="Subscription Fatigue"
-              imageSrc="/subscription-fatigue.svg"
-              imageAlt="Phone showing subscription overload"
-              description="Consumers have reached a point of absolute fatigue, where managing multiple recurring accounts has become a mental and financial burden they are no longer willing to carry."
-              delay={0.1}
-            />
-            <PainPointCard
-              emoji="🚫"
-              title="The Demand for Choice"
-              imageSrc="/paywall-blocked.svg"
-              imageAlt="Computer screen with ACCESS DENIED paywall"
-              description="There is a clear and growing frustration with rigid, binary paywalls, as users increasingly seek flexible, on-demand access that aligns with how they actually consume information."
-              delay={0.15}
-            />
+            {PAIN_POINT_CARDS.map((card, index) => (
+              <PainPointCard key={index} {...card} />
+            ))}
           </div>
         </Container>
       </Slide>
@@ -391,27 +327,9 @@ export default function Home() {
 
               {/* Three Value Propositions - Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <ValuePropCard
-                  icon={Key}
-                  title="One Key, All Paywalls"
-                  description="Single OAuth/JWT identity • Auto-unlock partner content"
-                  variant="cyan"
-                  delay={0.1}
-                />
-                <ValuePropCard
-                  icon={CreditCard}
-                  title="The Credit Economy"
-                  description="Monthly credit pool • No decision fatigue • AI-powered"
-                  variant="orange"
-                  delay={0.2}
-                />
-                <ValuePropCard
-                  icon={RefreshCw}
-                  title="Data Reciprocity"
-                  description="Share 1st-party data • Unlike Apple News+ walled gardens"
-                  variant="cyan"
-                  delay={0.3}
-                />
+                {VALUE_PROP_CARDS.map((card, index) => (
+                  <ValuePropCard key={index} {...card} />
+                ))}
               </div>
             </div>
 
@@ -532,9 +450,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="mt-8 flex flex-wrap items-center justify-center gap-2"
           >
-            <FeaturePill variant="orange">No signup required</FeaturePill>
-            <FeaturePill variant="orange">Full feature access</FeaturePill>
-            <FeaturePill variant="orange">2-minute experience</FeaturePill>
+            {DEMO_FEATURES.map((feature) => (
+              <FeaturePill key={feature} variant="orange">{feature}</FeaturePill>
+            ))}
           </motion.div>
         </Container>
       </Slide>
