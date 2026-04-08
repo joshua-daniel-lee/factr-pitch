@@ -491,7 +491,7 @@ export default function Home() {
               <defs>
                 {/* Glow filter for hazy effect */}
                 <filter id="glow">
-                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                  <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
                   <feMerge>
                     <feMergeNode in="coloredBlur"/>
                     <feMergeNode in="SourceGraphic"/>
@@ -514,13 +514,13 @@ export default function Home() {
                   <animate 
                     attributeName="x1" 
                     values="-100%;200%" 
-                    dur="3s" 
+                    dur="5s" 
                     repeatCount="indefinite" 
                   />
                   <animate 
                     attributeName="x2" 
                     values="0%;300%" 
-                    dur="3s" 
+                    dur="5s" 
                     repeatCount="indefinite" 
                   />
                 </linearGradient>
