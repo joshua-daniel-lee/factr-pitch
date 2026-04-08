@@ -19,7 +19,7 @@ const sections = [
   'moat',
   'vision',
   'capstone',
-  'contact'
+  'about'
 ];
 
 export default function SlideNav() {
