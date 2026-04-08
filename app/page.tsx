@@ -480,7 +480,7 @@ export default function Home() {
           </div>
 
           {/* 3-Card Process Flow with Top Animated Connector */}
-          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mb-16">
+          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 mb-16">
             
             {/* Animated Connector Line at Badge Level */}
             <div className="hidden md:block absolute top-6 left-0 right-0 h-1 pointer-events-none z-0">
