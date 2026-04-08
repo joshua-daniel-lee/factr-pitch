@@ -7,9 +7,9 @@ import { ChevronUp, ChevronDown } from 'lucide-react';
 const sections = [
   'hero',
   'summary',
-  'problem',
   'customers',
   'solution',
+  'demo',
   'how-it-works',
   'technology',
   'business',

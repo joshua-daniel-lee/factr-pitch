@@ -8,9 +8,9 @@ import Image from 'next/image';
 const sections = [
   { id: 'hero', label: 'Home' },
   { id: 'summary', label: 'Executive Summary' },
-  { id: 'problem', label: 'The Problem' },
   { id: 'customers', label: 'Customer Landscape' },
   { id: 'solution', label: 'The Solution' },
+  { id: 'demo', label: 'Try the Demo' },
   { id: 'how-it-works', label: 'How It Works' },
   { id: 'technology', label: 'Technology' },
   { id: 'business', label: 'Business Model' },

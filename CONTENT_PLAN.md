@@ -7,18 +7,20 @@
 ## 📐 Narrative Arc Structure
 
 ```
-ACT I: THE CRISIS (Slides 1-4)
-└─ Hook → Problem → Impact → Customer Pain
+ACT I: THE CRISIS (Slides 1-2)
+└─ Hook → Problem with Stats
 
-ACT II: THE SOLUTION (Slides 5-9)
-└─ Solution → How It Works → Technology → Business Model → Market
+ACT II: THE CUSTOMER & SOLUTION (Slides 3-8)
+└─ Customer Pain → Solution → How It Works → Technology → Business Model → Market
 
-ACT III: THE OPPORTUNITY (Slides 10-12)
+ACT III: THE OPPORTUNITY (Slides 9-11)
 └─ Financials → Investment → Strategic Moat
 
-ACT IV: THE VISION (Slides 13-15)
+ACT IV: THE VISION (Slides 12-14)
 └─ Vision → Academic Rigor → Call to Action
 ```
+
+**Note:** Original Slide 3 ("A $2B Crisis") was removed as redundant with Slide 2, which already presents the crisis with comprehensive statistics.
 
 ---
 
@@ -106,59 +108,7 @@ U.S. search traffic to news publishers plummeted by 38% since late 2024 due to A
 
 ---
 
-### **Slide 3: The Problem** (Background: white)
-
-**Layout:** 3-column stat grid + explanatory text
-
-**Content:**
-
-**H2:**
-```
-A $2B Crisis
-```
-
-**Lead Text:**
-```
-Publishers lose 95% of potential revenue at paywalls, while workers waste 9 hours weekly on "digital hide-and-seek"
-```
-
-**Three Key Metrics (StatCards):**
-
-1. **95% Bounce Rate**
-   - Icon: TrendingDown
-   - Label: "Potential Revenue Lost"
-   - Context: "Non-subscribers hit paywall and leave immediately"
-
-2. **$2B Annual Loss**
-   - Icon: DollarSign
-   - Label: "Advertising Revenue"
-   - Context: "Zero-click searches cannibalize publisher income"
-
-3. **9 Hours/Week**
-   - Icon: Clock
-   - Label: "Productivity Drain"
-   - Context: "Workers searching for accessible information"
-
-**Explanatory Text:**
-```
-The root cause? Publishers cannot distinguish between a high-value human and a bot, leading to defensive, high-friction paywalls.
-
-For large organizations, these access blockades lead to approximately $14.8M in lost productivity annually per 4,000 workers.
-```
-
-**Visual Assets:**
-- 📊 **Three animated StatCards** with icons
-- 🎨 **Background element:** Faded graph showing traffic decline
-
-**Components:**
-- Heading (level h2)
-- Text (variant lead)
-- StatCard (x3, gradient variant)
-- Container (grid layout)
-
----
-
-### **Slide 4: Customer Landscape** (Background: white)
+### **Slide 3: Customer Landscape** (Background: white)
 
 **Layout:** Two-column with persona cards
 
@@ -207,7 +157,7 @@ Information workers wasting 9 hours/week on digital hide-and-seek, trapped betwe
 
 ---
 
-### **Slide 5: The Solution** (Background: white)
+### **Slide 4: The Solution** (Background: white)
 
 **Layout:** Centered with feature highlights
 
@@ -260,7 +210,7 @@ We restore the economic bridge between publishers and high-intent readers by rep
 
 ---
 
-### **Slide 6: How It Works** (Background: white)
+### **Slide 5: How It Works** (Background: white)
 
 **Layout:** 3-step process flow
 
@@ -319,7 +269,7 @@ FOR PUBLISHERS: Monetize 95% bounce + verified human traffic
 
 ---
 
-### **Slide 7: Technology** (Background: white)
+### **Slide 6: Technology** (Background: white)
 
 **Layout:** Tech stack + validation
 
@@ -380,7 +330,7 @@ Privacy-preserving identity meets AI-powered pricing, validated by ClassPass eco
 
 ---
 
-### **Slide 8: Business Model** (Background: white)
+### **Slide 7: Business Model** (Background: white)
 
 **Layout:** Revenue breakdown + pricing tiers
 
@@ -433,7 +383,7 @@ Customer Acquisition: $75 → $40 declining CAC
 
 ---
 
-### **Slide 9: Market Opportunity** (Background: white)
+### **Slide 8: Market Opportunity** (Background: white)
 
 **Layout:** Market sizing + growth trajectory
 
@@ -490,7 +440,7 @@ Our advantage: Data reciprocity + verified human network
 
 ---
 
-### **Slide 10: Financial Model** (Background: white)
+### **Slide 9: Financial Model** (Background: white)
 
 **Layout:** Charts + key metrics
 
@@ -544,7 +494,7 @@ Path to $6.3M ARR
 
 ---
 
-### **Slide 11: The Investment** (Background: white)
+### **Slide 10: The Investment** (Background: white)
 
 **Layout:** Investment terms + returns
 
@@ -601,7 +551,7 @@ Total Capital: $31M over 5 years to profitability
 
 ---
 
-### **Slide 12: Strategic Moat** (Background: white)
+### **Slide 11: Strategic Moat** (Background: white)
 
 **Layout:** 5 advantages + competitive positioning
 
@@ -683,7 +633,7 @@ FactrAI vs. Apple News+ vs. Traditional Subs
 
 ---
 
-### **Slide 13: Vision & Impact** (Background: white)
+### **Slide 12: Vision & Impact** (Background: white)
 
 **Layout:** Inspirational + mission-driven
 
@@ -746,7 +696,7 @@ We're building infrastructure for the information economy, ensuring that quality
 
 ---
 
-### **Slide 14: Georgetown Capstone** (Background: white)
+### **Slide 13: Georgetown Capstone** (Background: white)
 
 **Layout:** Academic credibility + methodology
 
@@ -816,7 +766,7 @@ Academic rigor meets real-world innovation—a Georgetown Capstone project groun
 
 ---
 
-### **Slide 15: Contact** (Background: white)
+### **Slide 14: Contact** (Background: white)
 
 **Layout:** Call-to-action + contact info
 
