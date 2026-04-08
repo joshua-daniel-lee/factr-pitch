@@ -689,24 +689,24 @@ export default function Home() {
 
                 {/* Info Card with Glassmorphism */}
                 <div className="backdrop-blur-lg bg-white/80 rounded-2xl p-6 shadow-xl border border-white/50 max-w-md">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">Danyang</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-1">Danyang (Darcy) Wang</h3>
                   <p className="text-cyan-600 font-semibold mb-1">Co-Founder & CEO</p>
                   <div className="inline-block bg-gradient-to-r from-cyan-500 to-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
                     Hustler
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Visionary leader driving FactrAI's mission to democratize access to premium journalism. Passionate about solving the subscription crisis facing publishers and readers alike.
+                    Dual master's strategist (Georgetown MSITM '26, CMU MSPPM '24) with data analytics expertise from Yale Law and government consulting. AWS-certified leader revolutionizing journalism economics.
                   </p>
                   <div className="flex gap-3 justify-center">
                     <a
-                      href="mailto:danyang@factrai.com"
+                      href="mailto:dw1026@georgetown.edu"
                       className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors"
                     >
                       <Mail className="w-4 h-4" />
                       <span>Email</span>
                     </a>
                     <a
-                      href="https://linkedin.com/in/placeholder"
+                      href="https://www.linkedin.com/in/danyang-wang-79984a253/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-colors"
@@ -755,24 +755,24 @@ export default function Home() {
 
                 {/* Info Card with Glassmorphism */}
                 <div className="backdrop-blur-lg bg-white/80 rounded-2xl p-6 shadow-xl border border-white/50 max-w-md">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1">Joshua</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-1">Joshua Lee</h3>
                   <p className="text-orange-600 font-semibold mb-1">Co-Founder & CTO</p>
                   <div className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
                     Hacker
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    Technical architect building FactrAI's innovative platform. Expert in browser-level identity systems and AI-powered pricing optimization for digital content marketplaces.
+                    Cloud architect at NOAA Fisheries and Georgetown MSITM candidate. Award-winning DevOps leader building FactrAI's enterprise-grade identity and pricing platform.
                   </p>
                   <div className="flex gap-3 justify-center">
                     <a
-                      href="mailto:joshua@factrai.com"
+                      href="mailto:jdl166@georgetown.edu"
                       className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors"
                     >
                       <Mail className="w-4 h-4" />
                       <span>Email</span>
                     </a>
                     <a
-                      href="https://linkedin.com/in/placeholder"
+                      href="https://www.linkedin.com/in/joshua-lee-339504100/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors"
