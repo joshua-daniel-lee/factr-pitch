@@ -2,14 +2,14 @@ import { TrendingDown, MousePointerClick, DollarSign, UserX, Key, CreditCard, Re
 
 // Publisher Logos
 export const PUBLISHER_LOGOS = [
-  'nyt-logo.png',
-  'wsj-logo.png',
-  'ft-logo.png',
-  'economist-logo.png',
-  'bloomberg-logo.png',
-  'atlantic-logo.png',
-  'wapo-logo.png',
-  'reuters-logo.png',
+  'nyt.png',
+  'wsj.png',
+  'ft.png',
+  'economist.png',
+  'bloomberg.png',
+  'atlantic.png',
+  'wapo.png',
+  'reuters.png',
 ];
 
 // Stat Cards Data
@@ -62,7 +62,7 @@ export const PAIN_POINT_CARDS = [
   {
     emoji: '🔍',
     title: 'Digital Hide-and-Seek',
-    imageSrc: '/digital-search-frustration.svg',
+    imageSrc: '/illustrations/pain-search.svg',
     imageAlt: 'Frustrated professional drowning in browser tabs',
     description: 'Users are trapped in a cycle of digital hide-and-seek, wasting a significant portion of their professional lives searching for information they know exists but cannot access.',
     delay: 0.05,
@@ -70,7 +70,7 @@ export const PAIN_POINT_CARDS = [
   {
     emoji: '💳',
     title: 'Subscription Fatigue',
-    imageSrc: '/subscription-fatigue.svg',
+    imageSrc: '/illustrations/pain-subscriptions.svg',
     imageAlt: 'Phone showing subscription overload',
     description: 'Consumers have reached a point of absolute fatigue, where managing multiple recurring accounts has become a mental and financial burden they are no longer willing to carry.',
     delay: 0.1,
@@ -78,7 +78,7 @@ export const PAIN_POINT_CARDS = [
   {
     emoji: '🚫',
     title: 'The Demand for Choice',
-    imageSrc: '/paywall-blocked.svg',
+    imageSrc: '/illustrations/pain-paywall.svg',
     imageAlt: 'Computer screen with ACCESS DENIED paywall',
     description: 'There is a clear and growing frustration with rigid, binary paywalls, as users increasingly seek flexible, on-demand access that aligns with how they actually consume information.',
     delay: 0.15,

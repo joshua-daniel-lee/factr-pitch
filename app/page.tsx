@@ -58,7 +58,7 @@ export default function Home() {
             className="mb-8"
           >
             <Image 
-              src="/hero-image.svg" 
+              src="/illustrations/hero-key.svg" 
               alt="Universal Key to Premium Journalism" 
               width={350} 
               height={191}
@@ -149,7 +149,7 @@ export default function Home() {
                     >
                       <Image
                         src={`/publishers/${logo}`}
-                        alt={logo.replace('-logo.png', '')}
+                        alt={logo.replace('.png', '')}
                         fill
                         sizes="(max-width: 640px) 96px, 128px"
                         className="object-contain"
@@ -351,7 +351,7 @@ export default function Home() {
                 className="w-full aspect-[4/3] relative rounded-2xl shadow-2xl overflow-hidden"
               >
                 <Image
-                  src="/app-mockup.png"
+                  src="/mockups/app-interface.png"
                   alt="FactrAI App Mockup"
                   fill
                   className="object-contain"
@@ -395,7 +395,7 @@ export default function Home() {
             className="mb-6"
           >
             <Image 
-              src="/hero-image.svg" 
+              src="/illustrations/hero-key.svg" 
               alt="Universal Key to Premium Journalism" 
               width={280} 
               height={153}

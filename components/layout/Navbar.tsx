@@ -82,7 +82,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <Image 
-                src="/logo.png" 
+                src="/branding/logo.png" 
                 alt="FactrAI Logo" 
                 width={40} 
                 height={40}
