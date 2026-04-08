@@ -602,13 +602,14 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative pt-6"
             >
+              {/* Step Number Badge - Floating Above */}
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
+                1
+              </div>
+
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-cyan-400 hover:shadow-xl transition-all duration-300 flex flex-col">
-                {/* Step Number Badge */}
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl mb-4 mx-auto">
-                  1
-                </div>
 
                 {/* Image - TOP */}
                 <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden mb-6 bg-white">
@@ -647,13 +648,14 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative pt-6"
             >
+              {/* Step Number Badge - Floating Above */}
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
+                2
+              </div>
+
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-purple-400 hover:shadow-xl transition-all duration-300 flex flex-col">
-                {/* Step Number Badge */}
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl mb-4 mx-auto">
-                  2
-                </div>
 
                 {/* Content */}
                 <div className="flex-1 flex flex-col mb-6">
@@ -691,13 +693,14 @@ export default function Home() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative pt-6"
             >
+              {/* Step Number Badge - Floating Above */}
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
+                3
+              </div>
+
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-orange-400 hover:shadow-xl transition-all duration-300 flex flex-col">
-                {/* Step Number Badge */}
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl mb-4 mx-auto">
-                  3
-                </div>
 
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Publisher Payout</h3>
