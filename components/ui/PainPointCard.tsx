@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Text from './Text';
+import { GRADIENT_BORDER } from '@/constants/design-tokens';
+import { DURATION, VIEWPORT, hoverScale } from '@/constants/animations';
 
 interface PainPointCardProps {
   emoji: string;
@@ -25,14 +27,11 @@ export default function PainPointCard({
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay }}
-      viewport={{ once: true }}
+      transition={{ duration: DURATION.normal, delay }}
+      viewport={{ once: VIEWPORT.once }}
       whileHover={{ scale: 1.05, y: -5 }}
       className="relative bg-white p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col h-full cursor-pointer group"
-      style={{
-        background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, rgba(247,112,36,0.4), rgba(247,112,36,0.2)) border-box',
-        border: '3px solid transparent',
-      }}
+      style={GRADIENT_BORDER.orangeStrong}
     >
       {/* Header */}
       <div className="bg-gradient-to-r from-cyan-500 to-cyan-600 text-white px-3 py-1.5 rounded-lg mb-3 text-center font-semibold text-sm flex items-center justify-center gap-2">

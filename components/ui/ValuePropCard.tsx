@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
+import { GRADIENT_BORDER } from '@/constants/design-tokens';
+import { DURATION, VIEWPORT } from '@/constants/animations';
 
 interface ValuePropCardProps {
   icon: LucideIcon;
@@ -14,11 +16,11 @@ interface ValuePropCardProps {
 const VARIANT_STYLES = {
   cyan: {
     iconColor: 'text-cyan-600',
-    gradient: 'linear-gradient(135deg, rgba(6,192,215,0.3), rgba(6,192,215,0.1))',
+    border: GRADIENT_BORDER.cyan,
   },
   orange: {
     iconColor: 'text-orange-600',
-    gradient: 'linear-gradient(135deg, rgba(247,112,36,0.3), rgba(247,112,36,0.1))',
+    border: GRADIENT_BORDER.orange,
   },
 };
 
@@ -35,13 +37,10 @@ export default function ValuePropCard({
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay }}
-      viewport={{ once: true }}
+      transition={{ duration: DURATION.normal, delay }}
+      viewport={{ once: VIEWPORT.once }}
       className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-      style={{
-        background: `linear-gradient(white, white) padding-box, ${styles.gradient} border-box`,
-        border: '2px solid transparent',
-      }}
+      style={styles.border}
     >
       <Icon className={`w-8 h-8 ${styles.iconColor} mb-3`} />
       <div className="text-lg font-bold text-gray-900 mb-1">{title}</div>
