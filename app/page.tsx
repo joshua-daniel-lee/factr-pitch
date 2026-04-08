@@ -612,7 +612,7 @@ export default function Home() {
               <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-cyan-400 hover:shadow-xl transition-all duration-300 flex flex-col">
 
                 {/* Image - TOP */}
-                <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden mb-6 bg-white">
+                <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden mb-6 bg-white border border-gray-200">
                   <Image
                     src="/how-it-works/step-1-auth.svg"
                     alt="User Authentication with FedCM"
@@ -625,7 +625,7 @@ export default function Home() {
                 {/* Content */}
                 <div className="flex-1 flex flex-col">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">User Authentication</h3>
-                  <p className="text-sm text-gray-600 mb-4">
+                  <p className="text-sm font-semibold text-cyan-600 mb-4">
                     Browser-level identity (FedCM)
                   </p>
                   <ul className="space-y-2 text-sm text-gray-700">
@@ -660,7 +660,7 @@ export default function Home() {
                 {/* Content */}
                 <div className="flex-1 flex flex-col mb-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Content Access</h3>
-                  <p className="text-sm text-gray-600 mb-4">
+                  <p className="text-sm font-semibold text-cyan-600 mb-4">
                     AI-powered pricing engine
                   </p>
                   <ul className="space-y-2 text-sm text-gray-700">
@@ -676,7 +676,7 @@ export default function Home() {
                 </div>
 
                 {/* Image - BOTTOM */}
-                <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden bg-white">
+                <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden bg-white border border-gray-200">
                   <Image
                     src="/how-it-works/step-2-access.svg"
                     alt="Content Access with AI-powered pricing"
@@ -707,7 +707,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Publisher Payout</h3>
 
                 {/* Image - MIDDLE */}
-                <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden mb-4 bg-white">
+                <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden mb-4 bg-white border border-gray-200">
                   <Image
                     src="/how-it-works/step-3-payout.svg"
                     alt="Publisher Payout with revenue sharing"
@@ -718,7 +718,7 @@ export default function Home() {
                 </div>
 
                 {/* Description */}
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm font-semibold text-cyan-600 mb-4">
                   65% of credit revenue
                 </p>
 
