@@ -480,7 +480,7 @@ export default function Home() {
           </div>
 
           {/* 3-Card Process Flow with Top Animated Connector */}
-          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 mb-16">
             
             {/* Animated Connector Line at Badge Level */}
             <div className="hidden md:block absolute top-6 left-0 right-0 h-1 pointer-events-none z-0">
@@ -641,30 +641,6 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Value Exchange Summary */}
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
-          >
-            {/* For Users */}
-            <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl p-6 border border-cyan-200">
-              <h4 className="font-bold text-cyan-900 mb-2">FOR USERS</h4>
-              <p className="text-sm text-cyan-800">
-                Save 9 hrs/week + $200/month in subscriptions
-              </p>
-            </div>
-
-            {/* For Publishers */}
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
-              <h4 className="font-bold text-orange-900 mb-2">FOR PUBLISHERS</h4>
-              <p className="text-sm text-orange-800">
-                Monetize 95% bounce + verified human traffic
-              </p>
-            </div>
-          </motion.div>
         </Container>
       </Slide>
 
