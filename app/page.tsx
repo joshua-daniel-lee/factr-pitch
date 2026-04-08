@@ -489,19 +489,27 @@ export default function Home() {
               preserveAspectRatio="none"
             >
               <defs>
-                {/* Gradient for the line */}
+                {/* Glow filter for hazy effect */}
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+                
+                {/* Gradient for the line - Cyan to Orange (matches header) */}
                 <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="rgb(6,182,212)" stopOpacity="0.8" />
-                  <stop offset="50%" stopColor="rgb(168,85,247)" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="rgb(249,115,22)" stopOpacity="0.8" />
+                  <stop offset="0%" stopColor="#06c0d7" stopOpacity="0.9" />
+                  <stop offset="100%" stopColor="#f77024" stopOpacity="0.9" />
                 </linearGradient>
                 
                 {/* Animated gradient for flowing effect */}
                 <linearGradient id="flowAnimatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stopColor="transparent" />
-                  <stop offset="30%" stopColor="rgb(6,182,212)" stopOpacity="1" />
+                  <stop offset="40%" stopColor="#06c0d7" stopOpacity="1" />
                   <stop offset="50%" stopColor="white" stopOpacity="1" />
-                  <stop offset="70%" stopColor="rgb(249,115,22)" stopOpacity="1" />
+                  <stop offset="60%" stopColor="#f77024" stopOpacity="1" />
                   <stop offset="100%" stopColor="transparent" />
                   <animate 
                     attributeName="x1" 
@@ -522,10 +530,11 @@ export default function Home() {
               <motion.path
                 d="M 166 100 L 333 100 L 333 300 L 500 300 L 500 180 L 666 180 L 833 180"
                 stroke="url(#flowGradient)"
-                strokeWidth="3"
+                strokeWidth="6"
                 fill="none"
                 strokeLinecap="round"
-                strokeLinejoin="miter"
+                strokeLinejoin="round"
+                filter="url(#glow)"
                 initial={{ pathLength: 0, opacity: 0 }}
                 whileInView={{ pathLength: 1, opacity: 1 }}
                 transition={{ duration: 1.5, delay: 0.3, ease: "easeInOut" }}
@@ -536,11 +545,12 @@ export default function Home() {
               <motion.path
                 d="M 166 100 L 333 100 L 333 300 L 500 300 L 500 180 L 666 180 L 833 180"
                 stroke="url(#flowAnimatedGradient)"
-                strokeWidth="4"
+                strokeWidth="8"
                 fill="none"
                 strokeLinecap="round"
-                strokeLinejoin="miter"
-                opacity="0.6"
+                strokeLinejoin="round"
+                opacity="0.7"
+                filter="url(#glow)"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ 
@@ -550,12 +560,13 @@ export default function Home() {
                 }}
               />
               
-              {/* Connection dots at each card */}
+              {/* Connection dots at each card with glow */}
               <motion.circle
                 cx="166"
                 cy="100"
-                r="6"
-                fill="rgb(6,182,212)"
+                r="7"
+                fill="#06c0d7"
+                filter="url(#glow)"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.4, delay: 1.8 }}
@@ -564,8 +575,9 @@ export default function Home() {
               <motion.circle
                 cx="500"
                 cy="300"
-                r="6"
-                fill="rgb(168,85,247)"
+                r="7"
+                fill="#f77024"
+                filter="url(#glow)"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.4, delay: 2.0 }}
@@ -574,8 +586,9 @@ export default function Home() {
               <motion.circle
                 cx="833"
                 cy="180"
-                r="6"
-                fill="rgb(249,115,22)"
+                r="7"
+                fill="#f77024"
+                filter="url(#glow)"
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.4, delay: 2.2 }}
