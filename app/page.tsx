@@ -1686,7 +1686,7 @@ export default function Home() {
 
       {/* Slide 14: About the Founders - Split Screen Hero */}
       <Slide id="about" background="none">
-        <div className="relative h-full w-full overflow-hidden">
+        <div className="relative min-h-screen w-full overflow-hidden">
           {/* Gradient Background - Fills entire viewport */}
           <div 
             className="absolute inset-0 -z-10"
