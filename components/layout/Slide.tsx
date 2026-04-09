@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 interface SlideProps {
   id: string;
   children: ReactNode;
-  background?: 'white' | 'gray' | 'lavender' | 'dark' | 'gradient';
+  background?: 'white' | 'gray' | 'lavender' | 'dark' | 'gradient' | 'none';
   className?: string;
 }
 
@@ -16,7 +16,8 @@ export default function Slide({ id, children, background = 'white', className = 
     gray: 'bg-gray-50',
     lavender: 'bg-purple-50',
     dark: 'bg-bunting text-white',
-    gradient: 'gradient-animated text-white'
+    gradient: 'gradient-animated text-white',
+    none: ''
   };
 
   return (

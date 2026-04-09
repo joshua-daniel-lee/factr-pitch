@@ -1453,6 +1453,9 @@ export default function Home() {
 
       {/* Slide 10: The Investment */}
       <Slide id="investment" background="white">
+        {/* Strong gradient transition to next slide */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white from-40% to-cyan-200 -z-10" />
+        
         <Container size="xl">
           {/* Header */}
           <div className="text-center mb-12">
@@ -1682,26 +1685,16 @@ export default function Home() {
       </div>
 
       {/* Slide 14: About the Founders - Split Screen Hero */}
-      <Slide id="about" background="white">
+      <Slide id="about" background="none">
         <div className="relative h-full w-full overflow-hidden">
-          {/* Unified Gradient Background (Cyan to Orange) */}
+          {/* Gradient Background - Fills entire viewport */}
           <div 
-            className="absolute inset-0"
+            className="absolute inset-0 -z-10"
             style={{
               background: 'linear-gradient(to right, rgb(6,192,215), rgb(247,112,36))',
             }}
           />
           
-          {/* Grainy Texture Overlay */}
-          <div 
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-              backgroundRepeat: 'repeat',
-              backgroundSize: '200px 200px',
-            }}
-          />
-
           {/* Header */}
           <div className="absolute top-8 left-0 right-0 z-20 text-center">
             <motion.div
