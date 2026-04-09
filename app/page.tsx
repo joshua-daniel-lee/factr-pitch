@@ -610,6 +610,7 @@ export default function Home() {
                     fill
                     className="object-contain"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                    priority
                   />
                 </div>
               </div>
@@ -1694,6 +1695,7 @@ export default function Home() {
             width={70}
             height={70}
             className="object-contain drop-shadow-lg"
+            style={{ height: "auto" }}
           />
         </motion.div>
 
