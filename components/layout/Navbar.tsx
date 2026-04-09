@@ -85,6 +85,7 @@ export default function Navbar() {
                 width={40} 
                 height={40}
                 className="object-contain"
+                style={{ height: "auto" }}
               />
               <div className="text-2xl font-inter font-bold gradient-text">
                 FactrAI
