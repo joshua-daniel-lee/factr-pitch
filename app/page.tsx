@@ -109,6 +109,7 @@ export default function Home() {
                   fill
                   className="object-cover"
                   sizes="80px"
+                  priority
                 />
               </div>
               <p className="text-sm font-semibold text-gray-900">Danyang Wang</p>
@@ -126,6 +127,7 @@ export default function Home() {
                   fill
                   className="object-cover"
                   sizes="80px"
+                  priority
                 />
               </div>
               <p className="text-sm font-semibold text-gray-900">Joshua Lee</p>
