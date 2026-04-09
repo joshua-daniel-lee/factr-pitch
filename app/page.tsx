@@ -1078,7 +1078,7 @@ export default function Home() {
               {/* Persona List - Tech Stack Style */}
               <div className="space-y-3">
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  <strong className="text-gray-700">Knowledge Professional</strong> — Consultants, VCs, lawyers requiring cross-source data
+                  <strong className="text-gray-700">Knowledge Professional</strong> — Consultants, strategists, lawyers requiring cross-source data
                 </p>
                 <p className="text-xs text-gray-500 leading-relaxed">
                   <strong className="text-gray-700">Informed Citizen</strong> — Balanced perspectives without managing 20 logins
@@ -1090,7 +1090,7 @@ export default function Home() {
                   <strong className="text-gray-700">Intent-Driven "Bouncer"</strong> — Social media click-throughs wanting instant access
                 </p>
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  <strong className="text-gray-700">B2B Enterprise</strong> — Reducing $14.8M organizational productivity drain
+                  <strong className="text-orange-600">B2B Enterprise</strong> — Reducing $14.8M organizational productivity drain
                 </p>
               </div>
             </div>
