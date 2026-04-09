@@ -34,17 +34,13 @@ export default function ValuePropCard({
   const styles = VARIANT_STYLES[variant];
 
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: DURATION.normal, delay }}
-      viewport={{ once: VIEWPORT.once }}
+    <div
       className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
       style={styles.border}
     >
       <Icon className={`w-8 h-8 ${styles.iconColor} mb-3`} />
       <div className="text-lg font-bold text-gray-900 mb-1">{title}</div>
       <div className="text-xs text-gray-500">{description}</div>
-    </motion.div>
+    </div>
   );
 }

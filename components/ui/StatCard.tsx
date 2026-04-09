@@ -43,11 +43,7 @@ export default function StatCard({
   const styles = VARIANT_STYLES[variant];
 
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: DURATION.normal, delay }}
-      viewport={{ once: VIEWPORT.once }}
+    <div
       className="relative bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
       style={styles.border}
     >
@@ -58,6 +54,6 @@ export default function StatCard({
       </div>
       <div className="text-sm font-medium text-gray-700 mb-1">{label}</div>
       <div className="text-xs text-gray-500">{sublabel}</div>
-    </motion.div>
+    </div>
   );
 }

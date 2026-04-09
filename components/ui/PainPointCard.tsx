@@ -24,13 +24,8 @@ export default function PainPointCard({
   delay = 0,
 }: PainPointCardProps) {
   return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: DURATION.normal, delay }}
-      viewport={{ once: VIEWPORT.once }}
-      whileHover={{ scale: 1.05, y: -5 }}
-      className="relative bg-white p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col h-full cursor-pointer group"
+    <div
+      className="relative bg-white p-4 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col h-full cursor-pointer group hover:scale-105 hover:-translate-y-1"
       style={GRADIENT_BORDER.orangeStrong}
     >
       {/* Header */}
@@ -58,6 +53,6 @@ export default function PainPointCard({
           {description}
         </Text>
       </div>
-    </motion.div>
+    </div>
   );
 }

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Mail, ExternalLink } from 'lucide-react';
+import { Mail, ExternalLink, CreditCard, Share2, Coins, TrendingUp, Image as ImageIcon } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Slide from '@/components/layout/Slide';
 import SlideNav from '@/components/layout/SlideNav';
@@ -503,13 +503,7 @@ export default function Home() {
             />
 
             {/* Card 1: User Authentication - Image TOP */}
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative pt-10"
-            >
+            <div className="relative pt-10">
               {/* Step Number Badge - Floating Above */}
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
                 1
@@ -546,16 +540,10 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Card 2: Content Access - Image BOTTOM */}
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="relative pt-10"
-            >
+            <div className="relative pt-10">
               {/* Step Number Badge - Floating Above */}
               <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
                 2
@@ -592,7 +580,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Card 3: Publisher Payout - Image MIDDLE */}
             <div className="relative pt-10">
@@ -861,26 +849,17 @@ export default function Home() {
                 <h4 className="text-base font-medium text-gray-600">The Stack</h4>
                 
                 <div className="space-y-3">
-                  <div>
-                    <h5 className="text-sm font-medium text-gray-700 mb-0.5">FedCM</h5>
-                    <p className="text-xs text-gray-500 leading-relaxed">
-                      Browser-level authentication without 3rd-party cookies, production-ready in Google Chrome.
-                    </p>
-                  </div>
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    <strong className="text-gray-700">FedCM</strong> is browser-level authentication without 3rd-party cookies, production-ready in Google Chrome.
+                  </p>
 
-                  <div>
-                    <h5 className="text-sm font-medium text-gray-700 mb-0.5">OAuth/JWT</h5>
-                    <p className="text-xs text-gray-500 leading-relaxed">
-                      Secure publisher access with decentralized control through publisher SDKs.
-                    </p>
-                  </div>
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    <strong className="text-gray-700">OAuth/JWT</strong> is secure publisher access with decentralized control through publisher SDKs.
+                  </p>
 
-                  <div>
-                    <h5 className="text-sm font-medium text-gray-700 mb-0.5">SmartReader AI</h5>
-                    <p className="text-xs text-gray-500 leading-relaxed">
-                      Dynamic pricing optimization powered by real-time traffic analysis.
-                    </p>
-                  </div>
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    <strong className="text-gray-700">SmartReader AI</strong> is dynamic pricing optimization powered by real-time traffic analysis.
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -890,19 +869,179 @@ export default function Home() {
 
       {/* Slide 7: Business Model */}
       <Slide id="business" background="white">
-        <Container className="text-center">
-          <Heading level="h2" className="mb-6 gradient-text">
-            Three Revenue Streams
-          </Heading>
-          <Text variant="lead" className="max-w-3xl mx-auto">
-            81% subscriptions, 12% affiliate, 7% breakage
-          </Text>
-          <div className="mt-8 p-6 bg-white rounded-2xl max-w-2xl mx-auto">
-            <Text variant="body" className="text-gray-600">
-              Content coming soon...
-            </Text>
+        <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 pb-12">
+          {/* Header */}
+          <div className="text-center mb-6">
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Heading level="h2" className="mb-3 gradient-text">
+                A Sustainable Revenue Model
+              </Heading>
+              <Text variant="lead" className="max-w-3xl mx-auto text-gray-700">
+                Multiple streams create resilience while aligning publisher and users
+              </Text>
+            </motion.div>
           </div>
-        </Container>
+
+          {/* Bento Grid Layout - 4 Sections */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 auto-rows-auto">
+            
+            {/* Section 1: Subscription-First - Tall Card */}
+            <div className="lg:row-span-2 bg-white border-2 border-cyan-400 rounded-2xl p-4 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300">
+              <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide mb-1.5">Stream 1</p>
+              <div className="flex items-start gap-4 mb-2">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-cyan-100 flex items-center justify-center">
+                  <CreditCard className="w-7 h-7 text-cyan-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mt-2">Subscription-First</h3>
+              </div>
+              <p className="text-base text-gray-600 mb-4 leading-relaxed">
+                Recurring monthly revenue from users accessing our credit-based platform
+              </p>
+              <ul className="space-y-1 text-sm text-gray-600 mb-4">
+                <li className="flex items-start">
+                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
+                  <span>Tiered access based on usage needs</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
+                  <span>Predictable, scalable SaaS economics</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
+                  <span>No decision fatigue per article</span>
+                </li>
+              </ul>
+              
+              {/* Subscription Tiers Chart */}
+              <div className="mt-auto">
+                <div className="relative w-full h-[300px] rounded-xl overflow-hidden">
+                  <Image
+                    src="/business-model/subscription-tiers.png"
+                    alt="Subscription tier pricing visualization"
+                    fill
+                    className="object-contain p-1 drop-shadow-lg"
+                    sizes="(max-width: 768px) 100vw, 300px"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Section 2: Affiliate Partnership - Standard Card */}
+            <div className="bg-white border-2 border-cyan-400 rounded-2xl p-4 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300">
+              <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide mb-1.5">Stream 2</p>
+              <div className="flex items-start gap-4 mb-2">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-cyan-100 flex items-center justify-center">
+                  <Share2 className="w-7 h-7 text-cyan-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mt-2">Affiliate Partnership</h3>
+              </div>
+              <p className="text-base text-gray-600 mb-4 leading-relaxed">
+                Commission when users upgrade to direct publisher subscriptions
+              </p>
+              <ul className="space-y-1 text-sm text-gray-600">
+                <li className="flex items-start">
+                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
+                  <span>Discovery engine, not a competitor</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
+                  <span>Aligned incentives with publishers</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
+                  <span>Lead generation for direct relationships</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Section 3: Credit Economy - Standard Card */}
+            <div className="bg-white border-2 border-cyan-400 rounded-2xl p-4 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300">
+              <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide mb-1.5">Stream 3</p>
+              <div className="flex items-start gap-4 mb-2">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-cyan-100 flex items-center justify-center">
+                  <Coins className="w-7 h-7 text-cyan-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mt-2">Credit Economy</h3>
+              </div>
+              <p className="text-base text-gray-600 mb-4 leading-relaxed">
+                Unused credits contribute to sustainable margins
+              </p>
+              <ul className="space-y-1 text-sm text-gray-600">
+                <li className="flex items-start">
+                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
+                  <span>Common in credit-based marketplaces</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
+                  <span>Reduces friction vs. pay-per-article</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
+                  <span>Proven by ClassPass model</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Section 4: Key Economics - Wide Card spanning 2 columns */}
+            <div className="md:col-span-2 lg:col-span-2 bg-white border-2 border-orange-400 rounded-2xl p-4 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300">
+              
+              {/* 2-Column Layout: Image Left, Content Right */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Left: Revenue Model Chart */}
+                <div className="relative w-full h-64 rounded-xl overflow-hidden">
+                  <Image
+                    src="/business-model/revenue-model.png"
+                    alt="Revenue model visualization"
+                    fill
+                    className="object-contain p-1 drop-shadow-lg"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                  />
+                </div>
+                
+                {/* Right: Label + Title + Description + Stacked Bullets */}
+                <div className="flex flex-col">
+                  {/* Label */}
+                  <p className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Why It Works</p>
+                  
+                  {/* Title with Icon */}
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center">
+                      <TrendingUp className="w-6 h-6 text-orange-600" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mt-1">Key Economics</h3>
+                  </div>
+                  
+                  {/* Description */}
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                    Multiple revenue streams de-risk the model while maintaining sustainability
+                  </p>
+                  
+                  {/* Bullets */}
+                  <ul className="space-y-1 text-sm text-gray-600">
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-3 mt-0.5 text-lg">•</span>
+                      <span>Publishers receive majority of credit revenue</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-3 mt-0.5 text-lg">•</span>
+                      <span>Data reciprocity unlike Apple News+</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-orange-500 mr-3 mt-0.5 text-lg">•</span>
+                      <span>Network effects improve unit economics at scale</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </Slide>
 
       {/* Slide 8: Market Opportunity */}
