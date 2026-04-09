@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Mail, ExternalLink, CreditCard, Share2, Coins, TrendingUp, Image as ImageIcon, User } from 'lucide-react';
+import { Mail, ExternalLink, CreditCard, Share2, Coins, TrendingUp, Image as ImageIcon, User, Calculator, Clock, Target } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Slide from '@/components/layout/Slide';
 import SlideNav from '@/components/layout/SlideNav';
@@ -869,7 +869,7 @@ export default function Home() {
 
       {/* Slide 7: Business Model */}
       <Slide id="business" background="white">
-        <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12 pb-12">
+        <Container size="xl">
           {/* Header */}
           <div className="text-center mb-6">
             <motion.div
@@ -887,161 +887,131 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Bento Grid Layout - 4 Sections */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 auto-rows-auto">
+          {/* Split-Screen Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            {/* Section 1: Subscription-First - Tall Card */}
-            <div className="lg:row-span-2 bg-white border-2 border-cyan-400 rounded-2xl p-4 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300">
-              <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide mb-1.5">Stream 1</p>
-              <div className="flex items-start gap-4 mb-2">
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-cyan-100 flex items-center justify-center">
-                  <CreditCard className="w-7 h-7 text-cyan-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mt-2">Subscription-First</h3>
-              </div>
-              <p className="text-base text-gray-600 mb-4 leading-relaxed">
-                Recurring monthly revenue from users accessing our credit-based platform
-              </p>
-              <ul className="space-y-1 text-sm text-gray-600 mb-4">
-                <li className="flex items-start">
-                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
-                  <span>Tiered access based on usage needs</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
-                  <span>Predictable, scalable SaaS economics</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
-                  <span>No decision fatigue per article</span>
-                </li>
-              </ul>
-              
-              {/* Subscription Tiers Chart */}
-              <div className="mt-auto">
-                <div className="relative w-full h-[300px] rounded-xl overflow-hidden">
-                  <Image
-                    src="/business-model/subscription-tiers.png"
-                    alt="Subscription tier pricing visualization"
-                    fill
-                    className="object-contain p-1 drop-shadow-lg"
-                    sizes="(max-width: 768px) 100vw, 300px"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Section 2: Affiliate Partnership - Standard Card */}
-            <div className="bg-white border-2 border-cyan-400 rounded-2xl p-4 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300">
-              <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide mb-1.5">Stream 2</p>
-              <div className="flex items-start gap-4 mb-2">
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-cyan-100 flex items-center justify-center">
-                  <Share2 className="w-7 h-7 text-cyan-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mt-2">Affiliate Partnership</h3>
-              </div>
-              <p className="text-base text-gray-600 mb-4 leading-relaxed">
-                Commission when users upgrade to direct publisher subscriptions
-              </p>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
-                  <span>Discovery engine, not a competitor</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
-                  <span>Aligned incentives with publishers</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
-                  <span>Lead generation for direct relationships</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Section 3: Credit Economy - Standard Card */}
-            <div className="bg-white border-2 border-cyan-400 rounded-2xl p-4 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300">
-              <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide mb-1.5">Stream 3</p>
-              <div className="flex items-start gap-4 mb-2">
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-cyan-100 flex items-center justify-center">
-                  <Coins className="w-7 h-7 text-cyan-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mt-2">Credit Economy</h3>
-              </div>
-              <p className="text-base text-gray-600 mb-4 leading-relaxed">
-                Unused credits contribute to sustainable margins
-              </p>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
-                  <span>Common in credit-based marketplaces</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
-                  <span>Reduces friction vs. pay-per-article</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-cyan-500 mr-3 mt-0.5 text-lg">•</span>
-                  <span>Proven by ClassPass model</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Section 4: Key Economics - Wide Card spanning 2 columns */}
-            <div className="md:col-span-2 lg:col-span-2 bg-white border-2 border-orange-400 rounded-2xl p-4 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300">
-              
-              {/* 2-Column Layout: Image Left, Content Right */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Left: Revenue Model Chart */}
-                <div className="relative w-full h-64 rounded-xl overflow-hidden">
-                  <Image
-                    src="/business-model/revenue-model.png"
-                    alt="Revenue model visualization"
-                    fill
-                    className="object-contain p-1 drop-shadow-lg"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-                  />
-                </div>
-                
-                {/* Right: Label + Title + Description + Stacked Bullets */}
-                <div className="flex flex-col">
-                  {/* Label */}
-                  <p className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Why It Works</p>
-                  
-                  {/* Title with Icon */}
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center">
-                      <TrendingUp className="w-6 h-6 text-orange-600" />
+            {/* LEFT SIDE: Revenue Streams + Key Economics */}
+            <div className="space-y-4">
+              {/* 3 Revenue Stream Cards - Horizontal - Balanced */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* Stream 1: Subscription-First */}
+                <div className="bg-white border-2 border-cyan-400 rounded-xl p-4 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300">
+                  <div className="flex items-center gap-2 mb-3">
+                    <CreditCard className="w-6 h-6 text-cyan-600 flex-shrink-0" />
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide">Stream 1</p>
+                      <h3 className="text-base font-bold text-gray-900 leading-tight">Subscription-First</h3>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mt-1">Key Economics</h3>
                   </div>
-                  
-                  {/* Description */}
                   <p className="text-sm text-gray-600 mb-3 leading-relaxed">
-                    Multiple revenue streams de-risk the model while maintaining sustainability
+                    Recurring monthly revenue from credit-based platform access
                   </p>
-                  
-                  {/* Bullets */}
-                  <ul className="space-y-1 text-sm text-gray-600">
+                  <ul className="space-y-1.5 text-xs text-gray-700">
                     <li className="flex items-start">
-                      <span className="text-orange-500 mr-3 mt-0.5 text-lg">•</span>
-                      <span>Publishers receive majority of credit revenue</span>
+                      <span className="text-cyan-500 mr-2">•</span>
+                      <span>Tiered access by usage</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-orange-500 mr-3 mt-0.5 text-lg">•</span>
-                      <span>Data reciprocity unlike Apple News+</span>
+                      <span className="text-cyan-500 mr-2">•</span>
+                      <span>Scalable SaaS economics</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Stream 2: Affiliate Partnership */}
+                <div className="bg-white border-2 border-cyan-400 rounded-xl p-4 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Share2 className="w-6 h-6 text-cyan-600 flex-shrink-0" />
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide">Stream 2</p>
+                      <h3 className="text-base font-bold text-gray-900 leading-tight">Affiliate Partnership</h3>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                    Commission when users upgrade to direct publisher subscriptions
+                  </p>
+                  <ul className="space-y-1.5 text-xs text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2">•</span>
+                      <span>Discovery engine, not competitor</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-orange-500 mr-3 mt-0.5 text-lg">•</span>
-                      <span>Network effects improve unit economics at scale</span>
+                      <span className="text-cyan-500 mr-2">•</span>
+                      <span>Aligned publisher incentives</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Stream 3: Credit Economy */}
+                <div className="bg-white border-2 border-cyan-400 rounded-xl p-4 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Coins className="w-6 h-6 text-cyan-600 flex-shrink-0" />
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide">Stream 3</p>
+                      <h3 className="text-base font-bold text-gray-900 leading-tight">Credit Economy</h3>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                    Unused credits contribute to sustainable margins
+                  </p>
+                  <ul className="space-y-1.5 text-xs text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2">•</span>
+                      <span>ClassPass-style model</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-cyan-500 mr-2">•</span>
+                      <span>Reduces user friction</span>
                     </li>
                   </ul>
                 </div>
               </div>
+
+              {/* Key Economics - Text Only */}
+              <div className="pt-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <TrendingUp className="w-8 h-8 text-orange-600" />
+                  <h3 className="text-2xl font-bold text-gray-900">Key Economics</h3>
+                </div>
+                <p className="text-base text-gray-700 mb-4 leading-relaxed">
+                  Multiple revenue streams de-risk the model while maintaining sustainability
+                </p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-3 text-lg">•</span>
+                    <span>Publishers receive majority of credit revenue</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-3 text-lg">•</span>
+                    <span>Data reciprocity unlike Apple News+</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-3 text-lg">•</span>
+                    <span>Network effects improve unit economics at scale</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
+            {/* RIGHT SIDE: Subscription Tiers Image */}
+            <motion.div
+              initial={{ x: 20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative w-full h-[700px]"
+            >
+              <Image
+                src="/business-model/subscription-tiers.png"
+                alt="Subscription tier pricing visualization"
+                fill
+                className="object-contain drop-shadow-2xl"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </motion.div>
+
           </div>
-        </div>
+        </Container>
       </Slide>
 
       {/* Slide 8: Market Opportunity */}
@@ -1267,34 +1237,396 @@ export default function Home() {
 
       {/* Slide 9: Financial Model */}
       <Slide id="financials" background="white">
-        <Container className="text-center">
-          <Heading level="h2" className="mb-6 gradient-text">
-            Path to $6.3M ARR
-          </Heading>
-          <Text variant="lead" className="max-w-3xl mx-auto">
-            19,430 users by Year 5 with strong unit economics
-          </Text>
-          <div className="mt-8">
-            <Text variant="body" className="text-gray-600">
-              Content coming soon...
-            </Text>
+        <Container size="xl">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Heading level="h2" className="mb-4 gradient-text">
+                Path to $6.3M ARR
+              </Heading>
+              <Text variant="lead" className="max-w-3xl mx-auto text-gray-700 mb-6">
+                19,430 users by Year 5 with strong unit economics
+              </Text>
+              
+              {/* 3-Sentence Narrative */}
+              <p className="text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                We start lean with 50 pilot users, proving product-market fit while refining our credit economy. Network effects compound as we scale to 19,400 users, driving down CAC from $75 to $40. Strong unit economics (11.5x LTV:CAC, 5-month payback) prove this is a capital-efficient path to profitability.
+              </p>
+            </motion.div>
           </div>
+
+          {/* Growth Timeline */}
+          <div className="relative max-w-5xl mx-auto mb-16">
+            {/* Gradient Line with Pulse Animation */}
+            <motion.div 
+              className="absolute top-8 left-0 right-0 h-1 rounded-full"
+              style={{
+                background: 'linear-gradient(to right, #06c0d7 0%, #06c0d7 25%, #22d3ee 50%, #fb923c 75%, #f77024 100%)'
+              }}
+              animate={{
+                opacity: [0.6, 1, 0.6],
+                scaleY: [1, 1.2, 1]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+
+            {/* Timeline Milestones */}
+            <div className="grid grid-cols-5 gap-4 relative">
+              {/* Year 1 */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/40 flex items-center justify-center mb-3 z-10">
+                  <span className="text-white font-bold text-xl">1</span>
+                </div>
+                <h3 className="text-base font-extrabold text-gray-900 uppercase tracking-wide mb-1">Launch</h3>
+                <p className="text-xs text-gray-600 mb-1">50 users</p>
+                <p className="text-xs font-semibold text-cyan-600">$135K</p>
+              </motion.div>
+
+              {/* Year 2 */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/40 flex items-center justify-center mb-3 z-10">
+                  <span className="text-white font-bold text-xl">2</span>
+                </div>
+                <h3 className="text-base font-extrabold text-gray-900 uppercase tracking-wide mb-1">Traction</h3>
+                <p className="text-xs text-gray-600 mb-1">2.5K users</p>
+                <p className="text-xs font-semibold text-cyan-600">$835K</p>
+              </motion.div>
+
+              {/* Year 3 */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400 to-orange-400 shadow-lg shadow-orange-400/40 flex items-center justify-center mb-3 z-10">
+                  <span className="text-white font-bold text-xl">3</span>
+                </div>
+                <h3 className="text-base font-extrabold text-gray-900 uppercase tracking-wide mb-1">Scale</h3>
+                <p className="text-xs text-gray-600 mb-1">7.1K users</p>
+                <p className="text-xs font-semibold text-orange-500">$2.4M</p>
+              </motion.div>
+
+              {/* Year 4 */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-orange-400 shadow-lg shadow-orange-400/40 flex items-center justify-center mb-3 z-10">
+                  <span className="text-white font-bold text-xl">4</span>
+                </div>
+                <h3 className="text-base font-extrabold text-gray-900 uppercase tracking-wide mb-1">Growth</h3>
+                <p className="text-xs text-gray-600 mb-1">13.8K users</p>
+                <p className="text-xs font-semibold text-orange-600">$4.5M</p>
+              </motion.div>
+
+              {/* Year 5 */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center"
+              >
+                <div className="w-16 h-16 rounded-full bg-orange-500 shadow-xl shadow-orange-500/50 flex items-center justify-center mb-3 z-10">
+                  <span className="text-white font-bold text-xl">5</span>
+                </div>
+                <h3 className="text-base font-extrabold text-gray-900 uppercase tracking-wide mb-1">Maturity</h3>
+                <p className="text-xs text-gray-600 mb-1">19.4K users</p>
+                <p className="text-xs font-bold text-orange-600">$6.3M ARR</p>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Key Metrics Cards - Matching Solution Card Style */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mb-8">
+            {/* Metric 1: 5-Year Revenue */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-4 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 text-center"
+            >
+              <p className="text-3xl font-bold text-cyan-600 mb-1">$13.6M</p>
+              <div className="flex items-center justify-center gap-1.5">
+                <TrendingUp className="w-3.5 h-3.5 text-cyan-600" />
+                <p className="text-xs font-semibold text-gray-700">5-Year Revenue</p>
+              </div>
+              <p className="text-xs text-gray-500 mt-1">58% CAGR</p>
+            </motion.div>
+
+            {/* Metric 2: LTV:CAC */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-4 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 text-center"
+            >
+              <p className="text-3xl font-bold text-cyan-600 mb-1">11.5x</p>
+              <div className="flex items-center justify-center gap-1.5">
+                <Calculator className="w-3.5 h-3.5 text-cyan-600" />
+                <p className="text-xs font-semibold text-gray-700">LTV:CAC Ratio</p>
+              </div>
+              <p className="text-xs text-gray-500 mt-1">&gt;3x is excellent</p>
+            </motion.div>
+
+            {/* Metric 3: Payback Period */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-4 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 text-center"
+            >
+              <p className="text-3xl font-bold text-cyan-600 mb-1">5 mo</p>
+              <div className="flex items-center justify-center gap-1.5">
+                <Clock className="w-3.5 h-3.5 text-cyan-600" />
+                <p className="text-xs font-semibold text-gray-700">CAC Payback</p>
+              </div>
+              <p className="text-xs text-gray-500 mt-1">&lt;12 mo target</p>
+            </motion.div>
+
+            {/* Metric 4: Break-Even */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl p-4 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 text-center"
+            >
+              <p className="text-3xl font-bold text-cyan-600 mb-1">Year 5</p>
+              <div className="flex items-center justify-center gap-1.5">
+                <Target className="w-3.5 h-3.5 text-cyan-600" />
+                <p className="text-xs font-semibold text-gray-700">Break-Even</p>
+              </div>
+              <p className="text-xs text-gray-500 mt-1">Clear path</p>
+            </motion.div>
+          </div>
+
+          {/* Additional Metrics - Pill Style */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap items-center justify-center gap-2"
+          >
+            <div className="px-4 py-2 bg-cyan-50 border border-cyan-200 rounded-full">
+              <p className="text-sm font-semibold text-cyan-700">35% Gross Margin</p>
+            </div>
+            <div className="px-4 py-2 bg-cyan-50 border border-cyan-200 rounded-full">
+              <p className="text-sm font-semibold text-cyan-700">18.4% IRR</p>
+            </div>
+            <div className="px-4 py-2 bg-cyan-50 border border-cyan-200 rounded-full">
+              <p className="text-sm font-semibold text-cyan-700">58% Annual Growth</p>
+            </div>
+          </motion.div>
         </Container>
       </Slide>
 
       {/* Slide 10: The Investment */}
       <Slide id="investment" background="white">
-        <Container className="text-center">
-          <Heading level="h2" className="mb-6 gradient-text">
-            Seed Round: $3M
-          </Heading>
-          <Text variant="lead" className="max-w-3xl mx-auto">
-            15x return potential for early investors
-          </Text>
-          <div className="mt-8 p-6 bg-gray-50 rounded-2xl max-w-2xl mx-auto">
-            <Text variant="body" className="text-gray-600">
-              Content coming soon...
-            </Text>
+        <Container size="xl">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Heading level="h2" className="mb-4 gradient-text">
+                The Investment Opportunity
+              </Heading>
+              <Text variant="lead" className="max-w-3xl mx-auto text-gray-700">
+                Join us in building the future of journalism monetization
+              </Text>
+            </motion.div>
+          </div>
+
+          {/* 3-Column Uniform Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
+            
+            {/* Column 1: The Investment */}
+            <motion.div
+              initial={{ y: 20, opacity: 0, rotateY: -5 }}
+              whileInView={{ y: 0, opacity: 1, rotateY: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="bg-gradient-to-br from-cyan-50 to-white border-2 border-cyan-400 rounded-3xl p-6 shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20 flex flex-col transition-shadow duration-300"
+            >
+              {/* Hero Number */}
+              <div className="text-center mb-6">
+                <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide mb-2">Raising</p>
+                <motion.p
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  className="text-6xl font-extrabold gradient-text mb-1"
+                >
+                  $3M
+                </motion.p>
+                <p className="text-lg font-bold text-gray-700">Seed Round</p>
+              </div>
+
+              {/* Investment Details */}
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center justify-between py-2 border-b border-cyan-200">
+                  <span className="text-xs font-semibold text-gray-700">Equity</span>
+                  <span className="text-base font-bold text-cyan-600">20%</span>
+                </div>
+                <div className="flex items-center justify-between py-2 border-b border-cyan-200">
+                  <span className="text-xs font-semibold text-gray-700">Runway</span>
+                  <span className="text-base font-bold text-cyan-600">18-24 mo</span>
+                </div>
+              </div>
+
+              {/* Use of Funds */}
+              <div className="flex-1">
+                <h3 className="text-base font-bold text-gray-900 mb-3">Use of Funds</h3>
+                <div className="space-y-3">
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs font-semibold text-gray-700">🏗️ Platform</span>
+                      <span className="text-xs font-bold text-cyan-600">$1.2M</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-1.5">
+                      <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '40%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs font-semibold text-gray-700">🚀 Pilots</span>
+                      <span className="text-xs font-bold text-cyan-600">$1.05M</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-1.5">
+                      <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '35%' }}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs font-semibold text-gray-700">🤝 Publishers</span>
+                      <span className="text-xs font-bold text-cyan-600">$750K</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-1.5">
+                      <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '25%' }}></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Column 2: The Returns */}
+            <motion.div
+              initial={{ y: 20, opacity: 0, rotateY: 5 }}
+              whileInView={{ y: 0, opacity: 1, rotateY: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="bg-gradient-to-br from-orange-50 to-white border-2 border-orange-400 rounded-3xl p-6 shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 flex flex-col transition-shadow duration-300"
+            >
+              {/* Hero Number */}
+              <div className="text-center mb-6">
+                <p className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Projected Return</p>
+                <motion.p
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="text-6xl font-extrabold text-orange-600 mb-1"
+                >
+                  15x
+                </motion.p>
+                <p className="text-lg font-bold text-gray-700">Base Case Multiple</p>
+              </div>
+
+              {/* Return Metrics */}
+              <div className="flex-1 space-y-4">
+                <div className="flex items-center justify-between py-2 border-b border-orange-200">
+                  <span className="text-xs font-semibold text-gray-700">IRR</span>
+                  <span className="text-base font-bold text-orange-600">18.4%</span>
+                </div>
+                <div className="flex items-center justify-between py-2 border-b border-orange-200">
+                  <span className="text-xs font-semibold text-gray-700">Year 5 ARR</span>
+                  <span className="text-base font-bold text-orange-600">$6.29M</span>
+                </div>
+                <div className="flex items-center justify-between py-2 border-b border-orange-200">
+                  <span className="text-xs font-semibold text-gray-700">Break-Even</span>
+                  <span className="text-base font-bold text-orange-600">Year 5</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Column 3: Why Invest Now */}
+            <motion.div
+              initial={{ y: 20, opacity: 0, rotateY: -5 }}
+              whileInView={{ y: 0, opacity: 1, rotateY: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="relative rounded-3xl p-[2px] bg-gradient-to-br from-cyan-400 to-orange-400"
+            >
+              <div className="bg-gradient-to-br from-cyan-50 to-orange-50 rounded-3xl p-6 shadow-xl hover:shadow-2xl hover:shadow-orange-500/30 flex flex-col transition-shadow duration-300 h-full">
+                {/* Header */}
+                <div className="text-center mb-6">
+                  <p className="text-xs font-semibold text-orange-600 uppercase tracking-wide mb-2">Investment Thesis</p>
+                  <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-cyan-400 to-orange-400 flex items-center justify-center mb-2 shadow-lg">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <p className="text-lg font-bold text-gray-900">Why Invest Now</p>
+                </div>
+
+                {/* Highlights */}
+                <div className="flex-1 space-y-3">
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-500 text-base mt-0.5">✓</span>
+                    <span className="text-xs text-gray-700 leading-relaxed">Exceptional unit economics (11.5x LTV:CAC)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-500 text-base mt-0.5">✓</span>
+                    <span className="text-xs text-gray-700 leading-relaxed">Fast payback period (5 months)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-500 text-base mt-0.5">✓</span>
+                    <span className="text-xs text-gray-700 leading-relaxed">Capital-efficient path to profitability</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-500 text-base mt-0.5">✓</span>
+                    <span className="text-xs text-gray-700 leading-relaxed">First-mover in FedCM-powered news access</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
           </div>
         </Container>
       </Slide>
@@ -1349,6 +1681,50 @@ export default function Home() {
           </div>
         </Container>
       </Slide>
+
+      {/* Floating Pufferfish Mascot - Corner Companion */}
+      <div className="fixed bottom-6 right-6 z-30 pointer-events-none">
+        {/* Pufferfish */}
+        <motion.div
+          animate={{ 
+            y: [0, -15, 0],
+            rotate: [0, -2, 0, 2, 0]
+          }}
+          transition={{ 
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="relative"
+        >
+          <Image
+            src="/branding/pufferfish.png"
+            alt="FactrAI Mascot"
+            width={70}
+            height={70}
+            className="object-contain drop-shadow-lg"
+          />
+        </motion.div>
+
+        {/* Bubbles */}
+        {[0, 1, 2].map((i) => (
+          <motion.div
+            key={i}
+            className="absolute bottom-8 left-1/2 w-2 h-2 bg-cyan-400/40 rounded-full"
+            animate={{
+              y: [-10, -80],
+              x: [0, Math.random() * 20 - 10],
+              opacity: [0, 0.6, 0]
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              delay: i * 2.5,
+              ease: "easeOut"
+            }}
+          />
+        ))}
+      </div>
 
       {/* Slide 14: About the Founders - Split Screen Hero */}
       <Slide id="about" background="white">
