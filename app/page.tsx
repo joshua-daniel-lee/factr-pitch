@@ -93,15 +93,46 @@ export default function Home() {
             </Text>
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* Founders Mini Avatars */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex gap-4 justify-center flex-wrap"
+            className="flex gap-8 items-center justify-center"
           >
-            <Button variant="gradient" size="lg" className="w-64 shadow-md">Explore the Opportunity</Button>
-            <Button variant="outline" size="lg" className="w-64 shadow-md">View Financials</Button>
+            {/* Danyang */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border-3 border-cyan-400 shadow-lg mb-2">
+                <Image
+                  src="/team/danyang.png"
+                  alt="Danyang Wang"
+                  fill
+                  className="object-cover"
+                  sizes="80px"
+                />
+              </div>
+              <p className="text-sm font-semibold text-gray-900">Danyang Wang</p>
+              <div className="inline-block bg-gradient-to-r from-cyan-500 to-cyan-600 text-white text-xs font-semibold px-3 py-1 rounded-full mt-1">
+                Hustler
+              </div>
+            </div>
+
+            {/* Joshua */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-20 h-20 rounded-full overflow-hidden border-3 border-orange-400 shadow-lg mb-2">
+                <Image
+                  src="/team/joshua.png"
+                  alt="Joshua Lee"
+                  fill
+                  className="object-cover"
+                  sizes="80px"
+                />
+              </div>
+              <p className="text-sm font-semibold text-gray-900">Joshua Lee</p>
+              <div className="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full mt-1">
+                Hacker
+              </div>
+            </div>
           </motion.div>
 
           {/* Subtext */}
@@ -438,8 +469,8 @@ export default function Home() {
             <Button 
               variant="gradient" 
               size="lg" 
+              href="https://demo.factrai.com"
               className="w-80 shadow-lg text-lg py-6"
-              onClick={() => window.open('https://demo.factrai.com', '_blank')}
             >
               Launch Interactive Demo →
             </Button>
