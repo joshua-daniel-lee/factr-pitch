@@ -1472,87 +1472,97 @@ export default function Home() {
           </div>
 
           {/* 3-Column Uniform Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
             
             {/* Column 1: The Investment */}
             <motion.div
-              initial={{ y: 20, opacity: 0, rotateY: -5 }}
-              whileInView={{ y: 0, opacity: 1, rotateY: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-gradient-to-br from-cyan-50 to-white border-2 border-cyan-400 rounded-3xl p-6 shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20 flex flex-col transition-shadow duration-300"
+              className="relative rounded-3xl p-[2px] bg-gradient-to-br from-cyan-400 to-orange-400"
             >
-              {/* Hero Number */}
-              <div className="text-center mb-6">
-                <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide mb-2">Raising</p>
-                <motion.p
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="text-6xl font-extrabold gradient-text mb-1"
-                >
-                  $3M
-                </motion.p>
-                <p className="text-lg font-bold text-gray-700">Seed Round</p>
-              </div>
-
-              {/* Investment Details */}
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center justify-between py-2 border-b border-cyan-200">
-                  <span className="text-xs font-semibold text-gray-700">Equity</span>
-                  <span className="text-base font-bold text-cyan-600">20%</span>
+              <div className="bg-gradient-to-br from-cyan-50 to-orange-50 rounded-3xl p-6 shadow-xl hover:shadow-2xl hover:shadow-cyan-500/30 flex flex-col transition-shadow duration-300 h-full">
+                {/* Hero Number */}
+                <div className="text-center mb-6">
+                  <p className="text-xs font-semibold text-cyan-600 uppercase tracking-wide mb-2">Raising</p>
+                  <motion.p
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="text-6xl font-extrabold gradient-text mb-1"
+                  >
+                    $3M
+                  </motion.p>
+                  <p className="text-lg font-bold text-gray-700">Seed Round</p>
                 </div>
-                <div className="flex items-center justify-between py-2 border-b border-cyan-200">
-                  <span className="text-xs font-semibold text-gray-700">Runway</span>
-                  <span className="text-base font-bold text-cyan-600">18-24 mo</span>
-                </div>
-              </div>
 
-              {/* Use of Funds */}
-              <div className="flex-1">
-                <h3 className="text-base font-bold text-gray-900 mb-3">Use of Funds</h3>
-                <div className="space-y-3">
-                  <div>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-xs font-semibold text-gray-700">🏗️ Platform</span>
-                      <span className="text-xs font-bold text-cyan-600">$1.2M</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '40%' }}></div>
-                    </div>
+                {/* Investment Details */}
+                <div className="space-y-4 mb-6">
+                  <div className="flex items-center justify-between py-2 border-b border-cyan-200">
+                    <span className="text-xs font-semibold text-gray-700">Equity</span>
+                    <span className="text-base font-bold text-cyan-600">20%</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-xs font-semibold text-gray-700">🚀 Pilots</span>
-                      <span className="text-xs font-bold text-cyan-600">$1.05M</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '35%' }}></div>
-                    </div>
+                  <div className="flex items-center justify-between py-2 border-b border-cyan-200">
+                    <span className="text-xs font-semibold text-gray-700">Runway</span>
+                    <span className="text-base font-bold text-cyan-600">18-24 mo</span>
                   </div>
-                  <div>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-xs font-semibold text-gray-700">🤝 Publishers</span>
-                      <span className="text-xs font-bold text-cyan-600">$750K</span>
+                </div>
+
+                {/* Use of Funds */}
+                <div className="flex-1">
+                  <h3 className="text-base font-bold text-gray-900 mb-3">Use of Funds</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-xs font-semibold text-gray-700">🏗️ Platform</span>
+                        <span className="text-xs font-bold text-cyan-600">$1.2M</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-1.5">
+                        <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '40%' }}></div>
+                      </div>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '25%' }}></div>
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-xs font-semibold text-gray-700">🚀 Pilots</span>
+                        <span className="text-xs font-bold text-cyan-600">$1.05M</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-1.5">
+                        <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '35%' }}></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-xs font-semibold text-gray-700">🤝 Publishers</span>
+                        <span className="text-xs font-bold text-cyan-600">$750K</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-1.5">
+                        <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '25%' }}></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Column 2: The Returns */}
+            {/* Column 2: The Returns - HERO CARD */}
             <motion.div
-              initial={{ y: 20, opacity: 0, rotateY: 5 }}
-              whileInView={{ y: 0, opacity: 1, rotateY: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-gradient-to-br from-orange-50 to-white border-2 border-orange-400 rounded-3xl p-6 shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 flex flex-col transition-shadow duration-300"
+              initial={{ scale: 1.15 }}
+              whileHover={{ y: -12, scale: 1.25 }}
+              className="relative z-10 bg-gradient-to-br from-orange-50 to-white border-2 border-orange-400 rounded-3xl p-6 shadow-2xl hover:shadow-3xl flex flex-col transition-all duration-300"
+              animate={{
+                scale: 1.15,
+                boxShadow: [
+                  '0 25px 50px -12px rgba(247, 112, 36, 0.25), 0 0 40px rgba(247, 112, 36, 0.15)',
+                  '0 25px 50px -12px rgba(247, 112, 36, 0.35), 0 0 60px rgba(247, 112, 36, 0.25)',
+                  '0 25px 50px -12px rgba(247, 112, 36, 0.25), 0 0 40px rgba(247, 112, 36, 0.15)'
+                ]
+              }}
+              transition={{
+                boxShadow: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }
+              }}
             >
               {/* Hero Number */}
               <div className="text-center mb-6">
@@ -1588,10 +1598,6 @@ export default function Home() {
 
             {/* Column 3: Why Invest Now */}
             <motion.div
-              initial={{ y: 20, opacity: 0, rotateY: -5 }}
-              whileInView={{ y: 0, opacity: 1, rotateY: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.02 }}
               className="relative rounded-3xl p-[2px] bg-gradient-to-br from-cyan-400 to-orange-400"
             >
@@ -1627,57 +1633,6 @@ export default function Home() {
               </div>
             </motion.div>
 
-          </div>
-        </Container>
-      </Slide>
-
-      {/* Slide 11: Strategic Moat */}
-      <Slide id="moat" background="white">
-        <Container className="text-center">
-          <Heading level="h2" className="mb-6 gradient-text">
-            Five Unfair Advantages
-          </Heading>
-          <Text variant="lead" className="max-w-3xl mx-auto">
-            Network effects, FedCM integration, data reciprocity
-          </Text>
-          <div className="mt-8 p-6 bg-white rounded-2xl max-w-2xl mx-auto">
-            <Text variant="body" className="text-gray-600">
-              Content coming soon...
-            </Text>
-          </div>
-        </Container>
-      </Slide>
-
-      {/* Slide 12: Vision & Impact */}
-      <Slide id="vision" background="white">
-        <Container className="text-center">
-          <Heading level="h2" className="mb-6 gradient-text">
-            Rebuilding the News Economy
-          </Heading>
-          <Text variant="lead" className="max-w-3xl mx-auto">
-            Sustainable journalism for the AI age
-          </Text>
-          <div className="mt-8 p-6 bg-gray-50 rounded-2xl max-w-2xl mx-auto">
-            <Text variant="body" className="text-gray-600">
-              Content coming soon...
-            </Text>
-          </div>
-        </Container>
-      </Slide>
-
-      {/* Slide 13: Georgetown Capstone */}
-      <Slide id="capstone" background="white">
-        <Container className="text-center">
-          <Heading level="h2" className="mb-6 gradient-text">
-            Research & Methodology
-          </Heading>
-          <Text variant="lead" className="max-w-3xl mx-auto">
-            Academic rigor meets real-world innovation
-          </Text>
-          <div className="mt-8 p-6 bg-white rounded-2xl max-w-2xl mx-auto">
-            <Text variant="body" className="text-gray-600">
-              Content coming soon...
-            </Text>
           </div>
         </Container>
       </Slide>

@@ -17,9 +17,6 @@ const sections = [
   { id: 'market', label: 'Market Opportunity' },
   { id: 'financials', label: 'Financial Model' },
   { id: 'investment', label: 'The Investment' },
-  { id: 'moat', label: 'Strategic Moat' },
-  { id: 'vision', label: 'Vision & Impact' },
-  { id: 'capstone', label: 'Georgetown Capstone' },
   { id: 'about', label: 'About the Founders' },
 ];
 
@@ -48,6 +45,7 @@ export default function Navbar() {
       }
     };
 
+    handleScroll(); // Run on mount to detect initial section
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

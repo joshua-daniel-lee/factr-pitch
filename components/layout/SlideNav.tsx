@@ -16,9 +16,6 @@ const sections = [
   'market',
   'financials',
   'investment',
-  'moat',
-  'vision',
-  'capstone',
   'about'
 ];
 
