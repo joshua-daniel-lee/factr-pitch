@@ -155,11 +155,11 @@ export default function Home() {
       <Slide id="summary" background="white">
         <Container size="xl" className="overflow-x-hidden">
           {/* Publisher Logos Carousel */}
-          <div className="mb-12 overflow-hidden w-full">
+          <div className="mb-8 sm:mb-12 overflow-hidden w-full">
             <div className="relative w-full overflow-hidden">
               {/* Gradient overlays for fade effect */}
-              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
-              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+              <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-white to-transparent z-10" />
+              <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-white to-transparent z-10" />
               
               {/* Scrolling container */}
               <div className="flex gap-12 items-center overflow-hidden w-full">
@@ -281,14 +281,14 @@ export default function Home() {
       <Slide id="customers" background="white">
         <Container size="xl">
           {/* Header Section */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-6 sm:mb-8">
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Heading level="h2" className="mb-4">
+              <Heading level="h2" className="mb-3 sm:mb-4">
                 <span className="gradient-text">The Productivity Gap</span>
               </Heading>
             </motion.div>
@@ -299,7 +299,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Text variant="lead" className="max-w-4xl mx-auto text-gray-700 mb-6">
+              <Text variant="lead" className="max-w-4xl mx-auto text-gray-700 mb-4 sm:mb-6">
                 The modern reader is exhausted by friction, suffering from both financial subscription fatigue and the daily loss of their most valuable asset: <strong className="text-cyan-600">TIME</strong>
               </Text>
             </motion.div>
@@ -321,7 +321,7 @@ export default function Home() {
           </div>
 
           {/* Three-Panel Pain Journey */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
             {PAIN_POINT_CARDS.map((card, index) => (
               <PainPointCard key={index} {...card} />
             ))}
@@ -332,19 +332,19 @@ export default function Home() {
       {/* Slide 4: The Solution */}
       <Slide id="solution" background="white">
         <Container size="xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             {/* Left Column: Content */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Heading level="h2" className="text-left mb-4 gradient-text">
+                <Heading level="h2" className="text-left mb-3 sm:mb-4 gradient-text">
                   One Key, All Paywalls
                 </Heading>
-                <Text variant="lead" className="text-gray-700 text-left mb-6">
+                <Text variant="lead" className="text-gray-700 text-left mb-4 sm:mb-6">
                   A frictionless, credit-based access layer that utilizes browser-level identity to unlock premium journalism across the web
                 </Text>
               </motion.div>
@@ -355,13 +355,13 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Text variant="body" className="text-gray-600 leading-relaxed text-left mb-8">
+                <Text variant="body" className="text-gray-600 leading-relaxed text-left mb-6 sm:mb-8">
                   A credit-based marketplace solving the "Subscription Trap" with seamless access to premium journalism through a single "Universal Key" and dynamic yield-optimization.
                 </Text>
               </motion.div>
 
               {/* Three Value Propositions - Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                 {VALUE_PROP_CARDS.map((card, index) => (
                   <ValuePropCard key={index} {...card} />
                 ))}
@@ -496,7 +496,7 @@ export default function Home() {
       <Slide id="how-it-works" background="white">
         <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-12">
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -513,7 +513,7 @@ export default function Home() {
           </div>
 
           {/* 3-Card Process Flow */}
-          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12 mb-16">
+          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 sm:mb-12 md:mb-16">
             
             {/* Pulsing Line - Badge to Badge */}
             <motion.div
@@ -536,13 +536,13 @@ export default function Home() {
             />
 
             {/* Card 1: User Authentication - Image TOP */}
-            <div className="relative pt-10">
+            <div className="relative pt-10 sm:pt-12">
               {/* Step Number Badge - Floating Above */}
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
+              <div className="absolute -top-6 sm:-top-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
                 1
               </div>
 
-              <div className="bg-gradient-to-br from-white to-cyan-50/30 border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-[1.02] transition-all duration-300 flex flex-col">
+              <div className="bg-gradient-to-br from-white to-cyan-50/30 border-2 border-gray-200 rounded-2xl p-4 sm:p-6 h-full hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-[1.02] transition-all duration-300 flex flex-col">
 
                 {/* Image - TOP */}
                 <div className="relative z-10 w-full h-40 rounded-xl overflow-hidden mb-6 bg-white border border-gray-200">
@@ -576,13 +576,13 @@ export default function Home() {
             </div>
 
             {/* Card 2: Content Access - Image BOTTOM */}
-            <div className="relative pt-10">
+            <div className="relative pt-10 sm:pt-12">
               {/* Step Number Badge - Floating Above */}
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
+              <div className="absolute -top-4 sm:-top-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
                 2
               </div>
 
-              <div className="bg-gradient-to-br from-white to-emerald-50/30 border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/20 hover:scale-[1.02] transition-all duration-300 flex flex-col">
+              <div className="bg-gradient-to-br from-white to-emerald-50/30 border-2 border-gray-200 rounded-2xl p-4 sm:p-6 h-full hover:border-emerald-400 hover:shadow-2xl hover:shadow-emerald-500/20 hover:scale-[1.02] transition-all duration-300 flex flex-col">
 
                 {/* Content */}
                 <div className="flex-1 flex flex-col mb-6">
@@ -617,7 +617,7 @@ export default function Home() {
             </div>
 
             {/* Card 3: Publisher Payout - Image MIDDLE */}
-            <div className="relative pt-10">
+            <div className="relative pt-10 sm:pt-12">
               {/* CSS Keyframe for Pulsing Glow */}
               <style jsx>{`
                 @keyframes pulse-glow {
@@ -631,14 +631,14 @@ export default function Home() {
               `}</style>
 
               {/* Step Number Badge - Floating Above */}
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
+              <div className="absolute -top-4 sm:-top-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center w-12 h-12 rounded-full bg-cyan-500 text-white font-bold text-xl shadow-lg shadow-cyan-500/30">
                 3
               </div>
 
               {/* Card with Vibrant Orange Border + Pulsing Glow */}
               <div className="relative">
                 <div 
-                  className="bg-gradient-to-br from-white to-orange-50/30 border-2 border-orange-400 rounded-2xl p-6 h-full hover:scale-[1.02] transition-all duration-300 flex flex-col"
+                  className="bg-gradient-to-br from-white to-orange-50/30 border-2 border-orange-400 rounded-2xl p-4 sm:p-6 h-full hover:scale-[1.02] transition-all duration-300 flex flex-col"
                   style={{
                     animation: 'pulse-glow 3s ease-in-out infinite'
                   }}
@@ -686,10 +686,10 @@ export default function Home() {
       <Slide id="technology" background="white">
         <Container size="xl">
           {/* Split Screen Layout - Diagram centered, Title on right */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             
-            {/* LEFT SIDE: Hub-and-Spoke Diagram - Static First */}
-            <div className="relative w-full max-w-[500px] h-[500px] mx-auto">
+            {/* LEFT SIDE: Hub-and-Spoke Diagram - Hidden on mobile */}
+            <div className="hidden md:block relative w-full max-w-[350px] sm:max-w-[500px] h-[350px] sm:h-[500px] mx-auto">
               
               {/* Central Hub - FactrAI Logo (Rounded Rectangle) */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
@@ -1582,11 +1582,10 @@ export default function Home() {
 
             {/* Column 2: The Returns - HERO CARD */}
             <motion.div
-              initial={{ scale: 1.15 }}
-              whileHover={{ y: -12, scale: 1.25 }}
-              className="relative z-10 bg-gradient-to-br from-orange-50 to-white border-2 border-orange-400 rounded-3xl p-6 shadow-2xl hover:shadow-3xl flex flex-col transition-all duration-300"
+              initial={{ scale: 1 }}
+              whileHover={{ y: -12, scale: 1.05 }}
+              className="relative z-10 bg-gradient-to-br from-orange-50 to-white border-2 border-orange-400 rounded-3xl p-6 shadow-2xl hover:shadow-3xl flex flex-col transition-all duration-300 md:scale-110"
               animate={{
-                scale: 1.15,
                 boxShadow: [
                   '0 25px 50px -12px rgba(247, 112, 36, 0.25), 0 0 40px rgba(247, 112, 36, 0.15)',
                   '0 25px 50px -12px rgba(247, 112, 36, 0.35), 0 0 60px rgba(247, 112, 36, 0.25)',
