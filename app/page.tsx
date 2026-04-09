@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Mail, ExternalLink, CreditCard, Share2, Coins, TrendingUp, Image as ImageIcon, User, Calculator, Clock, Target } from 'lucide-react';
+import { Mail, ExternalLink, CreditCard, Share2, Coins, TrendingUp, User, Calculator, Clock, Target } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Slide from '@/components/layout/Slide';
 import SlideNav from '@/components/layout/SlideNav';
@@ -14,7 +14,6 @@ import StatCard from '@/components/ui/StatCard';
 import PainPointCard from '@/components/ui/PainPointCard';
 import ValuePropCard from '@/components/ui/ValuePropCard';
 import FeaturePill from '@/components/ui/FeaturePill';
-import FounderCard from '@/components/ui/FounderCard';
 import { 
   PUBLISHER_LOGOS, 
   STAT_CARDS, 
@@ -706,7 +705,7 @@ export default function Home() {
                 <div className="w-24 h-20 rounded-2xl bg-white border border-gray-300 shadow-md flex flex-col items-center justify-center p-2">
                   <div className="relative w-10 h-10 mb-1">
                     <Image
-                      src="/tech/oauth.svg.svg"
+                      src="/tech/oauth.svg"
                       alt="OAuth"
                       fill
                       className="object-contain"
