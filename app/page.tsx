@@ -65,6 +65,7 @@ export default function Home() {
               height={191}
               className="object-contain w-full max-w-[280px] sm:max-w-[350px]"
               priority
+              quality={90}
               sizes="(max-width: 640px) 280px, 350px"
             />
           </motion.div>

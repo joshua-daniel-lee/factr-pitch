@@ -65,7 +65,7 @@ export default function SlideNav() {
       {hasPrev && (
         <motion.button
           onClick={() => scrollToSection(activeIndex - 1)}
-          className="p-2 rounded-full bg-accent/40 backdrop-blur-sm hover:bg-accent/60 transition-all shadow-glow-accent"
+          className="p-3 min-w-[44px] min-h-[44px] rounded-full bg-accent/40 backdrop-blur-sm hover:bg-accent/60 transition-all shadow-glow-accent"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           animate={{
@@ -90,7 +90,7 @@ export default function SlideNav() {
       {hasNext && (
         <motion.button
           onClick={() => scrollToSection(activeIndex + 1)}
-          className="p-2 rounded-full bg-primary/80 backdrop-blur-sm hover:bg-primary transition-all shadow-glow-primary"
+          className="p-3 min-w-[44px] min-h-[44px] rounded-full bg-primary/80 backdrop-blur-sm hover:bg-primary transition-all shadow-glow-primary"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           animate={{
