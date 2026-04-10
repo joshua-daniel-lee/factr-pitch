@@ -12,6 +12,8 @@ interface ButtonProps {
   href?: string;
   className?: string;
   size?: 'sm' | 'md' | 'lg';
+  target?: string;
+  rel?: string;
 }
 
 export default function Button({ 
@@ -20,7 +22,9 @@ export default function Button({
   onClick, 
   href,
   className = '',
-  size = 'md'
+  size = 'md',
+  target,
+  rel
 }: ButtonProps) {
   const baseStyles = 'rounded-full font-medium transition-all duration-300 inline-block text-center';
   
@@ -46,6 +50,8 @@ export default function Button({
     return (
       <motion.a
         href={href}
+        target={target}
+        rel={rel}
         className={combinedStyles}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

@@ -472,6 +472,8 @@ export default function Home() {
               variant="gradient" 
               size="lg" 
               href="https://factr-demo.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-80 shadow-lg text-lg py-6"
             >
               Launch Interactive Demo →
