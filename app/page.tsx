@@ -471,7 +471,7 @@ export default function Home() {
             <Button 
               variant="gradient" 
               size="lg" 
-              href="https://demo.factrai.com"
+              href="https://factr-demo.vercel.app"
               className="w-80 shadow-lg text-lg py-6"
             >
               Launch Interactive Demo →
