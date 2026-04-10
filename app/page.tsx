@@ -1033,7 +1033,7 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative w-full h-[700px]"
+              className="relative w-full h-[500px]"
             >
               <Image
                 src="/business-model/subscription-tiers.png"
@@ -1296,10 +1296,10 @@ export default function Home() {
 
           {/* Growth Timeline */}
           <div className="relative max-w-5xl mx-auto mb-16">
-            {/* Gradient Line with Pulse Animation */}
+            {/* Gradient Line with Pulse Animation - Hidden on mobile */}
             <motion.div 
-              className="absolute top-8 left-0 right-0 h-1 rounded-full"
-              style={{
+              className="hidden sm:block absolute top-8 left-0 right-0 h-1 rounded-full"
+              style={{ 
                 background: 'linear-gradient(to right, #06c0d7 0%, #06c0d7 25%, #22d3ee 50%, #fb923c 75%, #f77024 100%)'
               }}
               animate={{
@@ -1314,7 +1314,7 @@ export default function Home() {
             />
 
             {/* Timeline Milestones */}
-            <div className="grid grid-cols-5 gap-4 relative">
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-6 sm:gap-4 relative">
               {/* Year 1 */}
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
@@ -1730,7 +1730,7 @@ export default function Home() {
           />
           
           {/* Header */}
-          <div className="absolute top-8 left-0 right-0 z-20 text-center">
+          <div className="absolute top-20 md:top-8 left-0 right-0 z-20 text-center">
             <motion.div
               initial={{ y: -20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -1763,14 +1763,14 @@ export default function Home() {
               </div>
 
               {/* Content */}
-              <div className="relative z-10 flex flex-col items-center px-8 py-20">
+              <div className="relative z-10 flex flex-col items-center px-8 pt-48 pb-12 md:py-20">
                 {/* Large Portrait */}
                 <motion.div
                   whileHover={{ scale: 1.05, y: -10 }}
                   transition={{ duration: 0.3 }}
                   className="relative mb-8"
                 >
-                  <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                  <div className="relative w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                     {/* Cyan glow ring */}
                     <div className="absolute -inset-4 bg-cyan-400/30 rounded-full blur-xl" />
                     <Image
@@ -1778,7 +1778,7 @@ export default function Home() {
                       alt="Danyang - Co-Founder & CEO"
                       fill
                       className="object-cover relative z-10"
-                      sizes="256px"
+                      sizes="(max-width: 768px) 160px, 256px"
                     />
                   </div>
                 </motion.div>
@@ -1829,14 +1829,14 @@ export default function Home() {
               </div>
 
               {/* Content */}
-              <div className="relative z-10 flex flex-col items-center px-8 py-20">
+              <div className="relative z-10 flex flex-col items-center px-8 pt-32 pb-12 md:py-20">
                 {/* Large Portrait */}
                 <motion.div
                   whileHover={{ scale: 1.05, y: -10 }}
                   transition={{ duration: 0.3 }}
                   className="relative mb-8"
                 >
-                  <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                  <div className="relative w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                     {/* Orange glow ring */}
                     <div className="absolute -inset-4 bg-orange-400/30 rounded-full blur-xl" />
                     <Image
@@ -1844,7 +1844,7 @@ export default function Home() {
                       alt="Joshua - Co-Founder & CTO"
                       fill
                       className="object-cover relative z-10"
-                      sizes="256px"
+                      sizes="(max-width: 768px) 160px, 256px"
                     />
                   </div>
                 </motion.div>
