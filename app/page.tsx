@@ -1529,7 +1529,7 @@ export default function Home() {
                     viewport={{ once: true }}
                     className="text-6xl font-extrabold gradient-text mb-1"
                   >
-                    $3M
+                    $300K
                   </motion.p>
                   <p className="text-lg font-bold text-gray-700">Seed Round</p>
                 </div>
@@ -1538,11 +1538,11 @@ export default function Home() {
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center justify-between py-2 border-b border-cyan-200">
                     <span className="text-xs font-semibold text-gray-700">Equity</span>
-                    <span className="text-base font-bold text-cyan-600">20%</span>
+                    <span className="text-base font-bold text-cyan-600">10%</span>
                   </div>
                   <div className="flex items-center justify-between py-2 border-b border-cyan-200">
                     <span className="text-xs font-semibold text-gray-700">Runway</span>
-                    <span className="text-base font-bold text-cyan-600">18-24 mo</span>
+                    <span className="text-base font-bold text-cyan-600">12-15 mo</span>
                   </div>
                 </div>
 
@@ -1553,7 +1553,7 @@ export default function Home() {
                     <div>
                       <div className="flex items-center justify-between mb-1.5">
                         <span className="text-xs font-semibold text-gray-700">🏗️ Platform</span>
-                        <span className="text-xs font-bold text-cyan-600">$1.2M</span>
+                        <span className="text-xs font-bold text-cyan-600">$120K</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-1.5">
                         <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '40%' }}></div>
@@ -1562,7 +1562,7 @@ export default function Home() {
                     <div>
                       <div className="flex items-center justify-between mb-1.5">
                         <span className="text-xs font-semibold text-gray-700">🚀 Pilots</span>
-                        <span className="text-xs font-bold text-cyan-600">$1.05M</span>
+                        <span className="text-xs font-bold text-cyan-600">$105K</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-1.5">
                         <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '35%' }}></div>
@@ -1571,7 +1571,7 @@ export default function Home() {
                     <div>
                       <div className="flex items-center justify-between mb-1.5">
                         <span className="text-xs font-semibold text-gray-700">🤝 Publishers</span>
-                        <span className="text-xs font-bold text-cyan-600">$750K</span>
+                        <span className="text-xs font-bold text-cyan-600">$75K</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-1.5">
                         <div className="bg-cyan-500 h-1.5 rounded-full" style={{ width: '25%' }}></div>
@@ -1658,6 +1658,10 @@ export default function Home() {
                   <div className="flex items-start gap-2">
                     <span className="text-orange-500 text-base mt-0.5">✓</span>
                     <span className="text-xs text-gray-700 leading-relaxed">Fast payback period (5 months)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-500 text-base mt-0.5">✓</span>
+                    <span className="text-xs text-gray-700 leading-relaxed">$800K Series A planned for Year 2 scale</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="text-orange-500 text-base mt-0.5">✓</span>
