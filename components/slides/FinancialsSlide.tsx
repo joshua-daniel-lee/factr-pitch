@@ -21,7 +21,7 @@ export default function FinancialsSlide() {
             viewport={VIEWPORT}
           >
             <Heading level="h2" className="mb-3 sm:mb-4 gradient-text text-2xl sm:text-3xl lg:text-4xl">
-              Path to $6.3M ARR
+              Path to $6.3M Annual Recurring Revenue (ARR)
             </Heading>
             <Text variant="lead" className="max-w-3xl mx-auto text-gray-700 mb-4 sm:mb-6 text-base sm:text-lg">
               19,430 users by Year 5 with strong unit economics
@@ -29,7 +29,7 @@ export default function FinancialsSlide() {
             
             {/* 3-Sentence Narrative - Mobile Optimized */}
             <p className="text-xs sm:text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We start lean with 1000 pilot users, proving product-market fit while refining our credit economy. Network effects compound as we scale to 19,400 users, driving down CAC from $75 to $40. Strong unit economics (11.5x LTV:CAC, 5-month payback) prove this is a capital-efficient path to profitability.
+              We start lean with 1000 pilot users, proving product-market fit while refining our credit economy. Network effects compound as we scale to 19,400 users, driving down Customer Acquisition Cost (CAC) from $75 to $40. Strong unit economics (11.5x Lifetime Value to Customer Acquisition Cost, 5-month payback) prove this is a capital-efficient path to profitability.
             </p>
           </motion.div>
         </div>
@@ -46,7 +46,7 @@ export default function FinancialsSlide() {
             <p className="text-xs sm:text-sm font-semibold text-cyan-700">35% Gross Margin</p>
           </div>
           <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-50 border border-cyan-200 rounded-full">
-            <p className="text-xs sm:text-sm font-semibold text-cyan-700">18.4% IRR</p>
+            <p className="text-xs sm:text-sm font-semibold text-cyan-700">18.4% Internal Rate of Return (IRR)</p>
           </div>
           <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-50 border border-cyan-200 rounded-full">
             <p className="text-xs sm:text-sm font-semibold text-cyan-700">58% Annual Growth</p>
@@ -151,7 +151,7 @@ export default function FinancialsSlide() {
               </div>
               <h3 className="text-sm sm:text-base font-extrabold text-gray-900 uppercase tracking-wide mb-1">Maturity</h3>
               <p className="text-xs text-gray-600 mb-1">19.4K users</p>
-              <p className="text-xs font-bold text-orange-600">$6.3M ARR</p>
+              <p className="text-xs font-bold text-orange-600">$6.3M Annual Recurring Revenue (ARR)</p>
             </motion.div>
           </div>
         </div>
