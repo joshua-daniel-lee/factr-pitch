@@ -150,9 +150,10 @@ export default function InvestmentSlide() {
                 <span className="text-sm sm:text-base font-bold text-orange-600">$6.29M</span>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-orange-200">
-                <span className="text-xs font-semibold text-gray-700">Break-Even</span>
-                <span className="text-sm sm:text-base font-bold text-orange-600">Year 5</span>
+                <span className="text-xs font-semibold text-gray-700">Profitability</span>
+                <span className="text-sm sm:text-base font-bold text-orange-600">Year 2*</span>
               </div>
+              <p className="text-[10px] text-gray-500 italic mt-2">*with planned $800K Series A</p>
             </div>
           </motion.div>
 
