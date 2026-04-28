@@ -188,14 +188,14 @@ export default function FinancialsSlide() {
             <p className="text-[10px] sm:text-xs text-gray-500 mt-1">&lt;12 mo target</p>
           </div>
 
-          {/* Metric 4: Break-Even */}
+          {/* Metric 4: Profitability */}
           <div className="bg-white rounded-xl p-3 sm:p-4 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300 text-center">
-            <p className="text-2xl sm:text-3xl font-bold text-cyan-600 mb-1">Year 5</p>
+            <p className="text-2xl sm:text-3xl font-bold text-cyan-600 mb-1">Year 2*</p>
             <div className="flex items-center justify-center gap-1.5">
               <Target className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-cyan-600 flex-shrink-0" />
-              <p className="text-[10px] sm:text-xs font-semibold text-gray-700">Break-Even</p>
+              <p className="text-[10px] sm:text-xs font-semibold text-gray-700">Profitability</p>
             </div>
-            <p className="text-[10px] sm:text-xs text-gray-500 mt-1">Clear path</p>
+            <p className="text-[10px] sm:text-xs text-gray-500 mt-1 italic">*with $800K Series A</p>
           </div>
         </div>
       </Container>
