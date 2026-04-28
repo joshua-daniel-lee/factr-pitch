@@ -329,7 +329,7 @@ Why is this achievable? Three reasons:
 
 **Year 4:** 13,800 users, $4.5 million revenue. At this scale, we're a meaningful traffic source for mid-tier publishers.
 
-**Year 5:** 19,430 users, $6.29 million ARR. We're approaching break-even and have clear line-of-sight to profitability in Year 6.
+**Year 5:** 19,430 users, $6.29 million ARR. By this point, we've already achieved profitability in Year 2 with our Series A, and we're on a clear path to a strategic exit.
 
 **[Point to the 4 key metric cards below]**
 
@@ -349,7 +349,7 @@ Now, the numbers that matter to you as investors:
 - **58% CAGR** — Compound annual growth rate
 - **35% gross margin** — Consistent throughout
 - **18.4% IRR** — Exceeds VC hurdle rates
-- **Break-even Year 6** — Clear path to profitability
+- **Profitability Year 2** (with $800K Series A) — Capital-efficient path
 
 ### Financial Validation:
 - Conservative user growth (no viral explosion assumed)
@@ -368,48 +368,35 @@ Now, the numbers that matter to you as investors:
 ---
 
 ## Slide 11: The Investment — The Investment Opportunity
-**[1 minute 30 seconds]**
+**[1 minute]**
 
 ### Script:
 
-"We're raising a $300K seed round for 10% equity.
+"We're raising $300K for 10% equity—12 to 15 months of runway.
 
-**[Point to the left card - The Investment]**
+**[Point to left card]**
 
-This capital gives us 12-15 months of runway to accomplish three milestones:
+Where it goes: 40% to platform development, 35% to scaling our pilot from 50 to 1,000 users, and 25% to signing 25-50 publisher partnerships.
 
-**40% goes to platform development**—the core marketplace infrastructure, browser extension, and mobile apps.
+**[Point to center card - emphasis]**
 
-**35% goes to pilot expansion**—scaling from 50 to 1,000+ users and proving product-market fit.
+The long-term: In our base case, you see a **15x return** with 18.4% IRR. We hit **profitability in Year 2** with a planned **$800K Series A**, and by Year 5 we're at $6.29 million ARR on a path to a $45 million strategic exit—most likely a publisher consortium like NYT or WSJ who need this technology to compete with AI.
 
-**25% goes to publisher partnerships**—our BD team needs to sign 25-50 mid-tier publishers to validate the value proposition.
+**[Point to right card]**
 
-**[Point to the center card - The Returns - with emphasis]**
+Why now? Five reasons: **Exceptional unit economics**—11.5x LTV to CAC. **Fast payback**—just 5 months. **The $800K Series A in Year 2** gives early investors the best entry multiple. **Capital-efficient path to profitability.** And **first-mover advantage**—FedCM is brand new, and publishers are desperate for solutions as traffic drops 38%.
 
-In our base case scenario, which we believe has 55% probability, seed investors see a **15x return with 62% IRR** at a Year 5 exit valuation of $45 million. That exit is most likely a strategic acquisition by a publisher consortium—The New York Times, WSJ, Financial Times—who need this technology to compete with AI aggregators and modernize their monetization.
+**[Pause]**
 
-Even in our worst-case scenario, there's a viable acqui-hire exit at $15-25 million that returns 5-8x.
-
-**[Point to the right card - Why Invest Now]**
-
-Why invest now? Five reasons:
-
-**One:** Exceptional unit economics. 11.5x LTV:CAC and 5-month payback are rare in early-stage companies.
-
-**Two:** We're raising an $800K Series A in Year 2 to fund scale. Early investors get the best multiple.
-
-**Three:** First-mover advantage. FedCM is brand new. We're building the rails while competitors are still figuring out the spec.
-
-**Four:** The crisis is accelerating. Publisher traffic declined 38% in 18 months. They need solutions now, not in 2028.
-
-**Five:** We have clear line-of-sight to profitability. Break-even in Year 6 is realistic given our improving unit economics and enterprise focus."
+The crisis is accelerating. We're offering you a front-row seat to a $2 billion market with a clear path to exit."
 
 ### Talking Points:
-- **$300K seed round** for 10% equity
-- **12-15 month runway** to key milestones
-- **15x base case return** with 62% IRR
-- **$45M exit valuation** (Year 5, strategic acquisition most likely)
-- **Series A planned for Year 2** ($800K target)
+- **$300K for 10% equity**, 12-15 months runway
+- **Use of funds**: 40% Platform, 35% Pilots, 25% Publishers
+- **15x return, 18.4% IRR**
+- **Profitability Year 2** (with $800K Series A)
+- **$45M exit** (Year 5, strategic)
+- **11.5x LTV:CAC, 5-month payback**
 
 ### Use of Funds Breakdown:
 - 40% Platform → Core infrastructure
@@ -803,14 +790,14 @@ The Series A capital funds growth—specifically scaling our publisher BD team (
 
 If we execute well and hit our Year 2 numbers (2,500 users, $835K revenue), we'll raise Series A at a $8-12M valuation. That's a 4-5x step-up for seed investors, and you'll have the option to participate in the round to maintain ownership.
 
-Post-Series A, we're targeting Series B in Year 3 ($20M) to fund the path to profitability."
+Post-Series A, we're targeting Series B in Year 3 ($20M) to fund continued growth and market expansion."
 
 **Key Points:**
 - Series A in 12-18 months ($800K target)
 - Seed → PMF + initial traction (1K users, 25 publishers)
 - Series A → Scale (BD team, performance marketing)
 - Seed investors get 4-5x step-up at Series A ($8-12M valuation)
-- Series B in Year 3 ($20M) funds path to profitability
+- Series B in Year 3 ($20M) funds continued growth
 
 ---
 
@@ -849,7 +836,7 @@ The most likely buyer is a coalition of top-tier publishers—NYT, WSJ, Financia
 
 **Scenario 2 (30% probability): Secondary sale to private equity—$60-80M, Year 5-6.**
 
-If we hit profitability by Year 6 and demonstrate strong cash flow, we become attractive to PE firms who specialize in B2B SaaS roll-ups. They'd use us as a platform to consolidate publisher tools (CMS, analytics, paywalls).
+If we hit profitability by Year 2 as projected and demonstrate strong cash flow by Year 5-6, we become attractive to PE firms who specialize in B2B SaaS roll-ups. They'd use us as a platform to consolidate publisher tools (CMS, analytics, paywalls).
 
 **Scenario 3 (15% probability): IPO—$100M+, Year 6-7.**
 
