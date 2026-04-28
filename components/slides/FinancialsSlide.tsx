@@ -29,7 +29,7 @@ export default function FinancialsSlide() {
             
             {/* 3-Sentence Narrative - Mobile Optimized */}
             <p className="text-xs sm:text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We start lean with 50 pilot users, proving product-market fit while refining our credit economy. Network effects compound as we scale to 19,400 users, driving down CAC from $75 to $40. Strong unit economics (11.5x LTV:CAC, 5-month payback) prove this is a capital-efficient path to profitability.
+              We start lean with 1000 pilot users, proving product-market fit while refining our credit economy. Network effects compound as we scale to 19,400 users, driving down CAC from $75 to $40. Strong unit economics (11.5x LTV:CAC, 5-month payback) prove this is a capital-efficient path to profitability.
             </p>
           </motion.div>
         </div>
