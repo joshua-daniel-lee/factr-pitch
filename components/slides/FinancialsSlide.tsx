@@ -29,7 +29,7 @@ export default function FinancialsSlide() {
             
             {/* 3-Sentence Narrative - Mobile Optimized */}
             <p className="text-xs sm:text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We start lean with 50 pilot users, proving product-market fit while refining our credit economy. Network effects compound as we scale to 19,400 users, driving down CAC from $75 to $40. Strong unit economics (11.5x LTV:CAC, 5-month payback) prove this is a capital-efficient path to profitability.
+              We start lean with 1000 pilot users, proving product-market fit while refining our credit economy. Network effects compound as we scale to 19,400 users, driving down CAC from $75 to $40. Strong unit economics (11.5x LTV:CAC, 5-month payback) prove this is a capital-efficient path to profitability.
             </p>
           </motion.div>
         </div>
@@ -86,7 +86,7 @@ export default function FinancialsSlide() {
                 <span className="text-white font-bold text-lg sm:text-xl">1</span>
               </div>
               <h3 className="text-sm sm:text-base font-extrabold text-gray-900 uppercase tracking-wide mb-1">Launch</h3>
-              <p className="text-xs text-gray-600 mb-1">50 users</p>
+              <p className="text-xs text-gray-600 mb-1">1000 users</p>
               <p className="text-xs font-semibold text-cyan-600">$135K</p>
             </motion.div>
 
