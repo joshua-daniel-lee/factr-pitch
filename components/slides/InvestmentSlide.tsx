@@ -142,11 +142,11 @@ export default function InvestmentSlide() {
             {/* Return Metrics */}
             <div className="flex-1 space-y-3 sm:space-y-4">
               <div className="flex items-center justify-between py-2 border-b border-orange-200">
-                <span className="text-xs font-semibold text-gray-700">IRR</span>
+                <span className="text-xs font-semibold text-gray-700">Internal Rate of Return (IRR)</span>
                 <span className="text-sm sm:text-base font-bold text-orange-600">18.4%</span>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-orange-200">
-                <span className="text-xs font-semibold text-gray-700">Year 5 ARR</span>
+                <span className="text-xs font-semibold text-gray-700">Year 5 Annual Recurring Revenue (ARR)</span>
                 <span className="text-sm sm:text-base font-bold text-orange-600">$6.29M</span>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-orange-200">
@@ -175,7 +175,7 @@ export default function InvestmentSlide() {
               <div className="flex-1 space-y-2 sm:space-y-3">
                 <div className="flex items-start gap-2">
                   <span className="text-orange-500 text-sm sm:text-base mt-0.5 flex-shrink-0">✓</span>
-                  <span className="text-xs text-gray-700 leading-relaxed">Exceptional unit economics (11.5x LTV:CAC)</span>
+                  <span className="text-xs text-gray-700 leading-relaxed">Exceptional unit economics (11.5x Lifetime Value to Customer Acquisition Cost)</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-orange-500 text-sm sm:text-base mt-0.5 flex-shrink-0">✓</span>
