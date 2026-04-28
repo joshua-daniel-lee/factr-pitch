@@ -86,7 +86,7 @@ export default function FinancialsSlide() {
                 <span className="text-white font-bold text-lg sm:text-xl">1</span>
               </div>
               <h3 className="text-sm sm:text-base font-extrabold text-gray-900 uppercase tracking-wide mb-1">Launch</h3>
-              <p className="text-xs text-gray-600 mb-1">50 users</p>
+              <p className="text-xs text-gray-600 mb-1">1000 users</p>
               <p className="text-xs font-semibold text-cyan-600">$135K</p>
             </motion.div>
 
